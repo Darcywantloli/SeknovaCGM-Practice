@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61A2908702A005296E1 /* RegisterViewController.swift */; };
+		8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B61B2908702A005296E1 /* RegisterViewController.xib */; };
+		8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61F2909020E005296E1 /* Color+Extensions.swift */; };
+		8876B622290A6F91005296E1 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B621290A6F91005296E1 /* TextField+Extensions.swift */; };
+		88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF74828EEC93C00FE16E1 /* AppDelegate.swift */; };
+		88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF74A28EEC93C00FE16E1 /* SceneDelegate.swift */; };
+		88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CDF75128EEC93F00FE16E1 /* Assets.xcassets */; };
+		88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CDF75328EEC93F00FE16E1 /* LaunchScreen.storyboard */; };
+		88CDF76028EEC93F00FE16E1 /* SeknovaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF75F28EEC93F00FE16E1 /* SeknovaTests.swift */; };
+		88CDF76A28EEC93F00FE16E1 /* SeknovaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF76928EEC93F00FE16E1 /* SeknovaUITests.swift */; };
+		88CDF76C28EEC93F00FE16E1 /* SeknovaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF76B28EEC93F00FE16E1 /* SeknovaUITestsLaunchTests.swift */; };
+		88CDF77D28EEC9EF00FE16E1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF77B28EEC9EF00FE16E1 /* LoginViewController.swift */; };
+		88CDF77E28EEC9EF00FE16E1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88CDF77C28EEC9EF00FE16E1 /* LoginViewController.xib */; };
+		88CDF78028FFF64600FE16E1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF77F28FFF64600FE16E1 /* BaseViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88CDF75C28EEC93F00FE16E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88CDF73D28EEC93B00FE16E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88CDF74428EEC93C00FE16E1;
+			remoteInfo = Seknova;
+		};
+		88CDF76628EEC93F00FE16E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88CDF73D28EEC93B00FE16E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88CDF74428EEC93C00FE16E1;
+			remoteInfo = Seknova;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8876B61A2908702A005296E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8876B61B2908702A005296E1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		8876B61F2909020E005296E1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		8876B621290A6F91005296E1 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
+		88CDF74528EEC93C00FE16E1 /* Seknova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seknova.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88CDF74828EEC93C00FE16E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		88CDF74A28EEC93C00FE16E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		88CDF75128EEC93F00FE16E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88CDF75428EEC93F00FE16E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88CDF75628EEC93F00FE16E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88CDF75B28EEC93F00FE16E1 /* SeknovaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeknovaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88CDF75F28EEC93F00FE16E1 /* SeknovaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeknovaTests.swift; sourceTree = "<group>"; };
+		88CDF76528EEC93F00FE16E1 /* SeknovaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeknovaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88CDF76928EEC93F00FE16E1 /* SeknovaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeknovaUITests.swift; sourceTree = "<group>"; };
+		88CDF76B28EEC93F00FE16E1 /* SeknovaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeknovaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88CDF77B28EEC9EF00FE16E1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		88CDF77C28EEC9EF00FE16E1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		88CDF77F28FFF64600FE16E1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88CDF74228EEC93C00FE16E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88CDF75828EEC93F00FE16E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88CDF76228EEC93F00FE16E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8876B61E290901F7005296E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8876B61F2909020E005296E1 /* Color+Extensions.swift */,
+				8876B621290A6F91005296E1 /* TextField+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88CDF73C28EEC93B00FE16E1 = {
+			isa = PBXGroup;
+			children = (
+				88CDF74728EEC93C00FE16E1 /* Seknova */,
+				88CDF75E28EEC93F00FE16E1 /* SeknovaTests */,
+				88CDF76828EEC93F00FE16E1 /* SeknovaUITests */,
+				88CDF74628EEC93C00FE16E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88CDF74628EEC93C00FE16E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88CDF74528EEC93C00FE16E1 /* Seknova.app */,
+				88CDF75B28EEC93F00FE16E1 /* SeknovaTests.xctest */,
+				88CDF76528EEC93F00FE16E1 /* SeknovaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88CDF74728EEC93C00FE16E1 /* Seknova */ = {
+			isa = PBXGroup;
+			children = (
+				88CDF77A28EEC99900FE16E1 /* Model */,
+				88CDF77928EEC99300FE16E1 /* View */,
+				88CDF77828EEC98C00FE16E1 /* Controller */,
+				88CDF74828EEC93C00FE16E1 /* AppDelegate.swift */,
+				88CDF74A28EEC93C00FE16E1 /* SceneDelegate.swift */,
+				88CDF75128EEC93F00FE16E1 /* Assets.xcassets */,
+				88CDF75328EEC93F00FE16E1 /* LaunchScreen.storyboard */,
+				88CDF75628EEC93F00FE16E1 /* Info.plist */,
+			);
+			path = Seknova;
+			sourceTree = "<group>";
+		};
+		88CDF75E28EEC93F00FE16E1 /* SeknovaTests */ = {
+			isa = PBXGroup;
+			children = (
+				88CDF75F28EEC93F00FE16E1 /* SeknovaTests.swift */,
+			);
+			path = SeknovaTests;
+			sourceTree = "<group>";
+		};
+		88CDF76828EEC93F00FE16E1 /* SeknovaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				88CDF76928EEC93F00FE16E1 /* SeknovaUITests.swift */,
+				88CDF76B28EEC93F00FE16E1 /* SeknovaUITestsLaunchTests.swift */,
+			);
+			path = SeknovaUITests;
+			sourceTree = "<group>";
+		};
+		88CDF77828EEC98C00FE16E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88CDF77F28FFF64600FE16E1 /* BaseViewController.swift */,
+				88CDF77B28EEC9EF00FE16E1 /* LoginViewController.swift */,
+				88CDF77C28EEC9EF00FE16E1 /* LoginViewController.xib */,
+				8876B61A2908702A005296E1 /* RegisterViewController.swift */,
+				8876B61B2908702A005296E1 /* RegisterViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88CDF77928EEC99300FE16E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88CDF77A28EEC99900FE16E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8876B61E290901F7005296E1 /* Extensions */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88CDF74428EEC93C00FE16E1 /* Seknova */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88CDF76F28EEC93F00FE16E1 /* Build configuration list for PBXNativeTarget "Seknova" */;
+			buildPhases = (
+				88CDF74128EEC93C00FE16E1 /* Sources */,
+				88CDF74228EEC93C00FE16E1 /* Frameworks */,
+				88CDF74328EEC93C00FE16E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Seknova;
+			productName = Seknova;
+			productReference = 88CDF74528EEC93C00FE16E1 /* Seknova.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88CDF75A28EEC93F00FE16E1 /* SeknovaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88CDF77228EEC93F00FE16E1 /* Build configuration list for PBXNativeTarget "SeknovaTests" */;
+			buildPhases = (
+				88CDF75728EEC93F00FE16E1 /* Sources */,
+				88CDF75828EEC93F00FE16E1 /* Frameworks */,
+				88CDF75928EEC93F00FE16E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88CDF75D28EEC93F00FE16E1 /* PBXTargetDependency */,
+			);
+			name = SeknovaTests;
+			productName = SeknovaTests;
+			productReference = 88CDF75B28EEC93F00FE16E1 /* SeknovaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		88CDF76428EEC93F00FE16E1 /* SeknovaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88CDF77528EEC93F00FE16E1 /* Build configuration list for PBXNativeTarget "SeknovaUITests" */;
+			buildPhases = (
+				88CDF76128EEC93F00FE16E1 /* Sources */,
+				88CDF76228EEC93F00FE16E1 /* Frameworks */,
+				88CDF76328EEC93F00FE16E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88CDF76728EEC93F00FE16E1 /* PBXTargetDependency */,
+			);
+			name = SeknovaUITests;
+			productName = SeknovaUITests;
+			productReference = 88CDF76528EEC93F00FE16E1 /* SeknovaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88CDF73D28EEC93B00FE16E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					88CDF74428EEC93C00FE16E1 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					88CDF75A28EEC93F00FE16E1 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 88CDF74428EEC93C00FE16E1;
+					};
+					88CDF76428EEC93F00FE16E1 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 88CDF74428EEC93C00FE16E1;
+					};
+				};
+			};
+			buildConfigurationList = 88CDF74028EEC93C00FE16E1 /* Build configuration list for PBXProject "Seknova" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88CDF73C28EEC93B00FE16E1;
+			productRefGroup = 88CDF74628EEC93C00FE16E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88CDF74428EEC93C00FE16E1 /* Seknova */,
+				88CDF75A28EEC93F00FE16E1 /* SeknovaTests */,
+				88CDF76428EEC93F00FE16E1 /* SeknovaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88CDF74328EEC93C00FE16E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88CDF77E28EEC9EF00FE16E1 /* LoginViewController.xib in Resources */,
+				88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */,
+				88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */,
+				8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88CDF75928EEC93F00FE16E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88CDF76328EEC93F00FE16E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88CDF74128EEC93C00FE16E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88CDF77D28EEC9EF00FE16E1 /* LoginViewController.swift in Sources */,
+				8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */,
+				88CDF78028FFF64600FE16E1 /* BaseViewController.swift in Sources */,
+				88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */,
+				88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */,
+				8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */,
+				8876B622290A6F91005296E1 /* TextField+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88CDF75728EEC93F00FE16E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88CDF76028EEC93F00FE16E1 /* SeknovaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88CDF76128EEC93F00FE16E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88CDF76C28EEC93F00FE16E1 /* SeknovaUITestsLaunchTests.swift in Sources */,
+				88CDF76A28EEC93F00FE16E1 /* SeknovaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88CDF75D28EEC93F00FE16E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88CDF74428EEC93C00FE16E1 /* Seknova */;
+			targetProxy = 88CDF75C28EEC93F00FE16E1 /* PBXContainerItemProxy */;
+		};
+		88CDF76728EEC93F00FE16E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88CDF74428EEC93C00FE16E1 /* Seknova */;
+			targetProxy = 88CDF76628EEC93F00FE16E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		88CDF75328EEC93F00FE16E1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88CDF75428EEC93F00FE16E1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88CDF76D28EEC93F00FE16E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88CDF76E28EEC93F00FE16E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88CDF77028EEC93F00FE16E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8FBP4YLUA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Seknova/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Darcy.Seknova;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88CDF77128EEC93F00FE16E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8FBP4YLUA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Seknova/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Darcy.Seknova;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		88CDF77328EEC93F00FE16E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8FBP4YLUA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Darcy.SeknovaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Seknova.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Seknova";
+			};
+			name = Debug;
+		};
+		88CDF77428EEC93F00FE16E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8FBP4YLUA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Darcy.SeknovaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Seknova.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Seknova";
+			};
+			name = Release;
+		};
+		88CDF77628EEC93F00FE16E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8FBP4YLUA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Darcy.SeknovaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Seknova;
+			};
+			name = Debug;
+		};
+		88CDF77728EEC93F00FE16E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8FBP4YLUA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Darcy.SeknovaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Seknova;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88CDF74028EEC93C00FE16E1 /* Build configuration list for PBXProject "Seknova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88CDF76D28EEC93F00FE16E1 /* Debug */,
+				88CDF76E28EEC93F00FE16E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88CDF76F28EEC93F00FE16E1 /* Build configuration list for PBXNativeTarget "Seknova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88CDF77028EEC93F00FE16E1 /* Debug */,
+				88CDF77128EEC93F00FE16E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88CDF77228EEC93F00FE16E1 /* Build configuration list for PBXNativeTarget "SeknovaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88CDF77328EEC93F00FE16E1 /* Debug */,
+				88CDF77428EEC93F00FE16E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88CDF77528EEC93F00FE16E1 /* Build configuration list for PBXNativeTarget "SeknovaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88CDF77628EEC93F00FE16E1 /* Debug */,
+				88CDF77728EEC93F00FE16E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88CDF73D28EEC93B00FE16E1 /* Project object */;
+}
