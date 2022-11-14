@@ -10,4 +10,5 @@ import UIKit
 extension UIColor {
     
     static var navigationBar = UIColor(named: "NavigationBar")
+    static var fb = UIColor(named: "FB")
 }

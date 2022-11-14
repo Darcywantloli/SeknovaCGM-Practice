@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
-                <outlet property="accountImageView" destination="Zdy-De-aAS" id="xS6-Nu-ceL"/>
                 <outlet property="accountTextField" destination="qQ9-RP-E89" id="NVm-g1-xh6"/>
                 <outlet property="backgroundImageView" destination="505-TE-zq8" id="PFB-Fx-Gzi"/>
                 <outlet property="facebookLoginButton" destination="TV3-dw-lBd" id="2lJ-oU-zUB"/>
@@ -25,7 +24,6 @@
                 <outlet property="googleLoginLabel" destination="BdM-6p-yKv" id="3Du-zS-EL1"/>
                 <outlet property="googleLoginView" destination="bQu-YJ-Ou8" id="RLl-Lw-nSh"/>
                 <outlet property="loginButton" destination="HhK-eu-4rR" id="4dp-Yz-nfj"/>
-                <outlet property="passwordImageView" destination="5Ka-P9-kNx" id="38i-Xz-Tfv"/>
                 <outlet property="passwordTextField" destination="THG-5w-kVU" id="y6M-Lb-0nK"/>
                 <outlet property="registerButton" destination="RYJ-99-taM" id="30W-KE-f6B"/>
                 <outlet property="sekNovaImageView" destination="156-gu-u7F" id="Ixc-cE-hOO"/>
@@ -60,48 +58,30 @@
                             <rect key="frame" x="-8" y="-8" width="316" height="102.5"/>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="帳號" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQ9-RP-E89" userLabel="AccountTextField">
-                            <rect key="frame" x="43.5" y="0.0" width="256.5" height="43.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THG-5w-kVU" userLabel="PassowrdTextField">
-                            <rect key="frame" x="43.5" y="43.5" width="256.5" height="43"/>
+                            <rect key="frame" x="0.0" y="43.5" width="300" height="43"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="Zdy-De-aAS">
-                            <rect key="frame" x="8" y="8" width="27.5" height="27.5"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="Zdy-De-aAS" secondAttribute="height" multiplier="1:1" id="8gf-gL-Q7e"/>
-                            </constraints>
-                        </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="5Ka-P9-kNx">
-                            <rect key="frame" x="8" y="51.5" width="27.5" height="27"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="5Ka-P9-kNx" secondAttribute="height" multiplier="1:1" id="XgK-oH-u8F"/>
-                            </constraints>
-                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="qQ9-RP-E89" firstAttribute="leading" secondItem="Zdy-De-aAS" secondAttribute="trailing" constant="8" id="05T-K5-z99"/>
                         <constraint firstAttribute="trailing" secondItem="THG-5w-kVU" secondAttribute="trailing" id="0sx-AS-hN4"/>
                         <constraint firstAttribute="trailing" secondItem="R73-ar-gVV" secondAttribute="trailing" constant="-8" id="2kh-fC-UET"/>
                         <constraint firstItem="R73-ar-gVV" firstAttribute="top" secondItem="cpG-tt-KwV" secondAttribute="top" constant="-8" id="3Gw-kq-h45"/>
-                        <constraint firstItem="Zdy-De-aAS" firstAttribute="leading" secondItem="cpG-tt-KwV" secondAttribute="leading" constant="8" id="75N-ws-C4m"/>
-                        <constraint firstItem="Zdy-De-aAS" firstAttribute="top" secondItem="cpG-tt-KwV" secondAttribute="top" constant="8" id="7MT-4s-gzL"/>
-                        <constraint firstItem="5Ka-P9-kNx" firstAttribute="centerY" secondItem="THG-5w-kVU" secondAttribute="centerY" id="9TM-oz-R1j"/>
                         <constraint firstAttribute="bottom" secondItem="R73-ar-gVV" secondAttribute="bottom" constant="-8" id="C2i-gA-Tqx"/>
                         <constraint firstItem="qQ9-RP-E89" firstAttribute="top" secondItem="cpG-tt-KwV" secondAttribute="top" id="CP1-Gf-DCx"/>
-                        <constraint firstItem="5Ka-P9-kNx" firstAttribute="leading" secondItem="cpG-tt-KwV" secondAttribute="leading" constant="8" id="HQR-A8-zYL"/>
-                        <constraint firstItem="Zdy-De-aAS" firstAttribute="centerY" secondItem="qQ9-RP-E89" secondAttribute="centerY" id="IKf-wQ-arF"/>
+                        <constraint firstItem="THG-5w-kVU" firstAttribute="width" secondItem="cpG-tt-KwV" secondAttribute="width" id="Cav-aD-l1O"/>
                         <constraint firstItem="qQ9-RP-E89" firstAttribute="height" secondItem="cpG-tt-KwV" secondAttribute="height" multiplier="0.5" id="Ihw-Ql-VqJ"/>
                         <constraint firstItem="R73-ar-gVV" firstAttribute="leading" secondItem="cpG-tt-KwV" secondAttribute="leading" constant="-8" id="MFJ-ch-wzG"/>
                         <constraint firstAttribute="trailing" secondItem="qQ9-RP-E89" secondAttribute="trailing" id="Ma2-0g-rqD"/>
-                        <constraint firstAttribute="bottom" secondItem="5Ka-P9-kNx" secondAttribute="bottom" constant="8" id="S0K-Ho-DNV"/>
                         <constraint firstAttribute="bottom" secondItem="THG-5w-kVU" secondAttribute="bottom" id="XZC-fP-xcM"/>
                         <constraint firstItem="THG-5w-kVU" firstAttribute="height" secondItem="cpG-tt-KwV" secondAttribute="height" multiplier="0.5" id="ejG-Hu-Yr6"/>
-                        <constraint firstItem="THG-5w-kVU" firstAttribute="leading" secondItem="5Ka-P9-kNx" secondAttribute="trailing" constant="8" id="iXe-wk-MA2"/>
+                        <constraint firstItem="qQ9-RP-E89" firstAttribute="width" secondItem="cpG-tt-KwV" secondAttribute="width" id="p9z-rF-SW4"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhK-eu-4rR">
@@ -295,8 +275,6 @@
         <image name="applelogo" catalog="system" width="105" height="128"/>
         <image name="facebook" width="512" height="512"/>
         <image name="google" width="1335" height="1335"/>
-        <image name="mail" width="85" height="60"/>
-        <image name="password" width="33" height="41"/>
         <namedColor name="FB">
             <color red="0.27058823529411763" green="0.35294117647058826" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

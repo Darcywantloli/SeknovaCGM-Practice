@@ -8,12 +8,16 @@ import UIKit
 import Foundation
 
 class BaseViewController: UIViewController {
-  
+// MARK: - Variables
+    
+// MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setNavigationBar()
     }
+// MARK: - UI Settings
     
     //NavigationBar樣式
     func setNavigationBar() {
@@ -40,4 +44,6 @@ class BaseViewController: UIViewController {
         button.layer.cornerRadius = (buttonHeight / 2) - 1
     }
 }
+// MARK: - Extensions
 
+// MARK: - Protocol

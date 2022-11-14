@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: BaseViewController {
     
+// MARK: - IBOutlet
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var sekNovaImageView: UIImageView!
     
@@ -16,10 +17,8 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var textFieldImageView: UIImageView!
     
     @IBOutlet weak var accountTextField: UITextField!
-    @IBOutlet weak var accountImageView: UIImageView!
     
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordImageView: UIImageView!
     
     @IBOutlet weak var facebookLoginView: UIView!
     @IBOutlet weak var facebookLoginButton: UIButton!
@@ -40,6 +39,9 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
+// MARK: - Variables
+    
+// MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,10 +55,30 @@ class LoginViewController: BaseViewController {
         setUpButton(button: facebookLoginButton, borderWidth: 0)
         setUpButton(button: signInWithAppleButton, borderWidth: 0)
         setUpButton(button: googleLoginButton, borderWidth: 1, borderColor: .black)
+        
+        let height = UIScreen.main.bounds.height * 0.065
+        
+        accountTextField.setTextFieldLeftImage(name: "mail",
+                                               x: Int(height/6),
+                                               y: Int(height/6),
+                                               width: Int(height/3),
+                                               height: Int(height/3))
+        passwordTextField.setTextFieldLeftImage(name: "password",
+                                                x: Int(height/6),
+                                                y: Int(height/6),
+                                                width: Int(height/3),
+                                                height: Int(height/3))
     }
     
+// MARK: - UI Settings
+    
+// MARK: - IBAction
     // 跳轉到註冊畫面
     @IBAction func registerAccount(_ sender: Any) {
         self.navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
 }
+
+// MARK: - Extensions
+
+// MARK: - Protocol

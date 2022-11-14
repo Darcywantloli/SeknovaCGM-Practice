@@ -11,6 +11,9 @@
 		8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B61B2908702A005296E1 /* RegisterViewController.xib */; };
 		8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61F2909020E005296E1 /* Color+Extensions.swift */; };
 		8876B622290A6F91005296E1 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B621290A6F91005296E1 /* TextField+Extensions.swift */; };
+		8876B625292162CF005296E1 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B623292162CF005296E1 /* VerifyViewController.swift */; };
+		8876B626292162CF005296E1 /* VerifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B624292162CF005296E1 /* VerifyViewController.xib */; };
+		8876B6282921E155005296E1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B6272921E155005296E1 /* String+Extensions.swift */; };
 		88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF74828EEC93C00FE16E1 /* AppDelegate.swift */; };
 		88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF74A28EEC93C00FE16E1 /* SceneDelegate.swift */; };
 		88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CDF75128EEC93F00FE16E1 /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 		8876B61B2908702A005296E1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8876B61F2909020E005296E1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		8876B621290A6F91005296E1 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
+		8876B623292162CF005296E1 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		8876B624292162CF005296E1 /* VerifyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyViewController.xib; sourceTree = "<group>"; };
+		8876B6272921E155005296E1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		88CDF74528EEC93C00FE16E1 /* Seknova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seknova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CDF74828EEC93C00FE16E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88CDF74A28EEC93C00FE16E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 			children = (
 				8876B61F2909020E005296E1 /* Color+Extensions.swift */,
 				8876B621290A6F91005296E1 /* TextField+Extensions.swift */,
+				8876B6272921E155005296E1 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -155,6 +162,8 @@
 				88CDF77C28EEC9EF00FE16E1 /* LoginViewController.xib */,
 				8876B61A2908702A005296E1 /* RegisterViewController.swift */,
 				8876B61B2908702A005296E1 /* RegisterViewController.xib */,
+				8876B623292162CF005296E1 /* VerifyViewController.swift */,
+				8876B624292162CF005296E1 /* VerifyViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +290,7 @@
 				88CDF77E28EEC9EF00FE16E1 /* LoginViewController.xib in Resources */,
 				88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */,
 				88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */,
+				8876B626292162CF005296E1 /* VerifyViewController.xib in Resources */,
 				8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,8 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CDF77D28EEC9EF00FE16E1 /* LoginViewController.swift in Sources */,
+				8876B625292162CF005296E1 /* VerifyViewController.swift in Sources */,
 				8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */,
 				88CDF78028FFF64600FE16E1 /* BaseViewController.swift in Sources */,
+				8876B6282921E155005296E1 /* String+Extensions.swift in Sources */,
 				88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */,
 				88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */,
 				8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */,
