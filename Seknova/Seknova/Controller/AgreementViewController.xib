@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AgreementViewController" customModule="Seknova" customModuleProvider="target">
+            <connections>
+                <outlet property="agreeButton" destination="BD0-ty-ib6" id="6aC-q3-LhF"/>
+                <outlet property="agreementScrollView" destination="ed0-OO-EuT" id="Msi-iv-2xk"/>
+                <outlet property="contentLael" destination="guH-8w-fpS" id="AB8-8u-iv3"/>
+                <outlet property="titleLabel" destination="dRB-9n-NlB" id="eM3-nu-7e0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ed0-OO-EuT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seknova 應用程式使用條款" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-9n-NlB">
+                            <rect key="frame" x="5" y="0.0" width="365" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guH-8w-fpS">
+                            <rect key="frame" x="5" y="30" width="365" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD0-ty-ib6">
+                            <rect key="frame" x="37.5" y="40" width="300" height="43.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="同意" cornerStyle="capsule">
+                                <backgroundConfiguration key="background" strokeWidth="5">
+                                    <color key="strokeColor" name="NavigationBar"/>
+                                </backgroundConfiguration>
+                                <color key="baseForegroundColor" name="NavigationBar"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="agreeContent:" destination="-1" eventType="touchUpInside" id="j9n-Ko-67F"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="BD0-ty-ib6" firstAttribute="bottom" secondItem="FBO-0L-3NC" secondAttribute="bottom" constant="-10" id="1Jn-uT-URp"/>
+                        <constraint firstItem="TqH-FM-6X4" firstAttribute="trailing" secondItem="guH-8w-fpS" secondAttribute="trailing" constant="5" id="6pX-m5-lIR"/>
+                        <constraint firstItem="guH-8w-fpS" firstAttribute="leading" secondItem="FBO-0L-3NC" secondAttribute="leading" constant="5" id="JlA-xR-kNp"/>
+                        <constraint firstItem="dRB-9n-NlB" firstAttribute="leading" secondItem="TqH-FM-6X4" secondAttribute="leading" constant="5" id="NTk-jw-M0Z"/>
+                        <constraint firstItem="guH-8w-fpS" firstAttribute="leading" secondItem="TqH-FM-6X4" secondAttribute="leading" constant="5" id="a7g-1V-i6u"/>
+                        <constraint firstItem="BD0-ty-ib6" firstAttribute="centerX" secondItem="TqH-FM-6X4" secondAttribute="centerX" id="dTm-GP-4gy"/>
+                        <constraint firstItem="guH-8w-fpS" firstAttribute="trailing" secondItem="FBO-0L-3NC" secondAttribute="trailing" constant="5" id="fzN-Cc-koU"/>
+                        <constraint firstItem="guH-8w-fpS" firstAttribute="top" secondItem="dRB-9n-NlB" secondAttribute="bottom" id="l8S-HW-LVV"/>
+                        <constraint firstItem="TqH-FM-6X4" firstAttribute="trailing" secondItem="dRB-9n-NlB" secondAttribute="trailing" constant="5" id="oOh-OG-EI3"/>
+                        <constraint firstItem="BD0-ty-ib6" firstAttribute="top" secondItem="guH-8w-fpS" secondAttribute="bottom" constant="10" id="pH3-5S-msy"/>
+                        <constraint firstItem="BD0-ty-ib6" firstAttribute="width" secondItem="TqH-FM-6X4" secondAttribute="width" multiplier="0.8" id="re3-oH-NIj"/>
+                        <constraint firstItem="dRB-9n-NlB" firstAttribute="top" secondItem="FBO-0L-3NC" secondAttribute="top" id="uI6-RL-8hq"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="FBO-0L-3NC"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="TqH-FM-6X4"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ed0-OO-EuT" secondAttribute="bottom" id="6i5-h9-gqk"/>
+                <constraint firstItem="BD0-ty-ib6" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="BbA-0H-3Bc"/>
+                <constraint firstItem="ed0-OO-EuT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Gup-Y7-ZiR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ed0-OO-EuT" secondAttribute="trailing" id="M1z-bT-BVq"/>
+                <constraint firstItem="ed0-OO-EuT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OO9-bZ-htM"/>
+            </constraints>
+            <point key="canvasLocation" x="-42.399999999999999" y="20.239880059970016"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NavigationBar">
+            <color red="0.75686274509803919" green="0.058823529411764705" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

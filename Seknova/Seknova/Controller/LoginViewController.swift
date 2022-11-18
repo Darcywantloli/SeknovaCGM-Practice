@@ -9,7 +9,8 @@ import UIKit
 
 class LoginViewController: BaseViewController {
     
-// MARK: - IBOutlet
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var sekNovaImageView: UIImageView!
     
@@ -39,23 +40,35 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
-// MARK: - Variables
+    // MARK: - Variables
     
-// MARK: - LifeCycle
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 標題
         self.title = "Login"
-        
+        setupUI()
+    }
+    
+    // MARK: - UI Settings
+    
+    func setupUI() {
+        setupButton()
+        setupTextField()
+    }
+    
+    private func setupButton() {
         // 按鈕樣式
-        setUpButton(button: loginButton)
-        setUpButton(button: registerButton)
-        setUpButton(button: forgotPasswordButton)
-        setUpButton(button: facebookLoginButton, borderWidth: 0)
-        setUpButton(button: signInWithAppleButton, borderWidth: 0)
-        setUpButton(button: googleLoginButton, borderWidth: 1, borderColor: .black)
+        loginButton.setTitle("登入", for: .normal)
+        registerButton.setTitle("註冊", for: .normal)
+        forgotPasswordButton.setTitle("忘記密碼", for: .normal)
         
+        facebookLoginLabel.text = "Facebook 登入"
+        signInWithAppleLabel.text = "使用 Apple 登入"
+        googleLoginLabel.text = "Google 登入"
+    }
+    
+    private func setupTextField() {
         let height = UIScreen.main.bounds.height * 0.065
         
         accountTextField.setTextFieldLeftImage(name: "mail",
@@ -63,16 +76,18 @@ class LoginViewController: BaseViewController {
                                                y: Int(height/6),
                                                width: Int(height/3),
                                                height: Int(height/3))
+        accountTextField.placeholder = "帳號"
+        
         passwordTextField.setTextFieldLeftImage(name: "password",
                                                 x: Int(height/6),
                                                 y: Int(height/6),
                                                 width: Int(height/3),
                                                 height: Int(height/3))
+        passwordTextField.placeholder = "密碼"
     }
     
-// MARK: - UI Settings
+    // MARK: - IBAction
     
-// MARK: - IBAction
     // 跳轉到註冊畫面
     @IBAction func registerAccount(_ sender: Any) {
         self.navigationController?.pushViewController(RegisterViewController(), animated: true)

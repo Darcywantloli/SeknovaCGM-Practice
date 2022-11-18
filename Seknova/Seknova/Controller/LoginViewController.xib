@@ -87,7 +87,10 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhK-eu-4rR">
                     <rect key="frame" x="67.5" y="381" width="240" height="43.5"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="登入" titleAlignment="center">
+                    <buttonConfiguration key="configuration" style="plain" title="登入" cornerStyle="capsule" titleAlignment="center">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" name="NavigationBar"/>
+                        </backgroundConfiguration>
                         <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                         <color key="baseForegroundColor" name="NavigationBar"/>
                     </buttonConfiguration>
@@ -97,9 +100,12 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TV3-dw-lBd">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
-                            <color key="backgroundColor" name="FB"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain"/>
+                            <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                <backgroundConfiguration key="background">
+                                    <color key="backgroundColor" name="FB"/>
+                                </backgroundConfiguration>
+                            </buttonConfiguration>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="Qfu-EZ-jNz">
                             <rect key="frame" x="30" y="10" width="23.5" height="23.5"/>
@@ -133,9 +139,12 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhy-tL-FkE">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain"/>
+                            <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                <backgroundConfiguration key="background">
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </backgroundConfiguration>
+                            </buttonConfiguration>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applelogo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FhT-QQ-ZRD">
                             <rect key="frame" x="30" y="10.5" width="23.5" height="22"/>
@@ -171,7 +180,11 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8g-W0-hQX">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain"/>
+                            <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                <backgroundConfiguration key="background">
+                                    <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </backgroundConfiguration>
+                            </buttonConfiguration>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="hx5-7y-oBa">
                             <rect key="frame" x="30" y="10" width="23.5" height="23"/>
@@ -203,7 +216,10 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rye-jC-eMb">
                     <rect key="frame" x="67.5" y="594.5" width="108" height="43.5"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="忘記密碼">
+                    <buttonConfiguration key="configuration" style="plain" title="忘記密碼" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" name="NavigationBar"/>
+                        </backgroundConfiguration>
                         <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                         <color key="baseForegroundColor" name="NavigationBar"/>
                     </buttonConfiguration>
@@ -212,6 +228,9 @@
                     <rect key="frame" x="199.5" y="594.5" width="108" height="43.5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="註冊" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" name="NavigationBar"/>
+                        </backgroundConfiguration>
                         <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                         <color key="baseForegroundColor" name="NavigationBar"/>
                     </buttonConfiguration>

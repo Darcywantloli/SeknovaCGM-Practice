@@ -8,7 +8,8 @@
 import UIKit
 
 class RegisterViewController: BaseViewController {
-// MARK: - IBOutlet
+
+    // MARK: - IBOutlet
     
     @IBOutlet weak var bachgroundImageView: UIImageView!
     
@@ -30,28 +31,93 @@ class RegisterViewController: BaseViewController {
     
     @IBOutlet weak var registerButton: UIButton!
     
-// MARK: - Variables
+    // MARK: - Variables
+    
     var countryPickerView = UIPickerView()
     var toolBar = UIToolbar()
     var countrys = ["Taiwan (台灣)", "USA (美國)"]
     var choosedCountry = "Taiwan (台灣)"
     var agreeOrNot = false
     
-// MARK: - LifeCycle
+    // UserDefault
+    var account: String = UserPreference.shared.email
+    var password: String = UserPreference.shared.password
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Register" // 標題
+        setupUI()
+    }
+    
+    // MARK: - UI Settings
+    
+    func setupUI() {
+        setupPickerView()
+        setupToolBar()
+        setupTextField()
+        setupButton()
+        setupLabel()
+    }
+    
+    private func setupButton() {
+        agreeButton.backgroundColor = .white
+        agreeButton.layer.cornerRadius = agreeButton.frame.height / 2
         
-        // 標題
-        self.title = "Register"
+        registerButton.setTitle("註冊", for: .normal)
+    }
+    
+    private func setupPickerView() {
+        countryPickerView.delegate = self
+        countryPickerView.dataSource = self
+        countryPickerView.backgroundColor = .white
+    }
+    
+    private func setupToolBar() {
+        let doneButton = UIBarButtonItem(title: "完成",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(dismissKeyboard))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                    target: nil,
+                                    action: nil)
         
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.sizeToFit()
+        toolBar.barTintColor = .white
+        toolBar.setItems([space, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+    }
+    
+    private func setupLabel() {
+        
+        // 特定範圍文字可互動
+        let text = "我已閱讀並同意會員協議的條款和條件。"
+        let termsAndConditions = NSMutableAttributedString(string: text)
+        let range = (text as NSString).range(of: "條款和條件")
+        
+        termsAndConditions.addAttribute(NSAttributedString.Key.foregroundColor,
+                                        value: UIColor.tintColor,
+                                        range: range)
+        
+        termsLabel.attributedText = termsAndConditions
+        termsLabel.isUserInteractionEnabled = true
+        termsLabel.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                               action: #selector(checkTermsAndConditions)))
+    }
+    
+    private func setupTextField() {
         accountTextField.delegate = self
         passwordTextField.delegate = self
         enterPasswordAgainTextField.delegate = self
         
-        countryPickerView.delegate = self
-        countryPickerView.dataSource = self
+        accountTextField.placeholder = "電子郵件"
+        passwordTextField.placeholder = "密碼(8到16字元，須包含大小寫及數字)"
+        enterPasswordAgainTextField.placeholder = "再一次輸入密碼"
         
-        // TextField圖片
+        // TextField左側圖片
         let height = UIScreen.main.bounds.height * 0.25 * 0.333
         
         accountTextField.setTextFieldLeftImage(name: "mail",
@@ -70,63 +136,101 @@ class RegisterViewController: BaseViewController {
                                                           width: Int(height/3),
                                                           height: Int(height/3))
         
-        //選擇國籍功能
+        // 選擇國籍
         countryTextField.text = choosedCountry
-        countryTextField.layer.borderWidth = 2
-        countryTextField.layer.borderColor = UIColor.navigationBar?.cgColor
-        countryPickerView.backgroundColor = .white
-        
-        let doneButton = UIBarButtonItem(title: "完成",
-                                         style: UIBarButtonItem.Style.done,
-                                         target: self,
-                                         action: #selector(self.disMissKeyBoard))
-        let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace,
-                                    target: nil,
-                                    action: nil)
-        
-        toolBar.barStyle = .default
-        toolBar.isTranslucent = true
-        toolBar.sizeToFit()
-        toolBar.barTintColor = .white
-        toolBar.setItems([space, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        
         countryTextField.inputView = countryPickerView
         countryTextField.inputAccessoryView = toolBar
-        
-        //是否同意條款
-        agreeButton.backgroundColor = .white
-        agreeButton.layer.cornerRadius = agreeButton.frame.height / 2
-        
-        //註冊按鈕
-        setUpButton(button: registerButton)
     }
     
-// MARK: - UI Settings
-    @objc func disMissKeyBoard(){
+    // 收起鍵盤
+    @objc func dismissKeyboard() {
         self.view.endEditing(true)
-        
         countryTextField.text = choosedCountry
     }
+ 
+    // 彈出同意書畫面
+    @objc func checkTermsAndConditions() {
+        let popupVC = AgreementViewController()
+        let popWidth = self.view.bounds.width
+        let popHeight = self.view.bounds.height
+        let navigationBarHeight = self.navigationController?.navigationBar.frame.height
+        
+        popupVC.modalPresentationStyle = .popover
+
+        popupVC.popoverPresentationController?.delegate = self
+        popupVC.popoverPresentationController?.sourceView = navigationController?.navigationBar
+        popupVC.popoverPresentationController?.sourceRect = CGRect(x: 0,
+                                                                   y: 0,
+                                                                   width: popWidth,
+                                                                   height: navigationBarHeight!)
+        popupVC.preferredContentSize = CGSize(width: popWidth, height: popHeight)
+
+        present(popupVC, animated: true)
+    }
+
+    // MARK: - IBAction
     
-// MARK: - IBAction
+    // 是否勾選
     @IBAction func agreeTermsOrNot(_ sender: Any) {
         agreeOrNot = !agreeOrNot
         
         if agreeOrNot {
-            agreeButton.backgroundColor = .red
+            agreeButton.backgroundColor = .systemBlue
         } else {
             agreeButton.backgroundColor = .white
         }
     }
     
+    // 註冊按鈕功能
     @IBAction func registerAccount(_ sender: Any) {
-        self.navigationController?.pushViewController(VerifyViewController(), animated: true)
+        var errorMeaasge = ""
+        
+        // 格式判斷
+        if accountTextField.text?.regularExpression(type: .email) == false {
+            errorMeaasge += "帳號格式不符，請重新輸入\n"
+        }
+        if passwordTextField.text?.regularExpression(type: .password) == false {
+            errorMeaasge += "密碼格式不符，請重新輸入\n"
+        }
+        if enterPasswordAgainTextField.text != passwordTextField.text {
+            errorMeaasge += "密碼不符，請再次確認\n"
+        }
+        if agreeOrNot == false {
+            errorMeaasge += "未勾選同意書\n"
+        }
+        
+        if errorMeaasge == "" {
+            
+            // 儲存帳號並跳轉至驗證畫面
+            account = accountTextField.text!
+            password = passwordTextField.text!
+            
+            self.navigationController?.pushViewController(VerifyViewController(), animated: true)
+        } else {
+            
+            // 推送錯誤訊息
+            errorMeaasge.removeLast()
+            
+            let alertController = UIAlertController(title: "錯誤",
+                                                    message: errorMeaasge,
+                                                    preferredStyle: .alert)
+            let enterAgain = UIAlertAction(title: "確認", style: .default)
+            
+            alertController.addAction(enterAgain)
+            present(alertController, animated: true, completion: nil)
+            
+            accountTextField.text = ""
+            passwordTextField.text = ""
+            enterPasswordAgainTextField.text = ""
+        }
     }
 }
 
-// MARK: - Extensions
+// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
+
 extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    // UIPickerViewDataSource
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -135,6 +239,7 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return countrys.count
     }
     
+    // UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView,
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
@@ -148,13 +253,25 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
+// MARK: - UITextFieldDelegate
+
 extension RegisterViewController: UITextFieldDelegate {
+    
+    // UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
         return true
     }
 }
 
-// MARK: - Protocol
+// MARK: - UIPopoverPresentationControllerDelegate
+
+extension RegisterViewController: UIPopoverPresentationControllerDelegate {
     
+    // UIPopoverPresentationControllerDelegate
+    func adaptivePresentationStyle(for controller: UIPresentationController,
+                                   traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
+    }
+}
+// MARK: - Protocol
