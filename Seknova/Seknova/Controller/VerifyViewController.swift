@@ -9,6 +9,10 @@ import UIKit
 
 class VerifyViewController: BaseViewController {
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var seknovaImageView: UIImageView!
+    
+    @IBOutlet weak var nextStepButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,5 +29,8 @@ class VerifyViewController: BaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func nextStep(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
 }
