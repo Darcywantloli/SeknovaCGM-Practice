@@ -17,6 +17,10 @@
 		8876B62B29256A4F005296E1 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B62929256A4F005296E1 /* AgreementViewController.swift */; };
 		8876B62C29256A4F005296E1 /* AgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B62A29256A4F005296E1 /* AgreementViewController.xib */; };
 		8876B62F292760B9005296E1 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B62E292760B9005296E1 /* UserPreference.swift */; };
+		8876B6322930747C005296E1 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B6302930747C005296E1 /* ForgotPasswordViewController.swift */; };
+		8876B6332930747C005296E1 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B6312930747C005296E1 /* ForgotPasswordViewController.xib */; };
+		8876B636293074B8005296E1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B634293074B8005296E1 /* ResetPasswordViewController.swift */; };
+		8876B637293074B8005296E1 /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B635293074B8005296E1 /* ResetPasswordViewController.xib */; };
 		88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF74828EEC93C00FE16E1 /* AppDelegate.swift */; };
 		88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF74A28EEC93C00FE16E1 /* SceneDelegate.swift */; };
 		88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CDF75128EEC93F00FE16E1 /* Assets.xcassets */; };
@@ -57,6 +61,10 @@
 		8876B62929256A4F005296E1 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		8876B62A29256A4F005296E1 /* AgreementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AgreementViewController.xib; sourceTree = "<group>"; };
 		8876B62E292760B9005296E1 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
+		8876B6302930747C005296E1 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		8876B6312930747C005296E1 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		8876B634293074B8005296E1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		8876B635293074B8005296E1 /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		88CDF74528EEC93C00FE16E1 /* Seknova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seknova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CDF74828EEC93C00FE16E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88CDF74A28EEC93C00FE16E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,14 +114,6 @@
 				8876B6272921E155005296E1 /* String+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		8876B62D2927606A005296E1 /* UserDefault */ = {
-			isa = PBXGroup;
-			children = (
-				8876B62E292760B9005296E1 /* UserPreference.swift */,
-			);
-			path = UserDefault;
 			sourceTree = "<group>";
 		};
 		88CDF73C28EEC93B00FE16E1 = {
@@ -180,6 +180,10 @@
 				8876B624292162CF005296E1 /* VerifyViewController.xib */,
 				8876B62929256A4F005296E1 /* AgreementViewController.swift */,
 				8876B62A29256A4F005296E1 /* AgreementViewController.xib */,
+				8876B6302930747C005296E1 /* ForgotPasswordViewController.swift */,
+				8876B6312930747C005296E1 /* ForgotPasswordViewController.xib */,
+				8876B634293074B8005296E1 /* ResetPasswordViewController.swift */,
+				8876B635293074B8005296E1 /* ResetPasswordViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,7 +198,7 @@
 		88CDF77A28EEC99900FE16E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8876B62D2927606A005296E1 /* UserDefault */,
+				8876B62E292760B9005296E1 /* UserPreference.swift */,
 				8876B61E290901F7005296E1 /* Extensions */,
 			);
 			path = Model;
@@ -306,8 +310,10 @@
 			files = (
 				88CDF77E28EEC9EF00FE16E1 /* LoginViewController.xib in Resources */,
 				88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */,
+				8876B6332930747C005296E1 /* ForgotPasswordViewController.xib in Resources */,
 				88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */,
 				8876B626292162CF005296E1 /* VerifyViewController.xib in Resources */,
+				8876B637293074B8005296E1 /* ResetPasswordViewController.xib in Resources */,
 				8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */,
 				8876B62C29256A4F005296E1 /* AgreementViewController.xib in Resources */,
 			);
@@ -342,6 +348,8 @@
 				8876B6282921E155005296E1 /* String+Extensions.swift in Sources */,
 				88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */,
 				88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */,
+				8876B6322930747C005296E1 /* ForgotPasswordViewController.swift in Sources */,
+				8876B636293074B8005296E1 /* ResetPasswordViewController.swift in Sources */,
 				8876B62B29256A4F005296E1 /* AgreementViewController.swift in Sources */,
 				8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */,
 				8876B622290A6F91005296E1 /* TextField+Extensions.swift in Sources */,

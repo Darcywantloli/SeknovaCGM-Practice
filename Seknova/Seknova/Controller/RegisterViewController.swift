@@ -39,10 +39,6 @@ class RegisterViewController: BaseViewController {
     var choosedCountry = "Taiwan (台灣)"
     var agreeOrNot = false
     
-    // UserDefault
-    var account: String = UserPreference.shared.email
-    var password: String = UserPreference.shared.password
-    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -156,7 +152,6 @@ class RegisterViewController: BaseViewController {
         let navigationBarHeight = self.navigationController?.navigationBar.frame.height
         
         popupVC.modalPresentationStyle = .popover
-
         popupVC.popoverPresentationController?.delegate = self
         popupVC.popoverPresentationController?.sourceView = navigationController?.navigationBar
         popupVC.popoverPresentationController?.sourceRect = CGRect(x: 0,
@@ -185,7 +180,7 @@ class RegisterViewController: BaseViewController {
     @IBAction func registerAccount(_ sender: Any) {
         var errorMeaasge = ""
         
-        // 格式判斷
+        // 正則判斷
         if accountTextField.text?.regularExpression(type: .email) == false {
             errorMeaasge += "帳號格式不符，請重新輸入\n"
         }
@@ -202,8 +197,9 @@ class RegisterViewController: BaseViewController {
         if errorMeaasge == "" {
             
             // 儲存帳號並跳轉至驗證畫面
-            account = accountTextField.text!
-            password = passwordTextField.text!
+            UserPreference.shared.email = accountTextField.text!
+            UserPreference.shared.password = passwordTextField.text!
+            UserPreference.shared.firstLogin = true
             
             self.navigationController?.pushViewController(VerifyViewController(), animated: true)
         } else {

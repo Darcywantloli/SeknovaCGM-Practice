@@ -9,28 +9,41 @@ import UIKit
 
 class VerifyViewController: BaseViewController {
 
+    // MARK: IBOutlet
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var seknovaImageView: UIImageView!
     
+    @IBOutlet weak var activatedAccountENLabel: UILabel!
+    @IBOutlet weak var activatedAccountCNLabel: UILabel!
+    
+    @IBOutlet weak var checkEmailLabel: UILabel!
+
+    @IBOutlet weak var sendAgainButton: UIButton!
     @IBOutlet weak var nextStepButton: UIButton!
+    
+    // MARK: - Variables
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    // MARK: - UI Settings
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // MARK: - IBAction
+
     @IBAction func nextStep(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
 }
+
+// MARK: - Extensions
+
+
+// MARK: - Protocol
+
+

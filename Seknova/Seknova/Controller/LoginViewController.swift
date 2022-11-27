@@ -42,12 +42,26 @@ class LoginViewController: BaseViewController {
     
     // MARK: - Variables
     
+    var account: String = UserPreference.shared.email
+    var password: String = UserPreference.shared.password
+    var firstLogin: Bool = UserPreference.shared.firstLogin
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Login"
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
+        print(account, password, firstLogin)
+        if firstLogin {
+            accountTextField.text = account
+            UserPreference.shared.firstLogin = false
+        }
+        print(account, password, firstLogin)
     }
     
     // MARK: - UI Settings
@@ -84,6 +98,21 @@ class LoginViewController: BaseViewController {
                                                 width: Int(height/3),
                                                 height: Int(height/3))
         passwordTextField.placeholder = "密碼"
+        
+        print(account, password, firstLogin)
+        if firstLogin {
+            accountTextField.text = account
+            UserPreference.shared.firstLogin = false
+        }
+        print(account, password, firstLogin)
+    }
+    
+    func finishRegister(autoLogin: Bool) {
+        if autoLogin {
+            accountTextField.text = account
+        } else {
+            accountTextField.text = ""
+        }
     }
     
     // MARK: - IBAction

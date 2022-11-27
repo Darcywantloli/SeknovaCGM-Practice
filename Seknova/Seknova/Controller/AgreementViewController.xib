@@ -74,11 +74,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ed0-OO-EuT" secondAttribute="bottom" id="6i5-h9-gqk"/>
+                <constraint firstAttribute="bottom" secondItem="ed0-OO-EuT" secondAttribute="bottom" id="6i5-h9-gqk"/>
                 <constraint firstItem="BD0-ty-ib6" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="BbA-0H-3Bc"/>
-                <constraint firstItem="ed0-OO-EuT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Gup-Y7-ZiR"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ed0-OO-EuT" secondAttribute="trailing" id="M1z-bT-BVq"/>
-                <constraint firstItem="ed0-OO-EuT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OO9-bZ-htM"/>
+                <constraint firstItem="ed0-OO-EuT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gup-Y7-ZiR"/>
+                <constraint firstAttribute="trailing" secondItem="ed0-OO-EuT" secondAttribute="trailing" id="M1z-bT-BVq"/>
+                <constraint firstItem="ed0-OO-EuT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OO9-bZ-htM"/>
             </constraints>
             <point key="canvasLocation" x="-42.399999999999999" y="20.239880059970016"/>
         </view>

@@ -12,9 +12,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
+                <outlet property="activatedAccountCNLabel" destination="q5i-rP-0XR" id="hSj-jQ-rsW"/>
+                <outlet property="activatedAccountENLabel" destination="1p9-lw-k61" id="SmQ-FE-ATE"/>
                 <outlet property="backgroundImageView" destination="LWG-cG-K1Z" id="Cuc-RH-qNA"/>
+                <outlet property="checkEmailLabel" destination="CQF-FP-3ld" id="Ez2-Wk-MsQ"/>
                 <outlet property="nextStepButton" destination="Vwo-6i-B8K" id="w0h-cp-IdM"/>
                 <outlet property="seknovaImageView" destination="fTo-Kg-ENv" id="gS0-BK-7iW"/>
+                <outlet property="sendAgainButton" destination="cXv-hS-h8o" id="EV7-OH-0Md"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,13 +49,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請到信箱點選認證信開通帳號" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQF-FP-3ld">
-                    <rect key="frame" x="37.5" y="283" width="300" height="35"/>
+                    <rect key="frame" x="37.5" y="270.5" width="300" height="43.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXv-hS-h8o">
-                    <rect key="frame" x="50.5" y="338" width="274" height="35"/>
+                    <rect key="frame" x="50.5" y="334" width="274" height="43"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="重送驗證信" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="5">
@@ -61,7 +65,7 @@
                     </buttonConfiguration>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwo-6i-B8K">
-                    <rect key="frame" x="50.5" y="602" width="274" height="35"/>
+                    <rect key="frame" x="50.5" y="593.5" width="274" height="43.5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="下一步" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="5">
@@ -98,6 +102,7 @@
                 <constraint firstItem="q5i-rP-0XR" firstAttribute="top" secondItem="1p9-lw-k61" secondAttribute="bottom" id="b7U-Op-Qtg"/>
                 <constraint firstItem="cXv-hS-h8o" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="bBN-MT-dEM"/>
                 <constraint firstItem="1p9-lw-k61" firstAttribute="height" secondItem="fTo-Kg-ENv" secondAttribute="height" multiplier="2" id="hWO-OL-zq6"/>
+                <constraint firstItem="Vwo-6i-B8K" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="jzI-GG-YvO"/>
                 <constraint firstItem="LWG-cG-K1Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kkZ-eT-iOq"/>
                 <constraint firstItem="q5i-rP-0XR" firstAttribute="centerX" secondItem="1p9-lw-k61" secondAttribute="centerX" id="nLV-10-zoB"/>
                 <constraint firstItem="fTo-Kg-ENv" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="tic-ag-xnR"/>

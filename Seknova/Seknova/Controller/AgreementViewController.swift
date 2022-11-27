@@ -26,7 +26,6 @@ class AgreementViewController: BaseViewController {
         super.viewDidLoad()
         
         setupUI()
-        
     }
     // MARK: - UI Settings
     func setupUI() {
