@@ -42,26 +42,18 @@ class LoginViewController: BaseViewController {
     
     // MARK: - Variables
     
-    var account: String = UserPreference.shared.email
-    var password: String = UserPreference.shared.password
-    var firstLogin: Bool = UserPreference.shared.firstLogin
-    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Login"
-        setupUI()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: true)
 
-        print(account, password, firstLogin)
-        if firstLogin {
-            accountTextField.text = account
-            UserPreference.shared.firstLogin = false
-        }
-        print(account, password, firstLogin)
+        setupUI()
+        setNavigationBar()
+        
+        accountTextField.text = UserPreference.shared.email
+        passwordTextField.text = UserPreference.shared.password
     }
     
     // MARK: - UI Settings
@@ -72,7 +64,6 @@ class LoginViewController: BaseViewController {
     }
     
     private func setupButton() {
-        // 按鈕樣式
         loginButton.setTitle("登入", for: .normal)
         registerButton.setTitle("註冊", for: .normal)
         forgotPasswordButton.setTitle("忘記密碼", for: .normal)
@@ -83,7 +74,7 @@ class LoginViewController: BaseViewController {
     }
     
     private func setupTextField() {
-        let height = UIScreen.main.bounds.height * 0.065
+        let height = accountTextField.frame.height
         
         accountTextField.setTextFieldLeftImage(name: "mail",
                                                x: Int(height/6),
@@ -98,24 +89,43 @@ class LoginViewController: BaseViewController {
                                                 width: Int(height/3),
                                                 height: Int(height/3))
         passwordTextField.placeholder = "密碼"
-        
-        print(account, password, firstLogin)
-        if firstLogin {
-            accountTextField.text = account
-            UserPreference.shared.firstLogin = false
-        }
-        print(account, password, firstLogin)
-    }
-    
-    func finishRegister(autoLogin: Bool) {
-        if autoLogin {
-            accountTextField.text = account
-        } else {
-            accountTextField.text = ""
-        }
     }
     
     // MARK: - IBAction
+    
+    // 登入
+    @IBAction func login(_ sender: Any) {
+        let indicatorView = activityIndicator(style: .large, center: self.view.center)
+        
+        self.view.addSubview(indicatorView)
+        
+        if accountTextField.text == UserPreference.shared.email &&
+            passwordTextField.text == UserPreference.shared.password &&
+            UserPreference.shared.firstLogin == true {
+            indicatorView.startAnimating()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                indicatorView.stopAnimating()
+                UserPreference.shared.firstLogin = false
+                self.navigationController?.pushViewController(AgreementViewController(), animated: true)
+            }
+        } else if UserPreference.shared.firstLogin == false {
+            indicatorView.startAnimating()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                indicatorView.stopAnimating()
+                self.navigationController?.pushViewController(VerifyViewController(),
+                                                              animated: true)
+            }
+        } else {
+            Alert.showAlertWith(title: "錯誤", message: "帳號密碼錯誤", vc: self, confirmTitle: "確認")
+        }
+    }
+    
+    // 跳轉到忘記密碼畫面
+    @IBAction func forgotPassword(_ sender: Any) {
+        self.navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
+    }
     
     // 跳轉到註冊畫面
     @IBAction func registerAccount(_ sender: Any) {
@@ -123,6 +133,6 @@ class LoginViewController: BaseViewController {
     }
 }
 
-// MARK: - Extensions
+    // MARK: - Extensions
 
-// MARK: - Protocol
+    // MARK: - Protocol

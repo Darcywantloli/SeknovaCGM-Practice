@@ -13,11 +13,6 @@ class BaseViewController: UIViewController {
     
     // MARK: - LifeCycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setNavigationBar()
-    }
-    
     // MARK: - UI Settings
     
     // NavigationBar樣式

@@ -44,17 +44,38 @@ class RegisterViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Register" // 標題
+        
         setupUI()
+        setNavigationBar()
     }
     
     // MARK: - UI Settings
     
     func setupUI() {
-        setupPickerView()
+        setupLabel()
+        setupButton()
         setupToolBar()
         setupTextField()
-        setupButton()
-        setupLabel()
+        setupPickerView()
+    }
+    
+    private func setupLabel() {
+        registerAccountENLabel.text = "REGISTER ACCOUNT"
+        registerAccountCNLabel.text = "註 冊 帳 號"
+        
+        // 特定範圍文字可互動
+        let text = "我已閱讀並同意會員協議的條款和條件。"
+        let termsAndConditions = NSMutableAttributedString(string: text)
+        let range = (text as NSString).range(of: "條款和條件")
+        
+        termsAndConditions.addAttribute(NSAttributedString.Key.foregroundColor,
+                                        value: UIColor.tintColor,
+                                        range: range)
+        
+        termsLabel.attributedText = termsAndConditions
+        termsLabel.isUserInteractionEnabled = true
+        termsLabel.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                               action: #selector(checkTermsAndConditions)))
     }
     
     private func setupButton() {
@@ -62,12 +83,6 @@ class RegisterViewController: BaseViewController {
         agreeButton.layer.cornerRadius = agreeButton.frame.height / 2
         
         registerButton.setTitle("註冊", for: .normal)
-    }
-    
-    private func setupPickerView() {
-        countryPickerView.delegate = self
-        countryPickerView.dataSource = self
-        countryPickerView.backgroundColor = .white
     }
     
     private func setupToolBar() {
@@ -87,23 +102,6 @@ class RegisterViewController: BaseViewController {
         toolBar.isUserInteractionEnabled = true
     }
     
-    private func setupLabel() {
-        
-        // 特定範圍文字可互動
-        let text = "我已閱讀並同意會員協議的條款和條件。"
-        let termsAndConditions = NSMutableAttributedString(string: text)
-        let range = (text as NSString).range(of: "條款和條件")
-        
-        termsAndConditions.addAttribute(NSAttributedString.Key.foregroundColor,
-                                        value: UIColor.tintColor,
-                                        range: range)
-        
-        termsLabel.attributedText = termsAndConditions
-        termsLabel.isUserInteractionEnabled = true
-        termsLabel.addGestureRecognizer(UITapGestureRecognizer(target: self,
-                                                               action: #selector(checkTermsAndConditions)))
-    }
-    
     private func setupTextField() {
         accountTextField.delegate = self
         passwordTextField.delegate = self
@@ -114,28 +112,34 @@ class RegisterViewController: BaseViewController {
         enterPasswordAgainTextField.placeholder = "再一次輸入密碼"
         
         // TextField左側圖片
-        let height = UIScreen.main.bounds.height * 0.25 * 0.333
+        let height = accountTextField.frame.height
         
         accountTextField.setTextFieldLeftImage(name: "mail",
-                                               x: Int(height/6),
-                                               y: Int(height/6),
-                                               width: Int(height/3),
-                                               height: Int(height/3))
+                                               x: Int(height/4),
+                                               y: Int(height/4),
+                                               width: Int(height/2),
+                                               height: Int(height/2))
         passwordTextField.setTextFieldLeftImage(name: "password",
-                                                x: Int(height/6),
-                                                y: Int(height/6),
-                                                width: Int(height/3),
-                                                height: Int(height/3))
+                                                x: Int(height/4),
+                                                y: Int(height/4),
+                                                width: Int(height/2),
+                                                height: Int(height/2))
         enterPasswordAgainTextField.setTextFieldLeftImage(name: "password",
-                                                          x: Int(height/6),
-                                                          y: Int(height/6),
-                                                          width: Int(height/3),
-                                                          height: Int(height/3))
+                                                          x: Int(height/4),
+                                                          y: Int(height/4),
+                                                          width: Int(height/2),
+                                                          height: Int(height/2))
         
         // 選擇國籍
         countryTextField.text = choosedCountry
         countryTextField.inputView = countryPickerView
         countryTextField.inputAccessoryView = toolBar
+    }
+    
+    private func setupPickerView() {
+        countryPickerView.delegate = self
+        countryPickerView.dataSource = self
+        countryPickerView.backgroundColor = .white
     }
     
     // 收起鍵盤
@@ -207,13 +211,7 @@ class RegisterViewController: BaseViewController {
             // 推送錯誤訊息
             errorMeaasge.removeLast()
             
-            let alertController = UIAlertController(title: "錯誤",
-                                                    message: errorMeaasge,
-                                                    preferredStyle: .alert)
-            let enterAgain = UIAlertAction(title: "確認", style: .default)
-            
-            alertController.addAction(enterAgain)
-            present(alertController, animated: true, completion: nil)
+            Alert.showAlertWith(title: "錯誤", message: errorMeaasge, vc: self, confirmTitle: "確認")
             
             accountTextField.text = ""
             passwordTextField.text = ""
@@ -222,7 +220,7 @@ class RegisterViewController: BaseViewController {
     }
 }
 
-// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
+    // MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 
 extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -249,7 +247,7 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
-// MARK: - UITextFieldDelegate
+    // MARK: - UITextFieldDelegate
 
 extension RegisterViewController: UITextFieldDelegate {
     
@@ -260,7 +258,7 @@ extension RegisterViewController: UITextFieldDelegate {
     }
 }
 
-// MARK: - UIPopoverPresentationControllerDelegate
+    // MARK: - UIPopoverPresentationControllerDelegate
 
 extension RegisterViewController: UIPopoverPresentationControllerDelegate {
     
@@ -270,4 +268,5 @@ extension RegisterViewController: UIPopoverPresentationControllerDelegate {
         return .none
     }
 }
-// MARK: - Protocol
+
+    // MARK: - Protocol

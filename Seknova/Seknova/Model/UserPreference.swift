@@ -28,7 +28,7 @@ class UserPreference {
     
     var password: String {
         get { return userPreference.string(forKey: Preference.password.rawValue) ?? "" }
-        set { return userPreference.set(newValue, forKey: Preference.email.rawValue) }
+        set { return userPreference.set(newValue, forKey: Preference.password.rawValue) }
     }
     
     var firstLogin: Bool {

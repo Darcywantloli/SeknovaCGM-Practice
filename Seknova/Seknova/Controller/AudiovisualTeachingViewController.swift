@@ -1,13 +1,13 @@
 //
-//  ResetPasswordViewController.swift
+//  AudiovisualTeachingViewController.swift
 //  Seknova
 //
-//  Created by imac on 2022/11/25.
+//  Created by imac on 2022/12/3.
 //
 
 import UIKit
 
-class ResetPasswordViewController: UIViewController {
+class AudiovisualTeachingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
