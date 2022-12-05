@@ -13,8 +13,8 @@ class ResetPasswordViewController: BaseViewController {
     
     @IBOutlet weak var bachgroundImageView: UIImageView!
     
-    @IBOutlet weak var resetPasswordENLabel: UILabel!
-    @IBOutlet weak var resetPasswordCNLabel: UILabel!
+    @IBOutlet weak var titleENLabel: UILabel!
+    @IBOutlet weak var titleCNLabel: UILabel!
     
     @IBOutlet weak var oldView: UIView!
     @IBOutlet weak var oldImageView: UIImageView!
@@ -48,8 +48,8 @@ class ResetPasswordViewController: BaseViewController {
     }
     
     private func setupLabel() {
-        resetPasswordENLabel.text = "RESET PASSWORD"
-        resetPasswordCNLabel.text = "重 置 密 碼"
+        titleENLabel.text = "RESET PASSWORD"
+        titleCNLabel.text = "重 置 密 碼"
     }
     
     private func setupButton() {

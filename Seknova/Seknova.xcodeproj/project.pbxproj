@@ -27,6 +27,8 @@
 		8876B63F293A6F19005296E1 /* AudiovisualTeachingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B63D293A6F19005296E1 /* AudiovisualTeachingViewController.xib */; };
 		88C4D23B293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4D239293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift */; };
 		88C4D23C293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C4D23A293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib */; };
+		88C4D23F293DF08200FB7C67 /* KnowMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4D23D293DF08200FB7C67 /* KnowMoreViewController.swift */; };
+		88C4D240293DF08200FB7C67 /* KnowMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C4D23E293DF08200FB7C67 /* KnowMoreViewController.xib */; };
 		88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF74828EEC93C00FE16E1 /* AppDelegate.swift */; };
 		88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF74A28EEC93C00FE16E1 /* SceneDelegate.swift */; };
 		88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CDF75128EEC93F00FE16E1 /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 		8876B63D293A6F19005296E1 /* AudiovisualTeachingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudiovisualTeachingViewController.xib; sourceTree = "<group>"; };
 		88C4D239293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpBloodSugerIndexViewController.swift; sourceTree = "<group>"; };
 		88C4D23A293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetUpBloodSugerIndexViewController.xib; sourceTree = "<group>"; };
+		88C4D23D293DF08200FB7C67 /* KnowMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowMoreViewController.swift; sourceTree = "<group>"; };
+		88C4D23E293DF08200FB7C67 /* KnowMoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowMoreViewController.xib; sourceTree = "<group>"; };
 		88CDF74528EEC93C00FE16E1 /* Seknova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seknova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CDF74828EEC93C00FE16E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88CDF74A28EEC93C00FE16E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 			children = (
 				88C4D239293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift */,
 				88C4D23A293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib */,
+				88C4D23D293DF08200FB7C67 /* KnowMoreViewController.swift */,
+				88C4D23E293DF08200FB7C67 /* KnowMoreViewController.xib */,
 			);
 			path = SetUpBloodSugerIndex;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CDF77E28EEC9EF00FE16E1 /* LoginViewController.xib in Resources */,
+				88C4D240293DF08200FB7C67 /* KnowMoreViewController.xib in Resources */,
 				88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */,
 				8876B6332930747C005296E1 /* ForgotPasswordViewController.xib in Resources */,
 				88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */,
@@ -434,6 +441,7 @@
 				8876B6282921E155005296E1 /* String+Extensions.swift in Sources */,
 				8876B6392934AB7D005296E1 /* Alert.swift in Sources */,
 				88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */,
+				88C4D23F293DF08200FB7C67 /* KnowMoreViewController.swift in Sources */,
 				88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */,
 				8876B63E293A6F19005296E1 /* AudiovisualTeachingViewController.swift in Sources */,
 				8876B6322930747C005296E1 /* ForgotPasswordViewController.swift in Sources */,

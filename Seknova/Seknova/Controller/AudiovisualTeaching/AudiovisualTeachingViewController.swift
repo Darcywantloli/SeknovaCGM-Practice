@@ -8,14 +8,14 @@
 import UIKit
 import WebKit
 
-class AudiovisualTeachingViewController: UIViewController {
+class AudiovisualTeachingViewController: BaseViewController {
 
     // MARK: - IBOutlet
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
-    @IBOutlet weak var audiovisualTeachingENLabel: UILabel!
-    @IBOutlet weak var audoivisualTeachingCNLabel: UILabel!
+    @IBOutlet weak var titleENLabel: UILabel!
+    @IBOutlet weak var titleCNLabel: UILabel!
     
     @IBOutlet weak var youtubeWebView: WKWebView!
     
@@ -29,6 +29,7 @@ class AudiovisualTeachingViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        setNavigationBar()
     }
     
     // MARK: - UI Settings
@@ -39,11 +40,11 @@ class AudiovisualTeachingViewController: UIViewController {
     }
     
     private func setupLabel() {
-        audiovisualTeachingENLabel.text = "AUDIOVISUAL TEACHING"
-        audiovisualTeachingENLabel.font = UIFont.boldSystemFont(ofSize: 30)
-        audiovisualTeachingENLabel.adjustsFontForContentSizeCategory = true
+        titleENLabel.text = "AUDIOVISUAL TEACHING"
+        titleENLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        titleENLabel.adjustsFontForContentSizeCategory = true
         
-        audoivisualTeachingCNLabel.text = "教 學 影 片"
+        titleCNLabel.text = "教 學 影 片"
     }
     
     private func setupButton() {

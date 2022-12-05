@@ -15,8 +15,8 @@ class RegisterViewController: BaseViewController {
     
     @IBOutlet weak var seknovaImageView: UIImageView!
     
-    @IBOutlet weak var registerAccountENLabel: UILabel!
-    @IBOutlet weak var registerAccountCNLabel: UILabel!
+    @IBOutlet weak var titleENLabel: UILabel!
+    @IBOutlet weak var titleCNLabel: UILabel!
     
     @IBOutlet weak var textFieldStackView: UIStackView!
     
@@ -60,8 +60,8 @@ class RegisterViewController: BaseViewController {
     }
     
     private func setupLabel() {
-        registerAccountENLabel.text = "REGISTER ACCOUNT"
-        registerAccountCNLabel.text = "註 冊 帳 號"
+        titleENLabel.text = "REGISTER ACCOUNT"
+        titleCNLabel.text = "註 冊 帳 號"
         
         // 特定範圍文字可互動
         let text = "我已閱讀並同意會員協議的條款和條件。"

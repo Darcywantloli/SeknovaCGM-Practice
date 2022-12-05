@@ -12,6 +12,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetUpBloodSugerIndexViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImageView" destination="ulS-aU-72l" id="JFS-UT-Jyz"/>
+                <outlet property="highSugerLabel" destination="UoZ-Ey-Wkb" id="L70-Rf-mr0"/>
+                <outlet property="highSugerPickerView" destination="xZ1-LK-hk0" id="idt-UC-7Ip"/>
+                <outlet property="highSugerView" destination="sjN-bU-2Wn" id="NFr-76-t6D"/>
+                <outlet property="knowMoreButton" destination="iwi-b7-duL" id="eAM-vQ-HNo"/>
+                <outlet property="lowSugerLabel" destination="lIm-4U-Eyj" id="uEP-MF-eTa"/>
+                <outlet property="lowSugerPickerView" destination="T44-b0-pC0" id="ekk-2x-gQY"/>
+                <outlet property="lowSugerView" destination="MLM-cG-tRh" id="YMo-LW-8qW"/>
+                <outlet property="saveButton" destination="OG5-cM-WgI" id="oTQ-FK-crE"/>
+                <outlet property="setHighSugerLabel" destination="1Ld-Uw-1Gs" id="mU4-9J-hw3"/>
+                <outlet property="setLowSugerLabel" destination="7Zd-4m-qSE" id="1g8-8e-O65"/>
+                <outlet property="titleENLabel" destination="hcn-F0-V6G" id="I6Z-NI-AQw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,8 +47,26 @@
                     <color key="textColor" name="NavigationBar"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLM-cG-tRh">
+                    <rect key="frame" x="52.5" y="217.5" width="270" height="24"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg/dl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIm-4U-Eyj">
+                            <rect key="frame" x="162" y="0.0" width="108" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.61568627450980395" green="0.81568627450980391" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="lIm-4U-Eyj" firstAttribute="height" secondItem="MLM-cG-tRh" secondAttribute="height" id="1be-MQ-x16"/>
+                        <constraint firstItem="lIm-4U-Eyj" firstAttribute="width" secondItem="MLM-cG-tRh" secondAttribute="width" multiplier="0.4" id="75E-4Q-ViB"/>
+                        <constraint firstItem="lIm-4U-Eyj" firstAttribute="centerY" secondItem="MLM-cG-tRh" secondAttribute="centerY" id="Er1-J4-2fN"/>
+                        <constraint firstAttribute="trailing" secondItem="lIm-4U-Eyj" secondAttribute="trailing" id="JCZ-zo-IB2"/>
+                    </constraints>
+                </view>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T44-b0-pC0">
-                    <rect key="frame" x="53" y="169" width="270" height="122"/>
+                    <rect key="frame" x="52" y="169" width="270" height="122"/>
                 </pickerView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設 定 高 血 糖 值" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ld-Uw-1Gs">
                     <rect key="frame" x="112.5" y="310.5" width="150" height="24"/>
@@ -44,19 +74,27 @@
                     <color key="textColor" name="NavigationBar"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjN-bU-2Wn">
+                    <rect key="frame" x="52.5" y="393" width="270" height="24.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg/dl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoZ-Ey-Wkb">
+                            <rect key="frame" x="162" y="0.0" width="108" height="24.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.49019607843137253" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="UoZ-Ey-Wkb" firstAttribute="width" secondItem="sjN-bU-2Wn" secondAttribute="width" multiplier="0.4" id="JoY-uW-kCv"/>
+                        <constraint firstItem="UoZ-Ey-Wkb" firstAttribute="height" secondItem="sjN-bU-2Wn" secondAttribute="height" id="O3K-wa-TCY"/>
+                        <constraint firstAttribute="trailing" secondItem="UoZ-Ey-Wkb" secondAttribute="trailing" id="Weg-vW-WTL"/>
+                        <constraint firstItem="UoZ-Ey-Wkb" firstAttribute="centerY" secondItem="sjN-bU-2Wn" secondAttribute="centerY" id="sFs-GA-TVo"/>
+                    </constraints>
+                </view>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZ1-LK-hk0">
-                    <rect key="frame" x="53" y="345" width="270" height="121"/>
+                    <rect key="frame" x="52" y="345" width="270" height="121"/>
                 </pickerView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwi-b7-duL">
-                    <rect key="frame" x="106.5" y="536.5" width="162" height="40.5"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="了解更多" cornerStyle="capsule">
-                        <backgroundConfiguration key="background" strokeWidth="5">
-                            <color key="strokeColor" name="NavigationBar"/>
-                        </backgroundConfiguration>
-                        <color key="baseForegroundColor" name="NavigationBar"/>
-                    </buttonConfiguration>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OG5-cM-WgI">
                     <rect key="frame" x="106.5" y="486" width="162" height="40.5"/>
                     <state key="normal" title="Button"/>
@@ -66,18 +104,38 @@
                         </backgroundConfiguration>
                         <color key="baseForegroundColor" name="NavigationBar"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="save:" destination="-1" eventType="touchUpInside" id="rup-xF-6dC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwi-b7-duL">
+                    <rect key="frame" x="106.5" y="536.5" width="162" height="40.5"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="了解更多" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" name="NavigationBar"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" name="NavigationBar"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="knowMore:" destination="-1" eventType="touchUpInside" id="GLr-Ml-iCl"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="iwi-b7-duL" firstAttribute="height" secondItem="OG5-cM-WgI" secondAttribute="height" id="17d-2P-0Ui"/>
+                <constraint firstItem="MLM-cG-tRh" firstAttribute="width" secondItem="T44-b0-pC0" secondAttribute="width" id="1bP-aJ-TgV"/>
+                <constraint firstItem="MLM-cG-tRh" firstAttribute="centerY" secondItem="T44-b0-pC0" secondAttribute="centerY" id="2Ei-P1-qeu"/>
                 <constraint firstItem="OG5-cM-WgI" firstAttribute="height" secondItem="hcn-F0-V6G" secondAttribute="height" id="2O3-X5-Y6q"/>
                 <constraint firstItem="1Ld-Uw-1Gs" firstAttribute="centerX" secondItem="T44-b0-pC0" secondAttribute="centerX" id="3Cb-RI-j21"/>
                 <constraint firstItem="iwi-b7-duL" firstAttribute="centerX" secondItem="OG5-cM-WgI" secondAttribute="centerX" id="7vp-kd-ocm"/>
                 <constraint firstItem="7Zd-4m-qSE" firstAttribute="top" secondItem="hcn-F0-V6G" secondAttribute="bottom" constant="10" id="C9y-VJ-bPu"/>
                 <constraint firstItem="xZ1-LK-hk0" firstAttribute="width" secondItem="hcn-F0-V6G" secondAttribute="width" multiplier="0.9" id="DnS-xY-g7z"/>
+                <constraint firstItem="MLM-cG-tRh" firstAttribute="centerX" secondItem="T44-b0-pC0" secondAttribute="centerX" id="EvL-l4-kAg"/>
                 <constraint firstItem="7Zd-4m-qSE" firstAttribute="width" secondItem="hcn-F0-V6G" secondAttribute="width" multiplier="0.5" id="FTx-Hm-8YY"/>
+                <constraint firstItem="sjN-bU-2Wn" firstAttribute="width" secondItem="xZ1-LK-hk0" secondAttribute="width" id="Fxs-rT-t7h"/>
                 <constraint firstItem="xZ1-LK-hk0" firstAttribute="height" secondItem="1Ld-Uw-1Gs" secondAttribute="height" multiplier="5" id="GYf-qf-O2B"/>
                 <constraint firstItem="OG5-cM-WgI" firstAttribute="top" secondItem="xZ1-LK-hk0" secondAttribute="bottom" constant="20" id="Grd-yV-uka"/>
                 <constraint firstItem="OG5-cM-WgI" firstAttribute="centerX" secondItem="xZ1-LK-hk0" secondAttribute="centerX" id="Kku-s4-LHB"/>
@@ -93,13 +151,17 @@
                 <constraint firstItem="T44-b0-pC0" firstAttribute="top" secondItem="7Zd-4m-qSE" secondAttribute="bottom" constant="10" id="YTO-OD-Lnr"/>
                 <constraint firstItem="ulS-aU-72l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aUI-m8-PQB"/>
                 <constraint firstItem="7Zd-4m-qSE" firstAttribute="height" secondItem="hcn-F0-V6G" secondAttribute="height" multiplier="0.6" id="b3p-kk-75l"/>
+                <constraint firstItem="sjN-bU-2Wn" firstAttribute="height" secondItem="xZ1-LK-hk0" secondAttribute="height" multiplier="0.2" id="bol-pt-ecW"/>
                 <constraint firstItem="xZ1-LK-hk0" firstAttribute="top" secondItem="1Ld-Uw-1Gs" secondAttribute="bottom" constant="10" id="cnG-SO-eCM"/>
                 <constraint firstItem="7Zd-4m-qSE" firstAttribute="centerX" secondItem="hcn-F0-V6G" secondAttribute="centerX" id="fNQ-fc-EqD"/>
                 <constraint firstItem="iwi-b7-duL" firstAttribute="width" secondItem="OG5-cM-WgI" secondAttribute="width" id="fZT-Ik-u0s"/>
+                <constraint firstItem="sjN-bU-2Wn" firstAttribute="centerX" secondItem="xZ1-LK-hk0" secondAttribute="centerX" id="h5m-MU-VuC"/>
                 <constraint firstItem="hcn-F0-V6G" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.065" id="hWF-al-u5m"/>
                 <constraint firstItem="ulS-aU-72l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jy3-VG-2s8"/>
                 <constraint firstItem="T44-b0-pC0" firstAttribute="width" secondItem="hcn-F0-V6G" secondAttribute="width" multiplier="0.9" id="nix-hq-HrN"/>
+                <constraint firstItem="MLM-cG-tRh" firstAttribute="height" secondItem="T44-b0-pC0" secondAttribute="height" multiplier="0.2" id="oeR-ff-9wD"/>
                 <constraint firstItem="iwi-b7-duL" firstAttribute="top" secondItem="OG5-cM-WgI" secondAttribute="bottom" constant="10" id="p2B-0w-L3U"/>
+                <constraint firstItem="sjN-bU-2Wn" firstAttribute="centerY" secondItem="xZ1-LK-hk0" secondAttribute="centerY" id="vPT-hp-eee"/>
                 <constraint firstItem="xZ1-LK-hk0" firstAttribute="centerX" secondItem="1Ld-Uw-1Gs" secondAttribute="centerX" id="yJj-lK-fxY"/>
                 <constraint firstItem="OG5-cM-WgI" firstAttribute="width" secondItem="xZ1-LK-hk0" secondAttribute="width" multiplier="0.6" id="yOJ-1E-enu"/>
                 <constraint firstItem="1Ld-Uw-1Gs" firstAttribute="width" secondItem="7Zd-4m-qSE" secondAttribute="width" id="yPs-uf-Aoi"/>

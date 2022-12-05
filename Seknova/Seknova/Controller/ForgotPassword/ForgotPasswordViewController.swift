@@ -14,8 +14,8 @@ class ForgotPasswordViewController: BaseViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var seknovaImageView: UIImageView!
     
-    @IBOutlet weak var forgotPasswordENLabel: UILabel!
-    @IBOutlet weak var forgotPasswordCNLabel: UILabel!
+    @IBOutlet weak var titleENLabel: UILabel!
+    @IBOutlet weak var titleCNLabel: UILabel!
     
     @IBOutlet weak var sendButton: UIButton!
     
@@ -49,8 +49,8 @@ class ForgotPasswordViewController: BaseViewController {
     }
     
     private func setupLabel() {
-        forgotPasswordENLabel.text = "FORGOT PASSWORD"
-        forgotPasswordCNLabel.text = "忘 記 密 碼"
+        titleENLabel.text = "FORGOT PASSWORD"
+        titleCNLabel.text = "忘 記 密 碼"
         
         enterEmailLabel.text = "請輸入您的Email"
     }

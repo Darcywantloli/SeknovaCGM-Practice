@@ -19,6 +19,8 @@ class UserPreference {
         case email
         case password
         case firstLogin
+        case lowSuger
+        case highSuger
     }
     
     var email: String {
@@ -34,5 +36,15 @@ class UserPreference {
     var firstLogin: Bool {
         get { return userPreference.bool(forKey: Preference.firstLogin.rawValue) }
         set { return userPreference.set(newValue, forKey: Preference.firstLogin.rawValue) }
+    }
+    
+    var lowSuger: Int {
+        get { return userPreference.integer(forKey: Preference.lowSuger.rawValue) }
+        set { return userPreference.set(newValue, forKey: Preference.lowSuger.rawValue) }
+    }
+    
+    var highSuger: Int {
+        get { return userPreference.integer(forKey: Preference.highSuger.rawValue) }
+        set { return userPreference.set(newValue, forKey: Preference.highSuger.rawValue) }
     }
 }

@@ -14,8 +14,8 @@ class VerifyViewController: BaseViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var seknovaImageView: UIImageView!
     
-    @IBOutlet weak var activatedAccountENLabel: UILabel!
-    @IBOutlet weak var activatedAccountCNLabel: UILabel!
+    @IBOutlet weak var titleENLabel: UILabel!
+    @IBOutlet weak var titleCNLabel: UILabel!
     
     @IBOutlet weak var checkEmailLabel: UILabel!
 
@@ -41,8 +41,8 @@ class VerifyViewController: BaseViewController {
     }
     
     private func setupLabel() {
-        activatedAccountENLabel.text = "Activated Account"
-        activatedAccountCNLabel.text = "開 通 帳 號"
+        titleENLabel.text = "Activated Account"
+        titleCNLabel.text = "開 通 帳 號"
         
         checkEmailLabel.text = "請到信箱點選認證信開通帳號"
     }

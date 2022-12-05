@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,12 +16,12 @@
                 <outlet property="countryTextField" destination="0ye-gp-BpA" id="HIC-qW-xxM"/>
                 <outlet property="enterPasswordAgainTextField" destination="QDP-SN-9uP" id="RiM-AT-G2t"/>
                 <outlet property="passwordTextField" destination="B87-Ls-lQa" id="kIl-14-9Oy"/>
-                <outlet property="registerAccountCNLabel" destination="Gku-Ga-LFo" id="X67-Vp-AFh"/>
-                <outlet property="registerAccountENLabel" destination="KtL-Ml-G67" id="tzS-rW-4cz"/>
                 <outlet property="registerButton" destination="cyI-0b-aZ2" id="snu-37-Yuv"/>
                 <outlet property="seknovaImageView" destination="Ksi-0l-UjE" id="q3u-U0-m2q"/>
                 <outlet property="termsLabel" destination="Njw-tD-H4f" id="1wv-tq-hUP"/>
                 <outlet property="textFieldStackView" destination="ufb-8Z-Wwt" id="eZl-XC-Ear"/>
+                <outlet property="titleCNLabel" destination="Gku-Ga-LFo" id="X67-Vp-AFh"/>
+                <outlet property="titleENLabel" destination="KtL-Ml-G67" id="tzS-rW-4cz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -48,13 +46,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="註 冊 帳 號" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gku-Ga-LFo">
-                    <rect key="frame" x="94" y="134" width="187.5" height="36"/>
+                    <rect key="frame" x="93.666666666666671" y="134" width="187.66666666666663" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" name="NavigationBar"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-8Z-Wwt">
-                    <rect key="frame" x="37.5" y="190" width="300" height="146.5"/>
+                    <rect key="frame" x="37.666666666666657" y="190" width="300" height="146.66666666666663"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="電子郵件" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E0o-0V-wxZ">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="49"/>
@@ -62,12 +60,12 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密碼(8到16字元，須包含大小寫及數字)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B87-Ls-lQa">
-                            <rect key="frame" x="0.0" y="49" width="300" height="49"/>
+                            <rect key="frame" x="0.0" y="49" width="300" height="48.666666666666657"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="再一次輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QDP-SN-9uP">
-                            <rect key="frame" x="0.0" y="98" width="300" height="48.5"/>
+                            <rect key="frame" x="0.0" y="97.666666666666686" width="300" height="49"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
@@ -88,15 +86,15 @@
                     </constraints>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pickerBg" translatesAutoresizingMaskIntoConstraints="NO" id="snJ-PV-GDv">
-                    <rect key="frame" x="38" y="356.5" width="299" height="36"/>
+                    <rect key="frame" x="38" y="356.66666666666669" width="299" height="36"/>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="0ye-gp-BpA">
-                    <rect key="frame" x="45" y="356.5" width="285" height="36"/>
+                    <rect key="frame" x="45" y="356.66666666666669" width="285" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyI-0b-aZ2">
-                    <rect key="frame" x="73.5" y="593.5" width="228" height="43.5"/>
+                    <rect key="frame" x="73.666666666666686" y="593.66666666666663" width="228" height="43.333333333333371"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="註冊" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="5">
@@ -109,7 +107,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjA-tu-V2y">
-                    <rect key="frame" x="43" y="415.5" width="10.5" height="10.5"/>
+                    <rect key="frame" x="43" y="415.33333333333331" width="10.666666666666664" height="10.666666666666686"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="IjA-tu-V2y" secondAttribute="height" multiplier="1:1" id="jYO-r0-gqm"/>
                     </constraints>
@@ -124,7 +122,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我已閱讀並同意會員協議的條款和條件。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njw-tD-H4f">
-                    <rect key="frame" x="58.5" y="402.5" width="269.5" height="36"/>
+                    <rect key="frame" x="58.666666666666657" y="402.66666666666669" width="269.33333333333337" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

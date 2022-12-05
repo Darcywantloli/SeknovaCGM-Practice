@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudiovisualTeachingViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
-                <outlet property="audiovisualTeachingENLabel" destination="MgN-2q-aiN" id="pbc-h9-Pid"/>
-                <outlet property="audoivisualTeachingCNLabel" destination="JEI-46-yyo" id="Wxa-vW-YP9"/>
                 <outlet property="backgroundImageView" destination="0u7-vt-nj3" id="9Vf-gQ-9Et"/>
                 <outlet property="nextStepButton" destination="kh4-AC-524" id="uUi-r3-sih"/>
+                <outlet property="titleCNLabel" destination="JEI-46-yyo" id="Wxa-vW-YP9"/>
+                <outlet property="titleENLabel" destination="MgN-2q-aiN" id="pbc-h9-Pid"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="youtubeWebView" destination="rmM-Si-l1b" id="DPl-DL-jrl"/>
             </connections>
