@@ -107,6 +107,7 @@ class LoginViewController: BaseViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 indicatorView.stopAnimating()
                 UserPreference.shared.firstLogin = false
+                indicatorView.removeFromSuperview()
                 self.navigationController?.pushViewController(AgreementViewController(), animated: true)
             }
         } else if UserPreference.shared.firstLogin == false {
@@ -114,6 +115,7 @@ class LoginViewController: BaseViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 indicatorView.stopAnimating()
+                indicatorView.removeFromSuperview()
                 self.navigationController?.pushViewController(VerifyViewController(),
                                                               animated: true)
             }

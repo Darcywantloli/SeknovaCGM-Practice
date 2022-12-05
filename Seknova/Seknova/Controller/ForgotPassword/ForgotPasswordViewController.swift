@@ -67,15 +67,21 @@ class ForgotPasswordViewController: BaseViewController {
     
     // 帳號判斷
     @IBAction func sendOut(_ sender: Any) {
-        if enterEmailTextField.text != UserPreference.shared.email ||
-            enterEmailTextField.text == "" {
+        if enterEmailTextField.text == "" {
             Alert.showAlertWith(title: "錯誤",
                                 message: "請輸入正確的郵箱",
                                 vc: self,
                                 confirmTitle: "確認")
-        } else {
+        }
+        
+        if enterEmailTextField.text?.regularExpression(type: .email) == true {
             self.navigationController?.pushViewController(ResetPasswordViewController(),
                                                           animated: true)
+        } else {
+            Alert.showAlertWith(title: "錯誤",
+                                message: "請輸入正確的郵箱",
+                                vc: self,
+                                confirmTitle: "確認")
         }
     }
 }
