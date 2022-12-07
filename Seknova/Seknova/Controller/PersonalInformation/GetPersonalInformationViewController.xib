@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GetPersonalInformationViewController" customModule="Seknova" customModuleProvider="target">
+            <connections>
+                <outlet property="informationTableView" destination="R26-gq-wkd" id="o7Y-V5-O1V"/>
+                <outlet property="nextStepButton" destination="1z8-c5-g6z" id="cMD-Sp-RT6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R26-gq-wkd">
+                    <rect key="frame" x="0.0" y="44" width="375" height="549.5"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1z8-c5-g6z">
+                    <rect key="frame" x="94" y="603.5" width="187.5" height="43.5"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="下一步" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" name="NavigationBar"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" name="NavigationBar"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="next:" destination="-1" eventType="touchUpInside" id="Mi6-4K-Mdr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1z8-c5-g6z" firstAttribute="centerX" secondItem="R26-gq-wkd" secondAttribute="centerX" id="1Z7-Yz-Wgi"/>
+                <constraint firstItem="1z8-c5-g6z" firstAttribute="top" secondItem="R26-gq-wkd" secondAttribute="bottom" constant="10" id="6IP-y4-ckJ"/>
+                <constraint firstItem="1z8-c5-g6z" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="E2r-oi-vKZ"/>
+                <constraint firstItem="R26-gq-wkd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="L8O-U7-hoM"/>
+                <constraint firstItem="R26-gq-wkd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VyN-ch-mi7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1z8-c5-g6z" secondAttribute="bottom" constant="20" id="abq-Wi-hNK"/>
+                <constraint firstItem="1z8-c5-g6z" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="oA6-1v-jdC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R26-gq-wkd" secondAttribute="trailing" id="xWO-Uq-fhe"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="-77" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NavigationBar">
+            <color red="0.75686274509803919" green="0.058823529411764705" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

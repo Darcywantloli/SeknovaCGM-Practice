@@ -57,6 +57,9 @@ class SetUpBloodSugerIndexViewController: BaseViewController {
     
     private func setupLabel() {
         titleENLabel.text = "SET UP BLOOD SUGER INDEX"
+        titleENLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        titleENLabel.adjustsFontForContentSizeCategory = true
+        
         lowSugerLabel.text = "mg/dl"
         highSugerLabel.text = "mg/dl"
     }
@@ -83,7 +86,8 @@ class SetUpBloodSugerIndexViewController: BaseViewController {
         UserPreference.shared.lowSuger = selectLowSuger
         UserPreference.shared.highSuger = selectHighSuger
         
-//        self.navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+        self.navigationController?.pushViewController(GetPersonalInformationViewController(),
+                                                      animated: true)
     }
     
     @IBAction func knowMore(_ sender: Any) {
