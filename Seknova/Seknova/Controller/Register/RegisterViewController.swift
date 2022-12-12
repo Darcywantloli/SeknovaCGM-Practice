@@ -103,10 +103,6 @@ class RegisterViewController: BaseViewController {
     }
     
     private func setupTextField() {
-        accountTextField.delegate = self
-        passwordTextField.delegate = self
-        enterPasswordAgainTextField.delegate = self
-        
         accountTextField.placeholder = "電子郵件"
         passwordTextField.placeholder = "密碼(8到16字元，須包含大小寫及數字)"
         enterPasswordAgainTextField.placeholder = "再一次輸入密碼"
@@ -244,17 +240,6 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
                     didSelectRow row: Int,
                     inComponent component: Int) {
         choosedCountry = countrys[row]
-    }
-}
-
-    // MARK: - UITextFieldDelegate
-
-extension RegisterViewController: UITextFieldDelegate {
-    
-    // UITextFieldDelegate
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
 }
 

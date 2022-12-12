@@ -7,13 +7,13 @@
 
 import UIKit
 
-class TextFieldTableViewCell: UITableViewCell {
+class PersonalTextFieldTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var informationTextField: UITextField!
     
-    static let identifier = "TextFieldTableViewCell"
+    static let identifier = "PersonalTextFieldTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +23,7 @@ class TextFieldTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
     
 }

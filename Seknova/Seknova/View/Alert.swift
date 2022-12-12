@@ -25,28 +25,27 @@ class Alert {
         }
     }
     
-    static func showActionSheetWith (title: String,
-                                     message: String,
+    static func showActionSheetWith (names: [String],
                                      vc: UIViewController,
-                                     names: [String],
-                                     confirmTitle: String,
                                      confirm: ((Int) -> Void)? = nil) {
         DispatchQueue.main.async {
-            let alertController = UIAlertController(title: title,
-                                                    message: message,
+            let alertController = UIAlertController(title: nil,
+                                                    message: nil,
                                                     preferredStyle: .actionSheet)
+            
             for name in names {
                 let action = UIAlertAction(title: name, style: .default) { action in
                     let index = names.firstIndex(of: name)
                     confirm?(index!)
                 }
+//                action.setValue(UIColor.navigationBar, forKey: "titleColor")
                 alertController.addAction(action)
             }
             
             let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            
             alertController.addAction(cancelAction)
             vc.present(alertController, animated: true)
         }
-        
     }
 }

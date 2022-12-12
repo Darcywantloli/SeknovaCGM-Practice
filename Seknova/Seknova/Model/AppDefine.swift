@@ -49,6 +49,23 @@ class AppDefine {
                 return "抽菸"
             }
         }
+        
+        var array: [String] {
+            switch self {
+            case .gender:
+                return ["生理男", "生理女"]
+            case .height:
+                return []
+            case .weight:
+                return []
+            case .race:
+                return ["亞洲", "非洲", "高加索", "拉丁", "其他"]
+            case .drink:
+                return ["無", "偶爾", "頻繁", "每天"]
+            case .smoke:
+                return ["有", "無"]
+            }
+        }
     }
     
 }

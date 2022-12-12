@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        IQKeyboardManager.shared.enable = true // 全域啟動 IQKeyboardManager
+        IQKeyboardManager.shared.enableAutoToolbar = true // 顯示工具列
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true // 點空白處關鍵盤
+        
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor.navigationBar
+        
         return true
     }
 

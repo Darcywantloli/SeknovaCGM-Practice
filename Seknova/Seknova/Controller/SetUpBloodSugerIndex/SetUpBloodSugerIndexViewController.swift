@@ -60,8 +60,8 @@ class SetUpBloodSugerIndexViewController: BaseViewController {
         titleENLabel.font = UIFont.boldSystemFont(ofSize: 30)
         titleENLabel.adjustsFontForContentSizeCategory = true
         
-        lowSugerLabel.text = "mg/dl"
-        highSugerLabel.text = "mg/dl"
+        lowSugerLabel.text = "mg/dL"
+        highSugerLabel.text = "mg/dL"
     }
     
     private func setupButton() {
@@ -86,30 +86,27 @@ class SetUpBloodSugerIndexViewController: BaseViewController {
         UserPreference.shared.lowSuger = selectLowSuger
         UserPreference.shared.highSuger = selectHighSuger
         
-        self.navigationController?.pushViewController(GetPersonalInformationViewController(),
-                                                      animated: true)
+        let nextVC = GetPersonalInformationViewController()
+        
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @IBAction func knowMore(_ sender: Any) {
         let popupVC = KnowMoreViewController()
-        let popWidth = knowMoreButton.frame.width
-        let popHeight = knowMoreButton.frame.height
+        let popWidth = view.bounds.width
         
         popupVC.modalPresentationStyle = .popover
         popupVC.popoverPresentationController?.delegate = self
         popupVC.popoverPresentationController?.sourceView = knowMoreButton
-        popupVC.popoverPresentationController?.sourceRect = CGRect(x: 0,
-                                                                   y: 0,
-                                                                   width: popWidth,
-                                                                   height: popHeight)
-        popupVC.preferredContentSize = CGSize(width: popWidth * 1.2,
-                                              height: popHeight * 4)
+        popupVC.popoverPresentationController?.sourceRect = knowMoreButton.bounds
+        popupVC.preferredContentSize = CGSize(width: popWidth, height: 200)
 
         present(popupVC, animated: true)
     }
 }
 
-    // MARK: - Extension
+// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
+
 extension SetUpBloodSugerIndexViewController: UIPickerViewDelegate,
                                               UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -150,6 +147,8 @@ extension SetUpBloodSugerIndexViewController: UIPickerViewDelegate,
     }
 }
 
+// MARK: - UIPopoverPresentationControllerDelegate
+
 extension SetUpBloodSugerIndexViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController,
                                    traitCollection: UITraitCollection) -> UIModalPresentationStyle {
@@ -157,4 +156,4 @@ extension SetUpBloodSugerIndexViewController: UIPopoverPresentationControllerDel
     }
 }
 
-    // MARK: - Protocol
+// MARK: - Protocol

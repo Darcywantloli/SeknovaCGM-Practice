@@ -9,8 +9,6 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    // MARK: - Variables
-    
     // NavigationBar樣式
     func setNavigationBar() {
         let appearance = UINavigationBarAppearance()
@@ -24,16 +22,10 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.standardAppearance = appearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
-    
-    func closeKeyboardWhenTapped() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func closeKeyboard() {
-        view.endEditing(true)
-    }
 }
+
 // MARK: - Extensions
+
+
 
 // MARK: - Protocol

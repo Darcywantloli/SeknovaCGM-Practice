@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ActionSheetTableViewCell: UITableViewCell {
+class PersonalActionSheetTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var informationLabel: UILabel!
     
-    static let identifier = "ActionSheetTableViewCell"
+    static let identifier = "PersonalActionSheetTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()

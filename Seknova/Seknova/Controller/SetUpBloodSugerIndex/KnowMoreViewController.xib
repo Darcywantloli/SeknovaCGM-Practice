@@ -40,7 +40,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AS-oy-iod">
-                            <rect key="frame" x="93.666666666666671" y="116" width="187.66666666666663" height="35"/>
+                            <rect key="frame" x="37.666666666666657" y="116" width="300" height="35"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="確認" cornerStyle="capsule">
                                 <backgroundConfiguration key="background" strokeWidth="5">
@@ -56,7 +56,7 @@
                     <constraints>
                         <constraint firstItem="PDm-XS-2Bc" firstAttribute="top" secondItem="dZt-72-c8z" secondAttribute="top" id="63c-dm-R8q"/>
                         <constraint firstItem="6AS-oy-iod" firstAttribute="bottom" secondItem="dZt-72-c8z" secondAttribute="bottom" id="7rM-u8-bZO"/>
-                        <constraint firstItem="6AS-oy-iod" firstAttribute="width" secondItem="PDm-XS-2Bc" secondAttribute="width" multiplier="0.5" id="Kb0-7V-YBf"/>
+                        <constraint firstItem="6AS-oy-iod" firstAttribute="width" secondItem="PDm-XS-2Bc" secondAttribute="width" multiplier="0.8" id="Kb0-7V-YBf"/>
                         <constraint firstItem="PDm-XS-2Bc" firstAttribute="leading" secondItem="HJS-ai-mkf" secondAttribute="leading" id="OF0-LR-PH2"/>
                         <constraint firstItem="6AS-oy-iod" firstAttribute="height" secondItem="PDm-XS-2Bc" secondAttribute="height" id="Qou-qw-Vau"/>
                         <constraint firstItem="HJS-ai-mkf" firstAttribute="trailing" secondItem="EZu-nn-kLh" secondAttribute="trailing" id="UnC-oE-q7T"/>

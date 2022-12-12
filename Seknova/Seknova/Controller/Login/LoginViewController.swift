@@ -95,7 +95,7 @@ class LoginViewController: BaseViewController {
     
     // 登入
     @IBAction func login(_ sender: Any) {
-        let indicatorView = activityIndicator(style: .large, center: self.view.center)
+        let indicatorView = activityIndicator(center: self.view.center)
         
         self.view.addSubview(indicatorView)
         
@@ -116,7 +116,7 @@ class LoginViewController: BaseViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 indicatorView.stopAnimating()
                 indicatorView.removeFromSuperview()
-                self.navigationController?.pushViewController(VerifyViewController(),
+                self.navigationController?.pushViewController(GetPersonalInformationViewController(),
                                                               animated: true)
             }
         } else {
