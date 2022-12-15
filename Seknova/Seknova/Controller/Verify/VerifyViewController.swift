@@ -66,6 +66,6 @@ class VerifyViewController: BaseViewController {
     }
 }
 
-    // MARK: - Extensions
+// MARK: - Extensions
 
-    // MARK: - Protocol
+// MARK: - Protocol

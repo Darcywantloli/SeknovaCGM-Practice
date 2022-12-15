@@ -216,7 +216,7 @@ class RegisterViewController: BaseViewController {
     }
 }
 
-    // MARK: - UIPickerViewDelegate, UIPickerViewDataSource
+// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 
 extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -243,7 +243,7 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
-    // MARK: - UIPopoverPresentationControllerDelegate
+// MARK: - UIPopoverPresentationControllerDelegate
 
 extension RegisterViewController: UIPopoverPresentationControllerDelegate {
     
@@ -254,4 +254,4 @@ extension RegisterViewController: UIPopoverPresentationControllerDelegate {
     }
 }
 
-    // MARK: - Protocol
+// MARK: - Protocol

@@ -8,7 +8,6 @@
 import Foundation
 
 class AppDefine {
-
     enum PersonalInformation: Int, CaseIterable {
         case firstName = 0, lastName, birthday, email, phone, address
         
@@ -29,9 +28,9 @@ class AppDefine {
             }
         }
     }
-    
+
     enum BodyInformation: Int, CaseIterable {
-        case gender = 0, height, weight, race, drink, smoke
+        case gender = 0, height, weight, race, liquor, smoke
         
         var title: String {
             switch self {
@@ -43,7 +42,7 @@ class AppDefine {
                 return "體重"
             case .race:
                 return "種族"
-            case .drink:
+            case .liquor:
                 return "飲酒"
             case .smoke:
                 return "抽菸"
@@ -60,12 +59,11 @@ class AppDefine {
                 return []
             case .race:
                 return ["亞洲", "非洲", "高加索", "拉丁", "其他"]
-            case .drink:
+            case .liquor:
                 return ["無", "偶爾", "頻繁", "每天"]
             case .smoke:
                 return ["有", "無"]
             }
         }
     }
-    
 }

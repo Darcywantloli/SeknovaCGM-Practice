@@ -26,6 +26,4 @@ class BaseViewController: UIViewController {
 
 // MARK: - Extensions
 
-
-
 // MARK: - Protocol

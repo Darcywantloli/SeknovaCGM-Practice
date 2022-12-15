@@ -43,7 +43,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="1z8-c5-g6z" firstAttribute="centerX" secondItem="R26-gq-wkd" secondAttribute="centerX" id="1Z7-Yz-Wgi"/>
-                <constraint firstItem="1z8-c5-g6z" firstAttribute="top" secondItem="R26-gq-wkd" secondAttribute="bottom" constant="10" id="6IP-y4-ckJ"/>
+                <constraint firstItem="1z8-c5-g6z" firstAttribute="top" secondItem="R26-gq-wkd" secondAttribute="bottom" constant="10" id="2JJ-zD-fMr"/>
                 <constraint firstItem="1z8-c5-g6z" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="E2r-oi-vKZ"/>
                 <constraint firstItem="R26-gq-wkd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="L8O-U7-hoM"/>
                 <constraint firstItem="R26-gq-wkd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VyN-ch-mi7"/>

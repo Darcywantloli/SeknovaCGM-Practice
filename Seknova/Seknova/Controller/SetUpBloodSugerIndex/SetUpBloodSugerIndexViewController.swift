@@ -55,6 +55,14 @@ class SetUpBloodSugerIndexViewController: BaseViewController {
         setupPickerView()
     }
     
+    private func setupView() {
+        lowSugerView.layer.shadowOpacity = 0.5
+        lowSugerView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        
+        highSugerView.layer.shadowOpacity = 0.5
+        highSugerView.layer.shadowOffset = CGSize(width: 0, height: 0)
+    }
+    
     private func setupLabel() {
         titleENLabel.text = "SET UP BLOOD SUGER INDEX"
         titleENLabel.font = UIFont.boldSystemFont(ofSize: 30)

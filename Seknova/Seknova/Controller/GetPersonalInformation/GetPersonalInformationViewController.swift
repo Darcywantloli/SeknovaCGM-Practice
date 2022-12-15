@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GetPersonalInformationViewController: BaseViewController {
     
@@ -18,6 +19,9 @@ class GetPersonalInformationViewController: BaseViewController {
     // MARK: - Variables
     
     var info: [String] = ["", "", "", "", "", "", "", "", "", "", "", ""]
+    
+    var datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    var toolBar = UIToolbar()
     
     // MARK: - LifeCycle
     
@@ -53,12 +57,96 @@ class GetPersonalInformationViewController: BaseViewController {
                                       forCellReuseIdentifier: PersonalActionSheetTableViewCell.identifier)
     }
     
+    private func setupDatePicker() {
+        var height = self.view.bounds.height
+        var width = self.view.bounds.width
+        var calendar = Calendar.current
+        
+        let year = calendar.component(.year, from: Date())
+        let month = calendar.component(.month, from: Date())
+        let day = calendar.component(.day, from: Date())
+        
+        let dateComponents = DateComponents(calendar: Calendar.current, year: year, month: month, day: day)
+        
+        let doneButton = UIBarButtonItem(title: "完成",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(selectDate))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                    target: nil,
+                                    action: nil)
+        
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.sizeToFit()
+        toolBar.barTintColor = .white
+        toolBar.setItems([space, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        toolBar.frame = CGRect(x: 0, y: height - 250, width: width, height: 50)
+        
+        var frame = CGRect(x: 0, y: height - 200, width: width, height: 200)
+        
+        var dateFormat = DateFormatter()
+        
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.backgroundColor = .white
+        datePicker.datePickerMode = .date
+        datePicker.maximumDate = dateComponents.date
+        datePicker.locale = Locale(identifier: "zh_TW")
+        datePicker.frame = frame
+        datePicker.date = Date()
+        
+        dateFormat.dateFormat = "yyyy/MM/dd"
+
+        view.addSubview(toolBar)
+        view.addSubview(datePicker)
+    }
+    
     // MARK: - IBAction
     
     @IBAction func next(_ sender: Any) {
+        var saveData = true
+        for data in 0...11 {
+            if info[data] == "" && data != 4 && data != 5{
+                saveData = false
+            }
+        }
         
+        if saveData {
+            var userInformation = UserInformationTable()
+            
+            userInformation.UserID = info[3]
+            userInformation.FirstName = info[0]
+            userInformation.LastName = info[1]
+            userInformation.Birthday = info[2]
+            userInformation.Email = info[3]
+            userInformation.Phone = info[4]
+            userInformation.Address = info[5]
+            userInformation.Gender = info[6]
+            userInformation.Height = Int(info[7]) ?? 0
+            userInformation.Weight = Int(info[8]) ?? 0
+            userInformation.Race = info[9]
+            userInformation.Liquor = info[10]
+            userInformation.Smoke = info[11]
+            
+            LocalDatabase.shared.addUserInformation(userInformation: userInformation)
+        } else {
+            Alert.showAlertWith(title: "錯誤", message: "請輸入資料", vc: self, confirmTitle: "確認")
+        }
     }
     
+    @objc func selectDate() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+       
+        let birthday = formatter.string(from: datePicker.date)
+        info[2] = birthday
+        
+        informationTableView.reloadData()
+        
+        datePicker.removeFromSuperview()
+        toolBar.removeFromSuperview()
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -92,6 +180,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row]
                 cell.informationTextField.placeholder = "點擊進行編輯"
+                cell.informationTextField.delegate = self
+                cell.informationTextField.tag = indexPath.row
                 
                 return cell
             case .lastName:
@@ -101,6 +191,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row]
                 cell.informationTextField.placeholder = "點擊進行編輯"
+                cell.informationTextField.delegate = self
+                cell.informationTextField.tag = indexPath.row
                 
                 return cell
             case .birthday:
@@ -113,11 +205,12 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .email:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalActionSheetTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalActionSheetTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalTextFieldTableViewCell.identifier,
+                                                         for: indexPath) as! PersonalTextFieldTableViewCell
                 
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
-                cell.informationLabel.text = info[indexPath.row]
+                cell.informationTextField.text = info[indexPath.row]
+                cell.informationTextField.isEnabled = false
                 
                 return cell
             case .phone:
@@ -128,6 +221,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 cell.informationTextField.text = info[indexPath.row]
                 cell.informationTextField.placeholder = "點擊進行編輯"
                 cell.informationTextField.keyboardType = .numberPad
+                cell.informationTextField.delegate = self
+                cell.informationTextField.tag = indexPath.row
                 
                 return cell
             case .address:
@@ -137,6 +232,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row]
                 cell.informationTextField.placeholder = "點擊進行編輯"
+                cell.informationTextField.delegate = self
+                cell.informationTextField.tag = indexPath.row
                 
                 return cell
             }
@@ -159,6 +256,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 cell.informationTextField.text = info[indexPath.row + 6]
                 cell.informationTextField.placeholder = "點擊進行編輯"
                 cell.informationTextField.keyboardType = .numberPad
+                cell.informationTextField.delegate = self
+                cell.informationTextField.tag = indexPath.row + 6
                 
                 return cell
             case .weight:
@@ -169,6 +268,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 cell.informationTextField.text = info[indexPath.row + 6]
                 cell.informationTextField.placeholder = "點擊進行編輯"
                 cell.informationTextField.keyboardType = .numberPad
+                cell.informationTextField.delegate = self
+                cell.informationTextField.tag = indexPath.row + 6
                 
                 return cell
             case .race:
@@ -180,7 +281,7 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 cell.accessoryView = imageView
                 
                 return cell
-            case .drink:
+            case .liquor:
                 let cell = tableView.dequeueReusableCell(withIdentifier: PersonalActionSheetTableViewCell.identifier,
                                                          for: indexPath) as! PersonalActionSheetTableViewCell
                 
@@ -223,7 +324,7 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
         if indexPath.section == 0 {
             switch AppDefine.PersonalInformation.allCases[indexPath.row] {
             case .birthday:
-                print("生日")
+                setupDatePicker()
             default:
                 return
             }
@@ -245,7 +346,7 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                         tableView.reloadData()
                     }
                 }
-            case .drink:
+            case .liquor:
                 Alert.showActionSheetWith(names: AppDefine.BodyInformation.allCases[indexPath.row].array,
                                           vc: self) { response in
                     self.info[indexPath.row + 6] = AppDefine.BodyInformation.allCases[indexPath.row].array[response]
@@ -268,5 +369,12 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
     }
 }
 
+// MARK: - UITextViewDelegate
+
+extension GetPersonalInformationViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        info[textField.tag] = textField.text!
+    }
+}
 
 // MARK: - Protocol

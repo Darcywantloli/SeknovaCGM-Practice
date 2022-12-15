@@ -86,6 +86,6 @@ class ForgotPasswordViewController: BaseViewController {
     }
 }
 
-    // MARK: - Extension
+// MARK: - Extension
 
-    // MARK: - Protocol
+// MARK: - Protocol

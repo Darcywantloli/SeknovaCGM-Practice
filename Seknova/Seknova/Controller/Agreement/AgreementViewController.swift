@@ -63,6 +63,6 @@ class AgreementViewController: BaseViewController {
     }
 }
 
-    // MARK: - Extension
+// MARK: - Extension
 
-    // MARK: - Protocol
+// MARK: - Protocol
