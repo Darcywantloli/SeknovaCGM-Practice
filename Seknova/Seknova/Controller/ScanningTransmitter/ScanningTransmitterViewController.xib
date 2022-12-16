@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanningTransmitterViewController" customModule="Seknova" customModuleProvider="target">
+            <connections>
+                <outlet property="QRCodeScanButton" destination="C96-9d-IPA" id="AeB-Xm-Ceo"/>
+                <outlet property="backButton" destination="ymG-2d-nFF" id="ujW-AV-QA7"/>
+                <outlet property="backgroundImageView" destination="2hv-wg-zhz" id="LbY-xN-ULP"/>
+                <outlet property="enterWithTextButton" destination="hBI-2S-khj" id="KIR-RD-jlt"/>
+                <outlet property="showQRCodeView" destination="x28-fw-jMT" id="eQO-Yk-BuQ"/>
+                <outlet property="transmitterAImageView" destination="RSs-mc-Zgv" id="cuA-vP-sda"/>
+                <outlet property="transmitterBImageView" destination="lLl-Hf-IuM" id="xed-GT-hYD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background5" translatesAutoresizingMaskIntoConstraints="NO" id="2hv-wg-zhz">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CGMTransmitter" translatesAutoresizingMaskIntoConstraints="NO" id="RSs-mc-Zgv">
+                    <rect key="frame" x="109" y="104" width="157.5" height="124.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="RSs-mc-Zgv" secondAttribute="height" multiplier="224:177" id="PP2-zO-kYY"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CGMTransmitterB" translatesAutoresizingMaskIntoConstraints="NO" id="lLl-Hf-IuM">
+                    <rect key="frame" x="93" y="248.5" width="189" height="149.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lLl-Hf-IuM" secondAttribute="height" multiplier="224:177" id="KkD-c0-ewz"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBI-2S-khj">
+                    <rect key="frame" x="75" y="476" width="225" height="43.5"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="文字輸入" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" name="NavigationBar"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" name="NavigationBar"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="enterWithText:" destination="-1" eventType="touchUpInside" id="0gz-Uz-WUu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymG-2d-nFF">
+                    <rect key="frame" x="75" y="529.5" width="225" height="43.5"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="返回" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" name="NavigationBar"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" name="NavigationBar"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="backToLogin:" destination="-1" eventType="touchUpInside" id="F95-Of-QsO"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x28-fw-jMT">
+                    <rect key="frame" x="75" y="128" width="225" height="225"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="x28-fw-jMT" secondAttribute="height" multiplier="1:1" id="H9A-9H-B5S"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C96-9d-IPA">
+                    <rect key="frame" x="75" y="423" width="225" height="43"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="QR 掃描" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" name="NavigationBar"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" name="NavigationBar"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="scanQRCode:" destination="-1" eventType="touchUpInside" id="dMe-7M-sMq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hBI-2S-khj" firstAttribute="width" secondItem="C96-9d-IPA" secondAttribute="width" id="05E-WE-ueV"/>
+                <constraint firstItem="ymG-2d-nFF" firstAttribute="width" secondItem="hBI-2S-khj" secondAttribute="width" id="0CL-yP-E8e"/>
+                <constraint firstItem="lLl-Hf-IuM" firstAttribute="centerX" secondItem="RSs-mc-Zgv" secondAttribute="centerX" id="7zd-xQ-5R7"/>
+                <constraint firstItem="x28-fw-jMT" firstAttribute="width" secondItem="C96-9d-IPA" secondAttribute="width" id="FKv-r9-NQz"/>
+                <constraint firstItem="x28-fw-jMT" firstAttribute="centerX" secondItem="C96-9d-IPA" secondAttribute="centerX" id="I76-uz-Dbx"/>
+                <constraint firstItem="ymG-2d-nFF" firstAttribute="height" secondItem="hBI-2S-khj" secondAttribute="height" id="KSO-m1-KvB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2hv-wg-zhz" secondAttribute="trailing" id="Kvj-Fn-o8M"/>
+                <constraint firstItem="ymG-2d-nFF" firstAttribute="centerX" secondItem="hBI-2S-khj" secondAttribute="centerX" id="LBa-ja-LFb"/>
+                <constraint firstItem="hBI-2S-khj" firstAttribute="centerX" secondItem="C96-9d-IPA" secondAttribute="centerX" id="Lun-AS-kkp"/>
+                <constraint firstItem="hBI-2S-khj" firstAttribute="top" secondItem="C96-9d-IPA" secondAttribute="bottom" constant="10" id="Qib-yH-u1l"/>
+                <constraint firstItem="C96-9d-IPA" firstAttribute="centerX" secondItem="lLl-Hf-IuM" secondAttribute="centerX" id="Rlc-cN-vRx"/>
+                <constraint firstItem="C96-9d-IPA" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="YJo-mv-bOd"/>
+                <constraint firstItem="RSs-mc-Zgv" firstAttribute="centerX" secondItem="2hv-wg-zhz" secondAttribute="centerX" id="Zhp-jU-0g5"/>
+                <constraint firstItem="RSs-mc-Zgv" firstAttribute="width" secondItem="2hv-wg-zhz" secondAttribute="width" multiplier="0.42" id="fFL-WT-Ypd"/>
+                <constraint firstItem="2hv-wg-zhz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gLx-Ts-lPm"/>
+                <constraint firstItem="C96-9d-IPA" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="h8V-dF-y61"/>
+                <constraint firstItem="C96-9d-IPA" firstAttribute="top" secondItem="lLl-Hf-IuM" secondAttribute="bottom" constant="25" id="k4N-Y8-NaL"/>
+                <constraint firstItem="2hv-wg-zhz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pxh-vP-XX5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2hv-wg-zhz" secondAttribute="bottom" id="rUt-E2-yVF"/>
+                <constraint firstItem="C96-9d-IPA" firstAttribute="top" secondItem="x28-fw-jMT" secondAttribute="bottom" constant="70" id="rur-NI-NsE"/>
+                <constraint firstItem="lLl-Hf-IuM" firstAttribute="top" secondItem="RSs-mc-Zgv" secondAttribute="bottom" constant="20" id="tyJ-wC-3CK"/>
+                <constraint firstItem="RSs-mc-Zgv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="vG5-0u-0Jg"/>
+                <constraint firstItem="ymG-2d-nFF" firstAttribute="top" secondItem="hBI-2S-khj" secondAttribute="bottom" constant="10" id="w4S-Uc-Fox"/>
+                <constraint firstItem="hBI-2S-khj" firstAttribute="height" secondItem="C96-9d-IPA" secondAttribute="height" id="y7L-Oz-bgH"/>
+                <constraint firstItem="lLl-Hf-IuM" firstAttribute="width" secondItem="RSs-mc-Zgv" secondAttribute="width" multiplier="1.2" id="yNW-Vf-4uz"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="100" y="20.239880059970016"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Background5" width="1126" height="2437"/>
+        <image name="CGMTransmitter" width="224" height="177"/>
+        <image name="CGMTransmitterB" width="214" height="192"/>
+        <namedColor name="NavigationBar">
+            <color red="0.75686274509803919" green="0.058823529411764705" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

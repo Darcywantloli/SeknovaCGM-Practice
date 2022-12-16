@@ -21,6 +21,7 @@ class UserPreference {
         case firstLogin
         case lowSuger
         case highSuger
+        case deviceID
     }
     
     var email: String {
@@ -46,5 +47,10 @@ class UserPreference {
     var highSuger: Int {
         get { return userPreference.integer(forKey: Preference.highSuger.rawValue) }
         set { return userPreference.set(newValue, forKey: Preference.highSuger.rawValue) }
+    }
+    
+    var deviceID: String {
+        get { return userPreference.string(forKey: Preference.deviceID.rawValue) ?? "" }
+        set { return userPreference.set(newValue, forKey: Preference.deviceID.rawValue) }
     }
 }

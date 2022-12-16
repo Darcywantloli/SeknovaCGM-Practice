@@ -8,11 +8,12 @@
 import UIKit
 
 class Alert {
-    static func showAlertWith (title: String,
-                               message: String,
-                               vc: UIViewController,
-                               confirmTitle: String,
-                               confirm: (() -> Void)? = nil) {
+    
+    static func showAlertWith(title: String,
+                              message: String,
+                              vc: UIViewController,
+                              confirmTitle: String,
+                              confirm: (() -> Void)? = nil) {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: title,
                                                     message: message,
@@ -25,9 +26,38 @@ class Alert {
         }
     }
     
-    static func showActionSheetWith (names: [String],
-                                     vc: UIViewController,
-                                     confirm: ((Int) -> Void)? = nil) {
+    static func showAlertWithTextField(title: String,
+                                       message: String,
+                                       vc: UIViewController,
+                                       confirmTitle: String,
+                                       cancelTitle: String,
+                                       setTextField: @escaping ((UITextField) -> Void),
+                                       comfirm: @escaping ((UITextField) -> Void)) {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: title,
+                                                    message: message,
+                                                    preferredStyle: .alert)
+            
+            alertController.addTextField { textField in
+                setTextField(textField)
+            }
+            
+            let confirmAction = UIAlertAction(title: confirmTitle, style: .default) { action in
+                let textField = alertController.textFields?.first
+                comfirm(textField!)
+            }
+            
+            let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
+            
+            alertController.addAction(confirmAction)
+            alertController.addAction(cancelAction)
+            vc.present(alertController, animated: true)
+        }
+    }
+    
+    static func showActionSheetWith(names: [String],
+                                    vc: UIViewController,
+                                    confirm: ((Int) -> Void)? = nil) {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: nil,
                                                     message: nil,
@@ -38,7 +68,6 @@ class Alert {
                     let index = names.firstIndex(of: name)
                     confirm?(index!)
                 }
-//                action.setValue(UIColor.navigationBar, forKey: "titleColor")
                 alertController.addAction(action)
             }
             

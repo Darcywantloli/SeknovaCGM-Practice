@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8807B2B12946C2A100FEC0B3 /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B2B02946C2A100FEC0B3 /* LocalDatabase.swift */; };
 		8807B2B3294B2BEE00FEC0B3 /* UserInformationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B2B2294B2BEE00FEC0B3 /* UserInformationTable.swift */; };
+		8807B2BB294C434100FEC0B3 /* ScanningTransmitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B2B9294C434100FEC0B3 /* ScanningTransmitterViewController.swift */; };
+		8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */; };
 		8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61A2908702A005296E1 /* RegisterViewController.swift */; };
 		8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B61B2908702A005296E1 /* RegisterViewController.xib */; };
 		8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61F2909020E005296E1 /* Color+Extensions.swift */; };
@@ -77,6 +79,8 @@
 		4480EAAC24CF79B9B851190C /* Pods-SeknovaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeknovaTests.release.xcconfig"; path = "Target Support Files/Pods-SeknovaTests/Pods-SeknovaTests.release.xcconfig"; sourceTree = "<group>"; };
 		8807B2B02946C2A100FEC0B3 /* LocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
 		8807B2B2294B2BEE00FEC0B3 /* UserInformationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTable.swift; sourceTree = "<group>"; };
+		8807B2B9294C434100FEC0B3 /* ScanningTransmitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningTransmitterViewController.swift; sourceTree = "<group>"; };
+		8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanningTransmitterViewController.xib; sourceTree = "<group>"; };
 		8876B61A2908702A005296E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8876B61B2908702A005296E1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8876B61F2909020E005296E1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -155,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8807B2B4294C351C00FEC0B3 /* ScanningTransmitter */ = {
+			isa = PBXGroup;
+			children = (
+				8807B2B9294C434100FEC0B3 /* ScanningTransmitterViewController.swift */,
+				8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */,
+			);
+			path = ScanningTransmitter;
+			sourceTree = "<group>";
+		};
 		8876B61E290901F7005296E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +319,7 @@
 				8876B646293B3E23005296E1 /* AudiovisualTeaching */,
 				88C4D238293D0ACB00FB7C67 /* SetUpBloodSugerIndex */,
 				88D874C829404F7B0048EB41 /* GetPersonalInformation */,
+				8807B2B4294C351C00FEC0B3 /* ScanningTransmitter */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -495,6 +509,7 @@
 				88D874CC294050290048EB41 /* GetPersonalInformationViewController.xib in Resources */,
 				88D874D529405C780048EB41 /* PersonalActionSheetTableViewCell.xib in Resources */,
 				8876B63F293A6F19005296E1 /* AudiovisualTeachingViewController.xib in Resources */,
+				8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */,
 				8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */,
 				8876B62C29256A4F005296E1 /* AgreementViewController.xib in Resources */,
 				88C4D23C293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib in Resources */,
@@ -643,6 +658,7 @@
 				8876B6322930747C005296E1 /* ForgotPasswordViewController.swift in Sources */,
 				88D874D429405C780048EB41 /* PersonalActionSheetTableViewCell.swift in Sources */,
 				8876B636293074B8005296E1 /* ResetPasswordViewController.swift in Sources */,
+				8807B2BB294C434100FEC0B3 /* ScanningTransmitterViewController.swift in Sources */,
 				8876B62B29256A4F005296E1 /* AgreementViewController.swift in Sources */,
 				88D874D72940717D0048EB41 /* AppDefine.swift in Sources */,
 				8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */,

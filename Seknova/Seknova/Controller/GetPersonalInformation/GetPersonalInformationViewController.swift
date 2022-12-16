@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class GetPersonalInformationViewController: BaseViewController {
     
@@ -130,6 +129,9 @@ class GetPersonalInformationViewController: BaseViewController {
             userInformation.Smoke = info[11]
             
             LocalDatabase.shared.addUserInformation(userInformation: userInformation)
+            
+            let nextVC = ScanningTransmitterViewController()
+            self.navigationController?.pushViewController(nextVC, animated: true)
         } else {
             Alert.showAlertWith(title: "錯誤", message: "請輸入資料", vc: self, confirmTitle: "確認")
         }
