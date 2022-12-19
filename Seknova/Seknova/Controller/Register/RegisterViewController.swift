@@ -201,7 +201,8 @@ class RegisterViewController: BaseViewController {
             UserPreference.shared.password = passwordTextField.text!
             UserPreference.shared.firstLogin = true
             
-            self.navigationController?.pushViewController(VerifyViewController(), animated: true)
+            let nextVC = VerifyViewController()
+            self.navigationController?.pushViewController(nextVC, animated: true)
         } else {
             
             // 推送錯誤訊息

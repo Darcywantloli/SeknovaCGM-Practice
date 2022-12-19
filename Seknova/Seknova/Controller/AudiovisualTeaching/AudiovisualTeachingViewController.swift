@@ -61,8 +61,8 @@ class AudiovisualTeachingViewController: BaseViewController {
     // MARK: - IBAction
     
     @IBAction func nextStep(_ sender: Any) {
-        self.navigationController?.pushViewController(SetUpBloodSugerIndexViewController(),
-                                                      animated: true)
+        let nextVC = SetUpBloodSugerIndexViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
 }

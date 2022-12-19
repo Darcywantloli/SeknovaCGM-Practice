@@ -95,7 +95,6 @@ class SetUpBloodSugerIndexViewController: BaseViewController {
         UserPreference.shared.highSuger = selectHighSuger
         
         let nextVC = GetPersonalInformationViewController()
-        
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     

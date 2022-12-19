@@ -109,7 +109,8 @@ class ResetPasswordViewController: BaseViewController {
             // 儲存新密碼並跳回登入畫面
             UserPreference.shared.password = newPasswordTextField.text!
             
-            self.navigationController?.pushViewController(LoginViewController(), animated: true)
+            let nextVC = LoginViewController()
+            self.navigationController?.pushViewController(nextVC, animated: true)
         } else {
             
             // 推送錯誤訊息

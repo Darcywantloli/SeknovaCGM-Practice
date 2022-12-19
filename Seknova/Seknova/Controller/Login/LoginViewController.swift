@@ -108,7 +108,9 @@ class LoginViewController: BaseViewController {
                 indicatorView.stopAnimating()
                 UserPreference.shared.firstLogin = false
                 indicatorView.removeFromSuperview()
-                self.navigationController?.pushViewController(AgreementViewController(), animated: true)
+                
+                let nextVC = AgreementViewController()
+                self.navigationController?.pushViewController(nextVC, animated: true)
             }
         } else if UserPreference.shared.firstLogin == false {
             indicatorView.startAnimating()
@@ -116,8 +118,9 @@ class LoginViewController: BaseViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 indicatorView.stopAnimating()
                 indicatorView.removeFromSuperview()
-                self.navigationController?.pushViewController(GetPersonalInformationViewController(),
-                                                              animated: true)
+                
+                let nextVC = GetPersonalInformationViewController()
+                self.navigationController?.pushViewController(nextVC, animated: true)
             }
         } else {
             Alert.showAlertWith(title: "錯誤", message: "帳號密碼錯誤", vc: self, confirmTitle: "確認")
@@ -126,12 +129,14 @@ class LoginViewController: BaseViewController {
     
     // 跳轉到忘記密碼畫面
     @IBAction func forgotPassword(_ sender: Any) {
-        self.navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
+        let nextVC = ForgotPasswordViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     // 跳轉到註冊畫面
     @IBAction func registerAccount(_ sender: Any) {
-        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
+        let nextVC = RegisterViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 

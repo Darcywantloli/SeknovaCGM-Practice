@@ -75,8 +75,8 @@ class ForgotPasswordViewController: BaseViewController {
         }
         
         if enterEmailTextField.text?.regularExpression(type: .email) == true {
-            self.navigationController?.pushViewController(ResetPasswordViewController(),
-                                                          animated: true)
+            let nextVC = ResetPasswordViewController()
+            self.navigationController?.pushViewController(nextVC, animated: true)
         } else {
             Alert.showAlertWith(title: "錯誤",
                                 message: "請輸入正確的郵箱",

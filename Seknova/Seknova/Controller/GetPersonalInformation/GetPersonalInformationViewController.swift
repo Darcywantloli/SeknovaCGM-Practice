@@ -83,8 +83,6 @@ class GetPersonalInformationViewController: BaseViewController {
         toolBar.isUserInteractionEnabled = true
         toolBar.frame = CGRect(x: 0, y: height - 250, width: width, height: 50)
         
-        var frame = CGRect(x: 0, y: height - 200, width: width, height: 200)
-        
         var dateFormat = DateFormatter()
         
         datePicker.preferredDatePickerStyle = .wheels
@@ -92,7 +90,7 @@ class GetPersonalInformationViewController: BaseViewController {
         datePicker.datePickerMode = .date
         datePicker.maximumDate = dateComponents.date
         datePicker.locale = Locale(identifier: "zh_TW")
-        datePicker.frame = frame
+        datePicker.frame = CGRect(x: 0, y: height - 200, width: width, height: 200)
         datePicker.date = Date()
         
         dateFormat.dateFormat = "yyyy/MM/dd"

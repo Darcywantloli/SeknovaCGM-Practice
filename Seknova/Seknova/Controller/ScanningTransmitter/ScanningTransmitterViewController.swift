@@ -136,17 +136,15 @@ class ScanningTransmitterViewController: BaseViewController {
     }
     
     @IBAction func enterWithText(_ sender: Any) {
-        Alert.showAlertWithTextField(title: "",
-                                     message: "",
-                                     vc: self,
-                                     confirmTitle: "確認",
-                                     cancelTitle: "取消") { textField in
-            
-        } comfirm: { textField in
-            guard let text = textField.text else {
-                return
-            }
-        }
+//        Alert.showAlertWithTextField(title: "內容",
+//                                     message: "請輸入裝置碼",
+//                                     vc: self,
+//                                     confirmTitle: "確認",
+//                                     cancelTitle: "取消",
+//                                     setTextField: { textField in
+//            
+//        },
+//                                     comfirm: <#T##((UITextField) -> Void)##((UITextField) -> Void)##(UITextField) -> Void#>)
     }
     
     @IBAction func backToLogin(_ sender: Any) {
@@ -180,6 +178,12 @@ extension ScanningTransmitterViewController: AVCaptureMetadataOutputObjectsDeleg
             }
         }
     }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension ScanningTransmitterViewController: UITextFieldDelegate {
+    
 }
 
 // MARK: - Protocol

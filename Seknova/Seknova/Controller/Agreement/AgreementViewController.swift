@@ -54,8 +54,8 @@ class AgreementViewController: BaseViewController {
     @IBAction func agreeContent(_ sender: Any) {
         switch root {
         case .LoginViewController:
-            self.navigationController?.pushViewController(AudiovisualTeachingViewController(),
-                                                          animated: true)
+            let nextVC = AudiovisualTeachingViewController()
+            self.navigationController?.pushViewController(nextVC, animated: true)
         case .RegisterViewController:
             dismiss(animated: true)
         }
