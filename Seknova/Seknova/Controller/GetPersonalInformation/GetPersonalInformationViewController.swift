@@ -1,5 +1,5 @@
 //
-//  PersonalInformationViewController.swift
+//  GetPersonalInformationViewController.swift
 //  Seknova
 //
 //  Created by imac on 2022/12/7.
@@ -57,9 +57,9 @@ class GetPersonalInformationViewController: BaseViewController {
     }
     
     private func setupDatePicker() {
-        var height = self.view.bounds.height
-        var width = self.view.bounds.width
-        var calendar = Calendar.current
+        let height = self.view.bounds.height
+        let width = self.view.bounds.width
+        let calendar = Calendar.current
         
         let year = calendar.component(.year, from: Date())
         let month = calendar.component(.month, from: Date())
@@ -83,7 +83,7 @@ class GetPersonalInformationViewController: BaseViewController {
         toolBar.isUserInteractionEnabled = true
         toolBar.frame = CGRect(x: 0, y: height - 250, width: width, height: 50)
         
-        var dateFormat = DateFormatter()
+        let dateFormat = DateFormatter()
         
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.backgroundColor = .white
@@ -369,9 +369,10 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
     }
 }
 
-// MARK: - UITextViewDelegate
+// MARK: - UITextFieldDelegate
 
 extension GetPersonalInformationViewController: UITextFieldDelegate {
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         info[textField.tag] = textField.text!
     }

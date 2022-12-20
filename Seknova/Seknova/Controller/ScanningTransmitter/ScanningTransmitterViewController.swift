@@ -32,6 +32,8 @@ class ScanningTransmitterViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Scanning Transmitter"
 
         setupUI()
         setNavigationBar()
@@ -136,15 +138,24 @@ class ScanningTransmitterViewController: BaseViewController {
     }
     
     @IBAction func enterWithText(_ sender: Any) {
-//        Alert.showAlertWithTextField(title: "內容",
-//                                     message: "請輸入裝置碼",
-//                                     vc: self,
-//                                     confirmTitle: "確認",
-//                                     cancelTitle: "取消",
-//                                     setTextField: { textField in
-//            
-//        },
-//                                     comfirm: <#T##((UITextField) -> Void)##((UITextField) -> Void)##(UITextField) -> Void#>)
+        Alert.showAlertWithTextField(title: "內容",
+                                     message: "請輸入裝置碼",
+                                     vc: self,
+                                     confirmTitle: "確認",
+                                     cancelTitle: "取消",
+                                     setTextField: { textField in
+            textField.placeholder = "輸入裝置碼"
+        },
+                                     comfirm: { textField in
+            if textField.text?.regularExpression(type: .deviceID) == false {
+                Alert.showAlertWith(title: "錯誤", message: "請輸入正確的裝置碼", vc: self, confirmTitle: "確認")
+            } else {
+                Alert.showAlertWith(title: "內容", message: "裝置碼正確", vc: self, confirmTitle: "確認", confirm: {
+                    let nextVC = PairBluetoothViewController()
+                    self.navigationController?.pushViewController(nextVC, animated: true)
+                })
+            }
+        })
     }
     
     @IBAction func backToLogin(_ sender: Any) {
@@ -172,18 +183,15 @@ extension ScanningTransmitterViewController: AVCaptureMetadataOutputObjectsDeleg
                 showQRCodeView?.frame = barCodeObject!.bounds
                 
                 if let value = metadataObject.stringValue {
-                    print(value)
+                    UserPreference.shared.deviceID = value
                     captureSession!.stopRunning()
+                    
+                    let nextVC = PairBluetoothViewController()
+                    self.navigationController?.pushViewController(nextVC, animated: true)
                 }
             }
         }
     }
-}
-
-// MARK: - UITextFieldDelegate
-
-extension ScanningTransmitterViewController: UITextFieldDelegate {
-    
 }
 
 // MARK: - Protocol

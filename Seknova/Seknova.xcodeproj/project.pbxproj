@@ -11,6 +11,8 @@
 		8807B2B3294B2BEE00FEC0B3 /* UserInformationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B2B2294B2BEE00FEC0B3 /* UserInformationTable.swift */; };
 		8807B2BB294C434100FEC0B3 /* ScanningTransmitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B2B9294C434100FEC0B3 /* ScanningTransmitterViewController.swift */; };
 		8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */; };
+		88202A3D29505ED7008B9E31 /* PairBluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88202A3B29505ED7008B9E31 /* PairBluetoothViewController.swift */; };
+		88202A3E29505ED7008B9E31 /* PairBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88202A3C29505ED7008B9E31 /* PairBluetoothViewController.xib */; };
 		8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61A2908702A005296E1 /* RegisterViewController.swift */; };
 		8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B61B2908702A005296E1 /* RegisterViewController.xib */; };
 		8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61F2909020E005296E1 /* Color+Extensions.swift */; };
@@ -29,6 +31,8 @@
 		8876B63B2938B144005296E1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B63A2938B143005296E1 /* ActivityIndicator.swift */; };
 		8876B63E293A6F19005296E1 /* AudiovisualTeachingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B63C293A6F19005296E1 /* AudiovisualTeachingViewController.swift */; };
 		8876B63F293A6F19005296E1 /* AudiovisualTeachingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B63D293A6F19005296E1 /* AudiovisualTeachingViewController.xib */; };
+		88A2D1D029506F400037E594 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A2D1CE29506F400037E594 /* ConnectionViewController.swift */; };
+		88A2D1D129506F400037E594 /* ConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A2D1CF29506F400037E594 /* ConnectionViewController.xib */; };
 		88C4D23B293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4D239293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift */; };
 		88C4D23C293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C4D23A293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib */; };
 		88C4D23F293DF08200FB7C67 /* KnowMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4D23D293DF08200FB7C67 /* KnowMoreViewController.swift */; };
@@ -81,6 +85,8 @@
 		8807B2B2294B2BEE00FEC0B3 /* UserInformationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTable.swift; sourceTree = "<group>"; };
 		8807B2B9294C434100FEC0B3 /* ScanningTransmitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningTransmitterViewController.swift; sourceTree = "<group>"; };
 		8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanningTransmitterViewController.xib; sourceTree = "<group>"; };
+		88202A3B29505ED7008B9E31 /* PairBluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairBluetoothViewController.swift; sourceTree = "<group>"; };
+		88202A3C29505ED7008B9E31 /* PairBluetoothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairBluetoothViewController.xib; sourceTree = "<group>"; };
 		8876B61A2908702A005296E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8876B61B2908702A005296E1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8876B61F2909020E005296E1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 		8876B63A2938B143005296E1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8876B63C293A6F19005296E1 /* AudiovisualTeachingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiovisualTeachingViewController.swift; sourceTree = "<group>"; };
 		8876B63D293A6F19005296E1 /* AudiovisualTeachingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudiovisualTeachingViewController.xib; sourceTree = "<group>"; };
+		88A2D1CE29506F400037E594 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		88A2D1CF29506F400037E594 /* ConnectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectionViewController.xib; sourceTree = "<group>"; };
 		88C4D239293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpBloodSugerIndexViewController.swift; sourceTree = "<group>"; };
 		88C4D23A293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetUpBloodSugerIndexViewController.xib; sourceTree = "<group>"; };
 		88C4D23D293DF08200FB7C67 /* KnowMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowMoreViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +174,17 @@
 				8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */,
 			);
 			path = ScanningTransmitter;
+			sourceTree = "<group>";
+		};
+		88202A3A29505EA8008B9E31 /* PairBlueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				88202A3B29505ED7008B9E31 /* PairBluetoothViewController.swift */,
+				88202A3C29505ED7008B9E31 /* PairBluetoothViewController.xib */,
+				88A2D1CE29506F400037E594 /* ConnectionViewController.swift */,
+				88A2D1CF29506F400037E594 /* ConnectionViewController.xib */,
+			);
+			path = PairBlueTooth;
 			sourceTree = "<group>";
 		};
 		8876B61E290901F7005296E1 /* Extensions */ = {
@@ -320,6 +339,7 @@
 				88C4D238293D0ACB00FB7C67 /* SetUpBloodSugerIndex */,
 				88D874C829404F7B0048EB41 /* GetPersonalInformation */,
 				8807B2B4294C351C00FEC0B3 /* ScanningTransmitter */,
+				88202A3A29505EA8008B9E31 /* PairBlueTooth */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -499,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CDF77E28EEC9EF00FE16E1 /* LoginViewController.xib in Resources */,
+				88202A3E29505ED7008B9E31 /* PairBluetoothViewController.xib in Resources */,
 				88C4D240293DF08200FB7C67 /* KnowMoreViewController.xib in Resources */,
 				88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */,
 				88D874D129405C500048EB41 /* PersonalTextFieldTableViewCell.xib in Resources */,
@@ -513,6 +534,7 @@
 				8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */,
 				8876B62C29256A4F005296E1 /* AgreementViewController.xib in Resources */,
 				88C4D23C293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib in Resources */,
+				88A2D1D129506F400037E594 /* ConnectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,12 +663,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CDF77D28EEC9EF00FE16E1 /* LoginViewController.swift in Sources */,
+				88202A3D29505ED7008B9E31 /* PairBluetoothViewController.swift in Sources */,
 				8876B63B2938B144005296E1 /* ActivityIndicator.swift in Sources */,
 				8876B625292162CF005296E1 /* VerifyViewController.swift in Sources */,
 				88C4D23B293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift in Sources */,
 				8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */,
 				88CDF78028FFF64600FE16E1 /* BaseViewController.swift in Sources */,
 				8876B62F292760B9005296E1 /* UserPreference.swift in Sources */,
+				88A2D1D029506F400037E594 /* ConnectionViewController.swift in Sources */,
 				88D874CB294050290048EB41 /* GetPersonalInformationViewController.swift in Sources */,
 				8876B6282921E155005296E1 /* String+Extensions.swift in Sources */,
 				8876B6392934AB7D005296E1 /* Alert.swift in Sources */,

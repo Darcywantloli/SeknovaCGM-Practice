@@ -20,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = true // 顯示工具列
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true // 點空白處關鍵盤
         
-        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor.navigationBar
-        
         return true
     }
 

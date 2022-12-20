@@ -32,7 +32,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ulS-aU-72l">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ulS-aU-72l">
                     <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET UP BLOOD SUGER INDEX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hcn-F0-V6G">
@@ -66,7 +66,7 @@
                     </constraints>
                 </view>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T44-b0-pC0">
-                    <rect key="frame" x="52" y="169" width="270" height="122"/>
+                    <rect key="frame" x="52.5" y="169" width="270" height="121.5"/>
                 </pickerView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設 定 高 血 糖 值" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ld-Uw-1Gs">
                     <rect key="frame" x="112.5" y="310.5" width="150" height="24"/>
@@ -93,7 +93,7 @@
                     </constraints>
                 </view>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZ1-LK-hk0">
-                    <rect key="frame" x="52" y="345" width="270" height="121"/>
+                    <rect key="frame" x="52.5" y="344.5" width="270" height="121.5"/>
                 </pickerView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OG5-cM-WgI">
                     <rect key="frame" x="106.5" y="486" width="162" height="40.5"/>

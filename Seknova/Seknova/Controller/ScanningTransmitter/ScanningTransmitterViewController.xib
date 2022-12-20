@@ -43,7 +43,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBI-2S-khj">
-                    <rect key="frame" x="75" y="476" width="225" height="43.5"/>
+                    <rect key="frame" x="75" y="511" width="225" height="43.5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="文字輸入" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="5">
@@ -56,7 +56,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymG-2d-nFF">
-                    <rect key="frame" x="75" y="529.5" width="225" height="43.5"/>
+                    <rect key="frame" x="75" y="564.5" width="225" height="43.5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="返回" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="5">
@@ -69,14 +69,14 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x28-fw-jMT">
-                    <rect key="frame" x="75" y="128" width="225" height="225"/>
+                    <rect key="frame" x="75" y="163" width="225" height="225"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="x28-fw-jMT" secondAttribute="height" multiplier="1:1" id="H9A-9H-B5S"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C96-9d-IPA">
-                    <rect key="frame" x="75" y="423" width="225" height="43"/>
+                    <rect key="frame" x="75" y="458" width="225" height="43"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="QR 掃描" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="5">
@@ -108,7 +108,7 @@
                 <constraint firstItem="RSs-mc-Zgv" firstAttribute="width" secondItem="2hv-wg-zhz" secondAttribute="width" multiplier="0.42" id="fFL-WT-Ypd"/>
                 <constraint firstItem="2hv-wg-zhz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gLx-Ts-lPm"/>
                 <constraint firstItem="C96-9d-IPA" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="h8V-dF-y61"/>
-                <constraint firstItem="C96-9d-IPA" firstAttribute="top" secondItem="lLl-Hf-IuM" secondAttribute="bottom" constant="25" id="k4N-Y8-NaL"/>
+                <constraint firstItem="C96-9d-IPA" firstAttribute="top" secondItem="lLl-Hf-IuM" secondAttribute="bottom" constant="60" id="k4N-Y8-NaL"/>
                 <constraint firstItem="2hv-wg-zhz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pxh-vP-XX5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2hv-wg-zhz" secondAttribute="bottom" id="rUt-E2-yVF"/>
                 <constraint firstItem="C96-9d-IPA" firstAttribute="top" secondItem="x28-fw-jMT" secondAttribute="bottom" constant="70" id="rur-NI-NsE"/>
