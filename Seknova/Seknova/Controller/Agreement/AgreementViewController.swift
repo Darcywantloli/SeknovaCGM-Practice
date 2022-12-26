@@ -20,9 +20,9 @@ class AgreementViewController: BaseViewController {
     
     // MARK: - Variables
     
-    var root: lastViewController = .LoginViewController
+    var root: LastViewController = .LoginViewController
     
-    enum lastViewController {
+    enum LastViewController {
         case LoginViewController
         case RegisterViewController
     }
@@ -59,7 +59,6 @@ class AgreementViewController: BaseViewController {
         case .RegisterViewController:
             dismiss(animated: true)
         }
-        dismiss(animated: true)
     }
 }
 

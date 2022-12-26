@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 class ScanningTransmitterViewController: BaseViewController {
-
+    
     // MARK: - IBOutlet
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -34,7 +34,7 @@ class ScanningTransmitterViewController: BaseViewController {
         super.viewDidLoad()
         
         self.title = "Scanning Transmitter"
-
+        
         setupUI()
         setNavigationBar()
     }
@@ -46,7 +46,7 @@ class ScanningTransmitterViewController: BaseViewController {
         setupButton()
         setupImageView()
     }
-
+    
     private func setupView() {
         showQRCodeView.isHidden = true
     }
@@ -61,33 +61,43 @@ class ScanningTransmitterViewController: BaseViewController {
     }
     
     func configurationScanner() {
+        // 取得後置鏡頭來擷取影片
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera],
                                                                       mediaType: AVMediaType.video,
                                                                       position: .back)
+        
+        // 使用前一個裝置物件 captureDevice 來取得 AVCaptureDeviceInput 類別的實例
         guard let captureDevice = deviceDiscoverySession.devices.first else {
             Alert.showAlertWith(title: "錯誤", message: "無法獲取相機", vc: self, confirmTitle: "確認")
             return
         }
         do {
+            // 設定captureSession的輸入裝置
             let input = try AVCaptureDeviceInput(device: captureDevice)
-            
+           
             captureSession = AVCaptureSession()
             captureSession?.addInput(input)
             
+            // 設定captureSession的輸出
             let captureMetadataOutput = AVCaptureMetadataOutput()
             captureSession?.addOutput(captureMetadataOutput)
             
+            // 設置delegate，並在主線程執行
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            
+            // 告訴App要處理的對象對象類型
             captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
             
+            // 用於顯示我們的相機畫面及影片在videoPreivewLayer的顯示方式
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-            
             videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
             videoPreviewLayer?.frame = showQRCodeView.layer.bounds
             showQRCodeView.layer.addSublayer(videoPreviewLayer!)
             
+            // 設置QRCode掃描框
             settingScannerFrame()
             
+            // 開始執行
             captureSession!.startRunning()
         } catch {
             Alert.showAlertWith(title: "錯誤", message: "QRCode掃描錯誤", vc: self, confirmTitle: "確認")
@@ -105,7 +115,7 @@ class ScanningTransmitterViewController: BaseViewController {
             view.bringSubviewToFront(showQRCodeView)
         }
     }
-
+    
     
     // MARK: - IBAction
     
@@ -148,12 +158,15 @@ class ScanningTransmitterViewController: BaseViewController {
         },
                                      comfirm: { textField in
             if textField.text?.regularExpression(type: .deviceID) == false {
-                Alert.showAlertWith(title: "錯誤", message: "請輸入正確的裝置碼", vc: self, confirmTitle: "確認")
+                Alert.showAlertWith(title: "錯誤",
+                                    message: "請輸入正確的裝置碼",
+                                    vc: self,
+                                    confirmTitle: "確認")
             } else {
-                Alert.showAlertWith(title: "內容", message: "裝置碼正確", vc: self, confirmTitle: "確認", confirm: {
-                    let nextVC = PairBluetoothViewController()
-                    self.navigationController?.pushViewController(nextVC, animated: true)
-                })
+                UserPreference.shared.deviceID = textField.text!
+                
+                let nextVC = PairBluetoothViewController()
+                self.navigationController?.pushViewController(nextVC, animated: true)
             }
         })
     }
@@ -176,6 +189,7 @@ extension ScanningTransmitterViewController: AVCaptureMetadataOutputObjectsDeleg
             return
         }
         
+        // 如果能夠取得metadataObjects且能轉換成AVMetadataMachineReadableCodeObject
         if let metadataObject = metadataObjects[0] as? AVMetadataMachineReadableCodeObject {
             if metadataObject.type == AVMetadataObject.ObjectType.qr {
                 let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject)

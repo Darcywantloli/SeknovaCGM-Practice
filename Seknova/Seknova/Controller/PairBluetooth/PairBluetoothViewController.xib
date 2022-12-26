@@ -12,6 +12,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PairBluetoothViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImageView" destination="7LV-XF-Fsd" id="wfN-AL-dhn"/>
+                <outlet property="bluetoothImageView" destination="DdG-IJ-A1g" id="cSZ-uS-p3M"/>
+                <outlet property="cancelButton" destination="u1k-lI-foY" id="0jJ-ty-OcJ"/>
+                <outlet property="connectImageView" destination="7hT-VC-U92" id="XIQ-dY-LsB"/>
+                <outlet property="connectSuccessLabel" destination="I5L-Jo-X9P" id="uo7-JB-0Ww"/>
+                <outlet property="deviceImageView" destination="c2i-fg-rdW" id="LMA-G6-jbR"/>
+                <outlet property="dotImageView" destination="Tgs-v4-FfT" id="T10-Uh-hID"/>
+                <outlet property="pairButton" destination="eT4-yW-Ehb" id="r6i-sm-Ye2"/>
+                <outlet property="phoneImageView" destination="EgO-5R-bLo" id="PDc-Ca-fN5"/>
+                <outlet property="titleCNLabel" destination="jTV-76-cZ4" id="VIk-nn-Y3p"/>
+                <outlet property="titleENLabel" destination="tkk-M1-4O1" id="TCV-MS-kt6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -62,6 +73,9 @@
                         </backgroundConfiguration>
                         <color key="baseForegroundColor" name="NavigationBar"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="cancel:" destination="-1" eventType="touchUpInside" id="ueV-gv-t1F"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eT4-yW-Ehb">
                     <rect key="frame" x="75" y="460.5" width="225" height="43"/>
@@ -72,15 +86,18 @@
                         </backgroundConfiguration>
                         <color key="baseForegroundColor" name="NavigationBar"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="pair:" destination="-1" eventType="touchUpInside" id="v91-If-Kki"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-VC-U92">
-                    <rect key="frame" x="154" y="371" width="67.5" height="67.5"/>
+                    <rect key="frame" x="154" y="322" width="67.5" height="67.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="7hT-VC-U92" secondAttribute="height" multiplier="1:1" id="LMY-BL-ukU"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配對成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5L-Jo-X9P">
-                    <rect key="frame" x="154" y="438.5" width="67.5" height="22"/>
+                    <rect key="frame" x="154" y="389.5" width="67.5" height="21.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -92,26 +109,26 @@
                 <constraint firstItem="u1k-lI-foY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="1sn-cd-1OY"/>
                 <constraint firstItem="7LV-XF-Fsd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2Kx-Hi-hyY"/>
                 <constraint firstItem="eT4-yW-Ehb" firstAttribute="width" secondItem="u1k-lI-foY" secondAttribute="width" id="5AT-97-vjc"/>
-                <constraint firstItem="I5L-Jo-X9P" firstAttribute="top" secondItem="7hT-VC-U92" secondAttribute="bottom" id="5tW-lh-K8H"/>
+                <constraint firstItem="I5L-Jo-X9P" firstAttribute="top" secondItem="7hT-VC-U92" secondAttribute="bottom" id="6u7-Vo-a1N"/>
                 <constraint firstItem="c2i-fg-rdW" firstAttribute="height" secondItem="Tgs-v4-FfT" secondAttribute="height" multiplier="0.4" id="77t-b6-Sll"/>
                 <constraint firstItem="7hT-VC-U92" firstAttribute="width" secondItem="I5L-Jo-X9P" secondAttribute="width" id="ALt-9Q-NWT"/>
                 <constraint firstItem="tkk-M1-4O1" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="B7l-sg-XBH"/>
                 <constraint firstItem="tkk-M1-4O1" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="CrB-H9-0gE"/>
                 <constraint firstItem="jTV-76-cZ4" firstAttribute="top" secondItem="tkk-M1-4O1" secondAttribute="bottom" constant="10" id="D9G-Co-GCY"/>
                 <constraint firstItem="Tgs-v4-FfT" firstAttribute="top" secondItem="jTV-76-cZ4" secondAttribute="bottom" constant="30" id="Dmy-VS-srD"/>
+                <constraint firstItem="I5L-Jo-X9P" firstAttribute="centerX" secondItem="7hT-VC-U92" secondAttribute="centerX" id="Dou-iQ-Oai"/>
                 <constraint firstItem="EgO-5R-bLo" firstAttribute="width" secondItem="Tgs-v4-FfT" secondAttribute="width" multiplier="0.9" id="Gfj-rU-eWe"/>
                 <constraint firstItem="tkk-M1-4O1" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="Gkh-hi-f4w"/>
                 <constraint firstItem="c2i-fg-rdW" firstAttribute="centerY" secondItem="Tgs-v4-FfT" secondAttribute="centerY" id="Gyw-ei-84c"/>
                 <constraint firstItem="EgO-5R-bLo" firstAttribute="centerY" secondItem="Tgs-v4-FfT" secondAttribute="centerY" id="I95-fX-Uj8"/>
                 <constraint firstItem="jTV-76-cZ4" firstAttribute="centerX" secondItem="tkk-M1-4O1" secondAttribute="centerX" id="ISY-Uy-QSD"/>
                 <constraint firstItem="Tgs-v4-FfT" firstAttribute="width" secondItem="jTV-76-cZ4" secondAttribute="width" multiplier="0.5" id="J1P-4V-qlZ"/>
-                <constraint firstItem="I5L-Jo-X9P" firstAttribute="centerX" secondItem="eT4-yW-Ehb" secondAttribute="centerX" id="JSe-wc-JfM"/>
                 <constraint firstItem="jTV-76-cZ4" firstAttribute="height" secondItem="tkk-M1-4O1" secondAttribute="height" multiplier="0.5" id="Kn7-n5-Cwg"/>
                 <constraint firstItem="7LV-XF-Fsd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="N4N-qT-zmb"/>
-                <constraint firstItem="7hT-VC-U92" firstAttribute="centerX" secondItem="I5L-Jo-X9P" secondAttribute="centerX" id="QIZ-p2-C1J"/>
                 <constraint firstItem="c2i-fg-rdW" firstAttribute="width" secondItem="Tgs-v4-FfT" secondAttribute="width" multiplier="0.4" id="QRC-uh-vtM"/>
                 <constraint firstItem="tkk-M1-4O1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="RVH-Ne-zoU"/>
                 <constraint firstItem="DdG-IJ-A1g" firstAttribute="leading" secondItem="tkk-M1-4O1" secondAttribute="trailing" id="TxT-rS-NfL"/>
+                <constraint firstItem="7hT-VC-U92" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VUL-zS-MSg"/>
                 <constraint firstItem="DdG-IJ-A1g" firstAttribute="centerY" secondItem="tkk-M1-4O1" secondAttribute="centerY" id="Vfw-lI-AN3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7LV-XF-Fsd" secondAttribute="bottom" id="aKO-IV-i7U"/>
                 <constraint firstItem="Tgs-v4-FfT" firstAttribute="centerX" secondItem="jTV-76-cZ4" secondAttribute="centerX" id="b1G-4F-9zy"/>
@@ -125,11 +142,11 @@
                 <constraint firstItem="eT4-yW-Ehb" firstAttribute="centerX" secondItem="u1k-lI-foY" secondAttribute="centerX" id="i2X-a4-Y5P"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="u1k-lI-foY" secondAttribute="bottom" constant="100" id="ioG-zz-Xqm"/>
                 <constraint firstItem="EgO-5R-bLo" firstAttribute="height" secondItem="Tgs-v4-FfT" secondAttribute="height" multiplier="1.5" id="jJQ-Js-Abc"/>
-                <constraint firstItem="eT4-yW-Ehb" firstAttribute="top" secondItem="I5L-Jo-X9P" secondAttribute="bottom" id="r6q-Bg-epp"/>
                 <constraint firstItem="u1k-lI-foY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="tIS-ed-Q2f"/>
                 <constraint firstItem="DdG-IJ-A1g" firstAttribute="height" secondItem="tkk-M1-4O1" secondAttribute="height" id="tc7-zK-7zw"/>
                 <constraint firstItem="c2i-fg-rdW" firstAttribute="leading" secondItem="Tgs-v4-FfT" secondAttribute="trailing" constant="20" id="u2d-kH-0qH"/>
                 <constraint firstItem="u1k-lI-foY" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="vja-6P-jPJ"/>
+                <constraint firstItem="7hT-VC-U92" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="zUK-fm-nWz"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="26" y="21"/>

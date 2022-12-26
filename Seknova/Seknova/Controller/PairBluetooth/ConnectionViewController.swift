@@ -34,8 +34,9 @@ class ConnectionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         setupUI()
-        setNavigationBar()
     }
 
     // MARK: - UI Settings
@@ -60,8 +61,12 @@ class ConnectionViewController: BaseViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 30) {
             self.connectionImageView.stopAnimating()
+            
+            let nextVC = PairBluetoothViewController()
+            nextVC.root = .ConnectionViewController
+            
+            self.navigationController?.pushViewController(nextVC, animated: true)
         }
-//        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - IBAction

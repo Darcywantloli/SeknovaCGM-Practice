@@ -119,7 +119,7 @@ class LoginViewController: BaseViewController {
                 indicatorView.stopAnimating()
                 indicatorView.removeFromSuperview()
                 
-                let nextVC = GetPersonalInformationViewController()
+                let nextVC = MainViewController()
                 self.navigationController?.pushViewController(nextVC, animated: true)
             }
         } else {

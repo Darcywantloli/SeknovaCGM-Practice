@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Seknova" customModuleProvider="target">
+            <connections>
+                <outlet property="burgerListView" destination="mVV-Hd-Efh" id="Fmh-Zr-fde"/>
+                <outlet property="dailyButton" destination="fqP-wp-Yen" id="jpk-Vl-0hE"/>
+                <outlet property="reportButton" destination="xur-6l-4Hh" id="6VT-DM-lZh"/>
+                <outlet property="settingButton" destination="N66-HW-MXK" id="KPf-7W-CVj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVV-Hd-Efh">
+                    <rect key="frame" x="0.0" y="44" width="94" height="133.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xur-6l-4Hh">
+                            <rect key="frame" x="0.0" y="0.0" width="94" height="44.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N66-HW-MXK">
+                            <rect key="frame" x="0.0" y="89" width="94" height="44.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqP-wp-Yen">
+                            <rect key="frame" x="0.0" y="44.5" width="94" height="44.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="N66-HW-MXK" firstAttribute="top" secondItem="fqP-wp-Yen" secondAttribute="bottom" id="ATU-Lr-rKm"/>
+                        <constraint firstItem="xur-6l-4Hh" firstAttribute="top" secondItem="mVV-Hd-Efh" secondAttribute="top" id="H8c-6O-KTv"/>
+                        <constraint firstItem="xur-6l-4Hh" firstAttribute="height" secondItem="mVV-Hd-Efh" secondAttribute="height" multiplier="0.333333" id="MJv-Ke-aGm"/>
+                        <constraint firstItem="xur-6l-4Hh" firstAttribute="centerX" secondItem="mVV-Hd-Efh" secondAttribute="centerX" id="MMC-2n-DaV"/>
+                        <constraint firstItem="N66-HW-MXK" firstAttribute="height" secondItem="fqP-wp-Yen" secondAttribute="height" id="OCL-fx-Pgf"/>
+                        <constraint firstItem="fqP-wp-Yen" firstAttribute="centerX" secondItem="xur-6l-4Hh" secondAttribute="centerX" id="Wqn-Sj-iUq"/>
+                        <constraint firstItem="xur-6l-4Hh" firstAttribute="width" secondItem="mVV-Hd-Efh" secondAttribute="width" id="XfN-Dn-sEc"/>
+                        <constraint firstItem="fqP-wp-Yen" firstAttribute="height" secondItem="xur-6l-4Hh" secondAttribute="height" id="YgN-Mu-x09"/>
+                        <constraint firstItem="fqP-wp-Yen" firstAttribute="top" secondItem="xur-6l-4Hh" secondAttribute="bottom" id="hne-gm-z80"/>
+                        <constraint firstItem="N66-HW-MXK" firstAttribute="centerX" secondItem="fqP-wp-Yen" secondAttribute="centerX" id="xHE-Wq-eXc"/>
+                        <constraint firstItem="fqP-wp-Yen" firstAttribute="width" secondItem="xur-6l-4Hh" secondAttribute="width" id="xka-Az-vBB"/>
+                        <constraint firstItem="N66-HW-MXK" firstAttribute="width" secondItem="fqP-wp-Yen" secondAttribute="width" id="zFy-ZS-GRv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mVV-Hd-Efh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AiU-hO-6RW"/>
+                <constraint firstItem="mVV-Hd-Efh" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.25" id="TYj-lY-Aaz"/>
+                <constraint firstItem="mVV-Hd-Efh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="ggQ-Fv-niC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="mVV-Hd-Efh" secondAttribute="leading" id="x6w-pD-nrs"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="26" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
