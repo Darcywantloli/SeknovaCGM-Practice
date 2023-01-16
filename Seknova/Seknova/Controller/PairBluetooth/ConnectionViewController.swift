@@ -59,7 +59,7 @@ class ConnectionViewController: BaseViewController {
         connectionImageView.animationDuration = 1
         connectionImageView.startAnimating()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 30) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
             self.connectionImageView.stopAnimating()
             
             let nextVC = PairBluetoothViewController()

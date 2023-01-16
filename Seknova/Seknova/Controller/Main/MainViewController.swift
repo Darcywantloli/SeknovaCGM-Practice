@@ -12,21 +12,34 @@ class MainViewController: BaseViewController {
     // MARK: - IBOutlet
     
     @IBOutlet weak var burgerListView: UIView!
-    
     @IBOutlet weak var reportButton: UIButton!
     @IBOutlet weak var dailyButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
+    
+    @IBOutlet weak var containerView: UIView!
+    
+    @IBOutlet weak var customTabBar: TabBarView!
     
     // MARK: - Variables
     
     var showOrNot = true
     let dropDownTransparent = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
     let deviceEventButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    
+    var vc: [UIViewController] = []
+    private let historyVC = HistoryViewController()
+    private let bloodSugarCorrectionVC = BloodSugarCorrectionViewController()
+    private let bloodSugarVC = BloodSugarIndexViewController()
+    private let lifeStyleVC = LifeStyleViewController()
+    private let personalVC = PersonalInformationViewController()
 
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        vc = [historyVC, bloodSugarCorrectionVC, bloodSugarVC, lifeStyleVC, personalVC]
+        
+        updateView(2)
         
         setupUI()
         setNavigationBar()
@@ -35,15 +48,33 @@ class MainViewController: BaseViewController {
     // MARK: - UI Settings
     
     func setupUI() {
-        setupView()
-        setupNavigationBarButton()
+        setupBurgerListView()
+        setupLeftNavigationBarButtonItems()
+        setupCustomTabBar()
     }
     
-    private func setupView() {
+    private func setupBurgerListView() {
         hideBurgerList(times: 0)
     }
     
-    private func setupNavigationBarButton() {
+    private func setupCustomTabBar() {
+        customTabBar.setInit()
+        customTabBar.delegate = self
+    }
+    
+    private func setupLeftNavigationBarButtonItems() {
+        let deviceImage: Bool
+        
+        if UserPreference.shared.deviceID == "" {
+            deviceImage = false
+        } else {
+            if UserPreference.shared.sensorID == "" {
+                deviceImage = false
+            } else {
+                deviceImage = true
+            }
+        }
+        
         dropDownTransparent.setBackgroundImage(UIImage(named: "ThreeLineSmall"), for: .normal)
         dropDownTransparent.addTarget(self, action: #selector(burgerList), for: .allEvents)
         
@@ -54,7 +85,12 @@ class MainViewController: BaseViewController {
         let dropDownButtonHeight = dropDownButton.customView?.heightAnchor.constraint(equalToConstant: 30)
         dropDownButtonHeight?.isActive = true
         
-        deviceEventButton.setBackgroundImage(UIImage(named: "unlink"), for: .normal)
+        if deviceImage {
+            deviceEventButton.setBackgroundImage(UIImage(named: "link"), for: .normal)
+        } else {
+            deviceEventButton.setBackgroundImage(UIImage(named: "unlink"), for: .normal)
+        }
+        
         deviceEventButton.addTarget(self, action: #selector(deviceEvent), for: .allEvents)
         
         let deviceButton = UIBarButtonItem(customView: deviceEventButton)
@@ -69,6 +105,7 @@ class MainViewController: BaseViewController {
 
     // MARK: - IBAction
     
+    // BurgerList動畫
     func showBurgerList() {
         UIView.animate(withDuration: 0.5, animations: {
             let moveRight = CGAffineTransform(translationX: 0.0, y: 0.0)
@@ -86,6 +123,7 @@ class MainViewController: BaseViewController {
         })
     }
     
+    // BurgerList狀態判斷
     @objc func burgerList() {
         if showOrNot {
             showBurgerList()
@@ -96,24 +134,50 @@ class MainViewController: BaseViewController {
         }
     }
     
+    // 顯示裝置狀態
     @objc func deviceEvent() {
         let popupVC = DeviceStatusViewController()
         
-        popupVC.event = .transmitterOnSensorOff
+        if UserPreference.shared.deviceID == "" {
+            popupVC.event = (UserPreference.shared.sensorID == "") ? .transmitterOffSensorOff : .transmitterOffSensorOn
+        } else {
+            popupVC.event = (UserPreference.shared.sensorID == "") ? .transmitterOnSensorOff : .transmitterOnSensorOn
+        }
+        
         popupVC.modalPresentationStyle = .popover
         popupVC.popoverPresentationController?.delegate = self
         popupVC.popoverPresentationController?.sourceView = deviceEventButton
         popupVC.popoverPresentationController?.sourceRect = deviceEventButton.bounds
+        popupVC.preferredContentSize = CGSize(width: self.view.bounds.width / 2, height: 100)
         
         present(popupVC, animated: true)
     }
+    
+    // 切換ContainerView
+    private func updateView(_ index: Int) {
+        if children.first(where: { String(describing: $0.classForCoder) == String(describing: vc[index].classForCoder) }) == nil {
+            addChild(vc[index])
+            vc[index].view.frame = containerView.bounds
+        }
+        containerView.addSubview(vc[index].view!)
+    }
 }
 
-// MARK: - Extension
+// MARK: - UIPopoverPresentationControllerDelegate
 
 extension MainViewController: UIPopoverPresentationControllerDelegate {
+    
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
+    }
+}
+
+// MARK: - CustomTabBarDelegate
+
+extension MainViewController: CustomTabBarDelegate {
+    
+    func targetTabBar(index: Int, button: UIButton) {
+        updateView(index)
     }
 }
 

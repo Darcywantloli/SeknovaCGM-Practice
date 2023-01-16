@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjo-Na-ds6">
-                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rjo-Na-ds6">
+                    <rect key="frame" x="10" y="10" width="370" height="824"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -30,10 +30,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rjo-Na-ds6" secondAttribute="trailing" id="22K-ru-CQf"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rjo-Na-ds6" secondAttribute="bottom" id="ZBp-8b-T83"/>
-                <constraint firstItem="Rjo-Na-ds6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bZK-Mj-mZe"/>
-                <constraint firstItem="Rjo-Na-ds6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xQt-jd-LwJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rjo-Na-ds6" secondAttribute="trailing" constant="10" id="22K-ru-CQf"/>
+                <constraint firstAttribute="bottom" secondItem="Rjo-Na-ds6" secondAttribute="bottom" constant="10" id="ZBp-8b-T83"/>
+                <constraint firstItem="Rjo-Na-ds6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="bZK-Mj-mZe"/>
+                <constraint firstItem="Rjo-Na-ds6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="xQt-jd-LwJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-74" y="21"/>
