@@ -25,10 +25,6 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lna-2s-Ywt">
-                    <rect key="frame" x="0.0" y="103" width="430" height="715"/>
-                    <color key="backgroundColor" systemColor="systemYellowColor"/>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVV-Hd-Efh">
                     <rect key="frame" x="0.0" y="103.00000000000001" width="107.66666666666667" height="186.33333333333337"/>
                     <subviews>
@@ -63,6 +59,9 @@
                         <constraint firstItem="N66-HW-MXK" firstAttribute="width" secondItem="fqP-wp-Yen" secondAttribute="width" id="zFy-ZS-GRv"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lna-2s-Ywt">
+                    <rect key="frame" x="0.0" y="103" width="430" height="715"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xo3-gL-DYs" customClass="TabBarView" customModule="Seknova" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="818" width="430" height="80"/>
                     <constraints>
@@ -92,9 +91,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

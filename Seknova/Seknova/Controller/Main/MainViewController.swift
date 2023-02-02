@@ -53,13 +53,13 @@ class MainViewController: BaseViewController {
         setupCustomTabBar()
     }
     
-    private func setupBurgerListView() {
-        hideBurgerList(times: 0)
-    }
-    
     private func setupCustomTabBar() {
         customTabBar.setInit()
         customTabBar.delegate = self
+    }
+    
+    private func setupBurgerListView() {
+        hideBurgerList(times: 0)
     }
     
     private func setupLeftNavigationBarButtonItems() {

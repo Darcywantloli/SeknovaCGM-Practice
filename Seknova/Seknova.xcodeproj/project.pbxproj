@@ -74,6 +74,7 @@
 		88D874D429405C780048EB41 /* PersonalActionSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D874D229405C780048EB41 /* PersonalActionSheetTableViewCell.swift */; };
 		88D874D529405C780048EB41 /* PersonalActionSheetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D874D329405C780048EB41 /* PersonalActionSheetTableViewCell.xib */; };
 		88D874D72940717D0048EB41 /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D874D62940717D0048EB41 /* AppDefine.swift */; };
+		88DA3D86297673F200DFB406 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA3D85297673F200DFB406 /* Background.swift */; };
 		93ED4E4E068F3ED8D195235E /* Pods_Seknova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CC119FE50D52484C5EED3B /* Pods_Seknova.framework */; };
 		B77DB71097F54A033F4A6F43 /* Pods_Seknova_SeknovaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015CF29A02A209AB89D19F16 /* Pods_Seknova_SeknovaUITests.framework */; };
 		DBD659E2F8D7B859B1070887 /* Pods_SeknovaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B21ECA9B78A9BB57E9BDBC51 /* Pods_SeknovaTests.framework */; };
@@ -172,6 +173,7 @@
 		88D874D229405C780048EB41 /* PersonalActionSheetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalActionSheetTableViewCell.swift; sourceTree = "<group>"; };
 		88D874D329405C780048EB41 /* PersonalActionSheetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalActionSheetTableViewCell.xib; sourceTree = "<group>"; };
 		88D874D62940717D0048EB41 /* AppDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
+		88DA3D85297673F200DFB406 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		99CC119FE50D52484C5EED3B /* Pods_Seknova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seknova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21ECA9B78A9BB57E9BDBC51 /* Pods_SeknovaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeknovaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E22A2722C48D14A71A8B1E /* Pods-Seknova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova.debug.xcconfig"; path = "Target Support Files/Pods-Seknova/Pods-Seknova.debug.xcconfig"; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 				88A2D1E32959A1460037E594 /* Customer */,
 				8876B6382934AB7D005296E1 /* Alert.swift */,
 				8876B63A2938B143005296E1 /* ActivityIndicator.swift */,
+				88DA3D85297673F200DFB406 /* Background.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				88202A3D29505ED7008B9E31 /* PairBluetoothViewController.swift in Sources */,
 				889EB690295EEADA00BAA752 /* BloodSugarIndexViewController.swift in Sources */,
 				8876B63B2938B144005296E1 /* ActivityIndicator.swift in Sources */,
+				88DA3D86297673F200DFB406 /* Background.swift in Sources */,
 				8876B625292162CF005296E1 /* VerifyViewController.swift in Sources */,
 				889EB688295EEA5400BAA752 /* PersonalInformationViewController.swift in Sources */,
 				889EB68C295EEA6500BAA752 /* LifeStyleViewController.swift in Sources */,
