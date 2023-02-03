@@ -75,6 +75,8 @@
 		88D874D529405C780048EB41 /* PersonalActionSheetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D874D329405C780048EB41 /* PersonalActionSheetTableViewCell.xib */; };
 		88D874D72940717D0048EB41 /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D874D62940717D0048EB41 /* AppDefine.swift */; };
 		88DA3D86297673F200DFB406 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA3D85297673F200DFB406 /* Background.swift */; };
+		88DA3D89298BBF2100DFB406 /* BloodSugarCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA3D87298BBF2100DFB406 /* BloodSugarCheckViewController.swift */; };
+		88DA3D8A298BBF2100DFB406 /* BloodSugarCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DA3D88298BBF2100DFB406 /* BloodSugarCheckViewController.xib */; };
 		93ED4E4E068F3ED8D195235E /* Pods_Seknova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CC119FE50D52484C5EED3B /* Pods_Seknova.framework */; };
 		B77DB71097F54A033F4A6F43 /* Pods_Seknova_SeknovaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015CF29A02A209AB89D19F16 /* Pods_Seknova_SeknovaUITests.framework */; };
 		DBD659E2F8D7B859B1070887 /* Pods_SeknovaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B21ECA9B78A9BB57E9BDBC51 /* Pods_SeknovaTests.framework */; };
@@ -174,6 +176,8 @@
 		88D874D329405C780048EB41 /* PersonalActionSheetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalActionSheetTableViewCell.xib; sourceTree = "<group>"; };
 		88D874D62940717D0048EB41 /* AppDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
 		88DA3D85297673F200DFB406 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		88DA3D87298BBF2100DFB406 /* BloodSugarCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarCheckViewController.swift; sourceTree = "<group>"; };
+		88DA3D88298BBF2100DFB406 /* BloodSugarCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodSugarCheckViewController.xib; sourceTree = "<group>"; };
 		99CC119FE50D52484C5EED3B /* Pods_Seknova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seknova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21ECA9B78A9BB57E9BDBC51 /* Pods_SeknovaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeknovaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E22A2722C48D14A71A8B1E /* Pods-Seknova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova.debug.xcconfig"; path = "Target Support Files/Pods-Seknova/Pods-Seknova.debug.xcconfig"; sourceTree = "<group>"; };
@@ -359,6 +363,8 @@
 			children = (
 				889EB692295EEAFF00BAA752 /* BloodSugarCorrectionViewController.swift */,
 				889EB693295EEAFF00BAA752 /* BloodSugarCorrectionViewController.xib */,
+				88DA3D87298BBF2100DFB406 /* BloodSugarCheckViewController.swift */,
+				88DA3D88298BBF2100DFB406 /* BloodSugarCheckViewController.xib */,
 			);
 			path = BloodSugarCorrection;
 			sourceTree = "<group>";
@@ -404,8 +410,6 @@
 			children = (
 				88C4D239293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift */,
 				88C4D23A293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib */,
-				88C4D23D293DF08200FB7C67 /* KnowMoreViewController.swift */,
-				88C4D23E293DF08200FB7C67 /* KnowMoreViewController.xib */,
 			);
 			path = SetUpBloodSugerIndex;
 			sourceTree = "<group>";
@@ -468,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				88CDF77F28FFF64600FE16E1 /* BaseViewController.swift */,
+				88DA3D8B298BC2E900DFB406 /* KnowMore */,
 				8876B640293A6F2D005296E1 /* Login */,
 				8876B641293A6F40005296E1 /* Register */,
 				8876B642293A6F61005296E1 /* Verify */,
@@ -527,6 +532,15 @@
 				88D874D329405C780048EB41 /* PersonalActionSheetTableViewCell.xib */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		88DA3D8B298BC2E900DFB406 /* KnowMore */ = {
+			isa = PBXGroup;
+			children = (
+				88C4D23D293DF08200FB7C67 /* KnowMoreViewController.swift */,
+				88C4D23E293DF08200FB7C67 /* KnowMoreViewController.xib */,
+			);
+			path = KnowMore;
 			sourceTree = "<group>";
 		};
 		B8D29B7A4B3A2F2B264F6E21 /* Pods */ = {
@@ -676,6 +690,7 @@
 				88D874D529405C780048EB41 /* PersonalActionSheetTableViewCell.xib in Resources */,
 				8876B63F293A6F19005296E1 /* AudiovisualTeachingViewController.xib in Resources */,
 				8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */,
+				88DA3D8A298BBF2100DFB406 /* BloodSugarCheckViewController.xib in Resources */,
 				8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */,
 				88A2D1D6295310A40037E594 /* ScanningSensorViewController.xib in Resources */,
 				889EB685295EEA4200BAA752 /* HistoryViewController.xib in Resources */,
@@ -820,6 +835,7 @@
 				88202A3D29505ED7008B9E31 /* PairBluetoothViewController.swift in Sources */,
 				889EB690295EEADA00BAA752 /* BloodSugarIndexViewController.swift in Sources */,
 				8876B63B2938B144005296E1 /* ActivityIndicator.swift in Sources */,
+				88DA3D89298BBF2100DFB406 /* BloodSugarCheckViewController.swift in Sources */,
 				88DA3D86297673F200DFB406 /* Background.swift in Sources */,
 				8876B625292162CF005296E1 /* VerifyViewController.swift in Sources */,
 				889EB688295EEA5400BAA752 /* PersonalInformationViewController.swift in Sources */,

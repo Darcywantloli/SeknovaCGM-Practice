@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarIndexViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
+                <outlet property="lineChartView" destination="7q0-2M-e4Z" id="sRG-of-wWH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,7 +45,7 @@
                     <color key="textColor" name="NavigationBar"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q0-2M-e4Z">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q0-2M-e4Z" customClass="LineChartView" customModule="Charts">
                     <rect key="frame" x="37.5" y="337" width="300" height="300"/>
                     <color key="backgroundColor" name="NavigationBar"/>
                     <constraints>

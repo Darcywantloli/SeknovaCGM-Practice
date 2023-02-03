@@ -12,6 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarCorrectionViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
+                <outlet property="bloodSugarTextField" destination="sKN-BY-IKb" id="Zve-rN-joL"/>
+                <outlet property="knowMoreButton" destination="Vat-jH-R2M" id="VFS-tE-8t7"/>
+                <outlet property="saveButton" destination="MyT-qg-dbp" id="Wx9-fK-yN6"/>
+                <outlet property="seknovaImageView" destination="PlZ-pk-xIm" id="3ut-N8-2oB"/>
+                <outlet property="setDownButton" destination="fcj-BC-UEe" id="i2k-Rc-unA"/>
+                <outlet property="setUpButton" destination="I26-pK-C1z" id="fvD-Dn-62s"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,6 +53,9 @@
                         <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                         <color key="baseForegroundColor" name="NavigationBar"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="knowMore:" destination="-1" eventType="touchUpInside" id="gAA-fS-bTE"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg/dL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1T-aV-hLs">
                     <rect key="frame" x="122" y="267" width="131" height="43.5"/>

@@ -102,6 +102,7 @@ class SetUpBloodSugerIndexViewController: BaseViewController {
         let popupVC = KnowMoreViewController()
         let popWidth = view.bounds.width
         
+        popupVC.root = .SetUpBloodSugerIndexViewController
         popupVC.modalPresentationStyle = .popover
         popupVC.popoverPresentationController?.delegate = self
         popupVC.popoverPresentationController?.sourceView = knowMoreButton
