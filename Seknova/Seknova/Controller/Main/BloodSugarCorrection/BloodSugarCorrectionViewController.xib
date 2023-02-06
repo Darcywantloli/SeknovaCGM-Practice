@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarCorrectionViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
                 <outlet property="bloodSugarTextField" destination="sKN-BY-IKb" id="Zve-rN-joL"/>
+                <outlet property="componentLabel" destination="B1T-aV-hLs" id="WgW-09-auM"/>
                 <outlet property="knowMoreButton" destination="Vat-jH-R2M" id="VFS-tE-8t7"/>
                 <outlet property="saveButton" destination="MyT-qg-dbp" id="Wx9-fK-yN6"/>
                 <outlet property="seknovaImageView" destination="PlZ-pk-xIm" id="3ut-N8-2oB"/>
@@ -42,6 +43,9 @@
                         <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                         <color key="baseForegroundColor" name="NavigationBar"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="saveData:" destination="-1" eventType="touchUpInside" id="gDq-66-kZY"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vat-jH-R2M">
                     <rect key="frame" x="56.5" y="410.5" width="262.5" height="43"/>
@@ -65,7 +69,7 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKN-BY-IKb">
                     <rect key="frame" x="72.5" y="158.5" width="230" height="108.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I26-pK-C1z">
@@ -75,6 +79,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="SetUp"/>
+                    <connections>
+                        <action selector="setUpBloodSugar:" destination="-1" eventType="touchUpInside" id="fua-qd-jlS"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcj-BC-UEe">
                     <rect key="frame" x="302.5" y="212.5" width="54" height="54.5"/>
@@ -83,6 +90,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="SetDown"/>
+                    <connections>
+                        <action selector="setDownBloodSugar:" destination="-1" eventType="touchUpInside" id="bp4-V9-P38"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

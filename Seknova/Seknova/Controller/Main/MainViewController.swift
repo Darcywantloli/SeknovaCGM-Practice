@@ -23,16 +23,20 @@ class MainViewController: BaseViewController {
     // MARK: - Variables
     
     var showOrNot = true
+    
     let dropDownTransparent = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
     let deviceEventButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
     
+    let rightBarButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    
     var vc: [UIViewController] = []
+    
     private let historyVC = HistoryViewController()
     private let bloodSugarCorrectionVC = BloodSugarCorrectionViewController()
     private let bloodSugarVC = BloodSugarIndexViewController()
     private let lifeStyleVC = LifeStyleViewController()
     private let personalVC = PersonalInformationViewController()
-
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -48,9 +52,9 @@ class MainViewController: BaseViewController {
     // MARK: - UI Settings
     
     func setupUI() {
+        setupCustomTabBar()
         setupBurgerListView()
         setupLeftNavigationBarButtonItems()
-        setupCustomTabBar()
     }
     
     private func setupCustomTabBar() {
@@ -58,8 +62,42 @@ class MainViewController: BaseViewController {
         customTabBar.delegate = self
     }
     
+    private func setupNaviagtionBar(_ index: Int) {
+        switch index {
+        case 0:
+            self.title = "歷史紀錄"
+        case 1:
+            self.title = "血糖校正"
+        case 2:
+            self.title = "即時血糖"
+        case 3:
+            self.title = "生活作息"
+        case 4:
+            self.title = "個人資訊"
+        default:
+            break
+        }
+    }
+    
     private func setupBurgerListView() {
         hideBurgerList(times: 0)
+    }
+    
+    private func setupRightNavigationBarButtonItems(_ index: Int) {
+//        switch index {
+//        case 0:
+//            <#code#>
+//        case 1:
+//
+//        case 2:
+//
+//        case 3:
+//
+//        case 4:
+//
+//        default:
+//            <#code#>
+//        }
     }
     
     private func setupLeftNavigationBarButtonItems() {
@@ -102,7 +140,7 @@ class MainViewController: BaseViewController {
         
         self.navigationItem.leftBarButtonItems = [dropDownButton, deviceButton]
     }
-
+    
     // MARK: - IBAction
     
     // BurgerList動畫
@@ -155,6 +193,8 @@ class MainViewController: BaseViewController {
     
     // 切換ContainerView
     private func updateView(_ index: Int) {
+        setupNaviagtionBar(index)
+        
         if children.first(where: { String(describing: $0.classForCoder) == String(describing: vc[index].classForCoder) }) == nil {
             addChild(vc[index])
             vc[index].view.frame = containerView.bounds
