@@ -39,20 +39,12 @@ class BloodSugarCorrectionViewController: BaseViewController {
         setupView()
         setupButton()
         setupTextField()
-        setupLongPress()
+        setupLongPressUp()
+        setupLongPressDown()
     }
     
     private func setupView() {
         self.view.insertSubview(Background(imageName: "Background5", alpha: 0.25), at: 0)
-    }
-    
-    private func setupLongPress() {
-        let longPress = UILongPressGestureRecognizer(target: self,
-                                                     action: #selector(setBloodSugarUp))
-        longPress.minimumPressDuration = 0.2
-        longPress.numberOfTapsRequired = 1
-        longPress.numberOfTouchesRequired = 1
-        setUpButton.addGestureRecognizer(longPress)
     }
     
     private func setupButton() {
@@ -64,6 +56,24 @@ class BloodSugarCorrectionViewController: BaseViewController {
         bloodSugarTextField.text = "225"
         bloodSugarTextField.delegate = self
         bloodSugarTextField.keyboardType = .numberPad
+    }
+    
+    private func setupLongPressUp() {
+        let longPress = UILongPressGestureRecognizer(target: self,
+                                                     action: #selector(setBloodSugarUp))
+        longPress.minimumPressDuration = 0.2
+        longPress.numberOfTapsRequired = 1
+        longPress.numberOfTouchesRequired = 1
+        setUpButton.addGestureRecognizer(longPress)
+    }
+    
+    private func setupLongPressDown() {
+        let longPress = UILongPressGestureRecognizer(target: self,
+                                                     action: #selector(setBloodSugarDown))
+        longPress.minimumPressDuration = 0.2
+        longPress.numberOfTapsRequired = 1
+        longPress.numberOfTouchesRequired = 1
+        setDownButton.addGestureRecognizer(longPress)
     }
     
     // MARK: - IBAction
@@ -84,13 +94,13 @@ class BloodSugarCorrectionViewController: BaseViewController {
     
     @IBAction func saveData(_ sender: Any) {
         let nextVC = BloodSugarCheckViewController()
+        
+        nextVC.bloodSugarIndex = bloodSugarTextField.text!
+        
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @IBAction func setUpBloodSugar(_ sender: Any) {
-        
-        
-                
         var bloodSugar = bloodSugarTextField.text!
         
         if Int(bloodSugar)! < 400 {
@@ -100,10 +110,6 @@ class BloodSugarCorrectionViewController: BaseViewController {
     }
     
     @IBAction func setDownBloodSugar(_ sender: Any) {
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(setBloodSugarUp))
-
-        setDownButton.addGestureRecognizer(longPress)
-        
         var bloodSugar = bloodSugarTextField.text!
         
         if Int(bloodSugar)! > 50 {
@@ -115,24 +121,28 @@ class BloodSugarCorrectionViewController: BaseViewController {
     @objc func setBloodSugarUp(_ sender: UILongPressGestureRecognizer) {
         var bloodSugar = bloodSugarTextField.text!
         switch sender.state {
-        case .began:
-            print("press began")
-        case .ended:
-            print("press ended")
         case .changed:
             if Int(bloodSugar)! < 400 {
                 bloodSugar = String(Int(bloodSugar)! + 1)
                 bloodSugarTextField.text = bloodSugar
             }
             print("press changed")
-        case .cancelled:
-            print("press cancelled")
-        case .failed:
-            print("press failed")
-        case .possible:
-            print("press possible")
         default:
-            print("press default")
+            break
+        }
+    }
+    
+    @objc func setBloodSugarDown(_ sender: UILongPressGestureRecognizer) {
+        var bloodSugar = bloodSugarTextField.text!
+        switch sender.state {
+        case .changed:
+            if Int(bloodSugar)! > 50 {
+                bloodSugar = String(Int(bloodSugar)! - 1)
+                bloodSugarTextField.text = bloodSugar
+            }
+            print("press changed")
+        default:
+            break
         }
     }
 }

@@ -77,6 +77,9 @@
 		88DA3D86297673F200DFB406 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA3D85297673F200DFB406 /* Background.swift */; };
 		88DA3D89298BBF2100DFB406 /* BloodSugarCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA3D87298BBF2100DFB406 /* BloodSugarCheckViewController.swift */; };
 		88DA3D8A298BBF2100DFB406 /* BloodSugarCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DA3D88298BBF2100DFB406 /* BloodSugarCheckViewController.xib */; };
+		88DA3D8D2991046C00DFB406 /* Charts+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA3D8C2991046C00DFB406 /* Charts+Extension.swift */; };
+		88DA3D912993989200DFB406 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA3D8F2993989200DFB406 /* TitleCollectionViewCell.swift */; };
+		88DA3D922993989200DFB406 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DA3D902993989200DFB406 /* TitleCollectionViewCell.xib */; };
 		93ED4E4E068F3ED8D195235E /* Pods_Seknova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CC119FE50D52484C5EED3B /* Pods_Seknova.framework */; };
 		B77DB71097F54A033F4A6F43 /* Pods_Seknova_SeknovaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015CF29A02A209AB89D19F16 /* Pods_Seknova_SeknovaUITests.framework */; };
 		DBD659E2F8D7B859B1070887 /* Pods_SeknovaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B21ECA9B78A9BB57E9BDBC51 /* Pods_SeknovaTests.framework */; };
@@ -178,6 +181,9 @@
 		88DA3D85297673F200DFB406 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		88DA3D87298BBF2100DFB406 /* BloodSugarCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarCheckViewController.swift; sourceTree = "<group>"; };
 		88DA3D88298BBF2100DFB406 /* BloodSugarCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodSugarCheckViewController.xib; sourceTree = "<group>"; };
+		88DA3D8C2991046C00DFB406 /* Charts+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Charts+Extension.swift"; sourceTree = "<group>"; };
+		88DA3D8F2993989200DFB406 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		88DA3D902993989200DFB406 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		99CC119FE50D52484C5EED3B /* Pods_Seknova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seknova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21ECA9B78A9BB57E9BDBC51 /* Pods_SeknovaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeknovaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E22A2722C48D14A71A8B1E /* Pods-Seknova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova.debug.xcconfig"; path = "Target Support Files/Pods-Seknova/Pods-Seknova.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +245,7 @@
 				8876B61F2909020E005296E1 /* Color+Extensions.swift */,
 				8876B621290A6F91005296E1 /* TextField+Extensions.swift */,
 				8876B6272921E155005296E1 /* String+Extensions.swift */,
+				88DA3D8C2991046C00DFB406 /* Charts+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +327,7 @@
 			children = (
 				889EB68A295EEA6500BAA752 /* LifeStyleViewController.swift */,
 				889EB68B295EEA6500BAA752 /* LifeStyleViewController.xib */,
+				88DA3D8E299397B300DFB406 /* Components */,
 			);
 			path = LifeStyle;
 			sourceTree = "<group>";
@@ -543,6 +551,15 @@
 			path = KnowMore;
 			sourceTree = "<group>";
 		};
+		88DA3D8E299397B300DFB406 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				88DA3D8F2993989200DFB406 /* TitleCollectionViewCell.swift */,
+				88DA3D902993989200DFB406 /* TitleCollectionViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		B8D29B7A4B3A2F2B264F6E21 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,6 +709,7 @@
 				8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */,
 				88DA3D8A298BBF2100DFB406 /* BloodSugarCheckViewController.xib in Resources */,
 				8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */,
+				88DA3D922993989200DFB406 /* TitleCollectionViewCell.xib in Resources */,
 				88A2D1D6295310A40037E594 /* ScanningSensorViewController.xib in Resources */,
 				889EB685295EEA4200BAA752 /* HistoryViewController.xib in Resources */,
 				8876B62C29256A4F005296E1 /* AgreementViewController.xib in Resources */,
@@ -836,6 +854,7 @@
 				889EB690295EEADA00BAA752 /* BloodSugarIndexViewController.swift in Sources */,
 				8876B63B2938B144005296E1 /* ActivityIndicator.swift in Sources */,
 				88DA3D89298BBF2100DFB406 /* BloodSugarCheckViewController.swift in Sources */,
+				88DA3D8D2991046C00DFB406 /* Charts+Extension.swift in Sources */,
 				88DA3D86297673F200DFB406 /* Background.swift in Sources */,
 				8876B625292162CF005296E1 /* VerifyViewController.swift in Sources */,
 				889EB688295EEA5400BAA752 /* PersonalInformationViewController.swift in Sources */,
@@ -857,6 +876,7 @@
 				8876B63E293A6F19005296E1 /* AudiovisualTeachingViewController.swift in Sources */,
 				8876B6322930747C005296E1 /* ForgotPasswordViewController.swift in Sources */,
 				88D874D429405C780048EB41 /* PersonalActionSheetTableViewCell.swift in Sources */,
+				88DA3D912993989200DFB406 /* TitleCollectionViewCell.swift in Sources */,
 				88A2D1D5295310A40037E594 /* ScanningSensorViewController.swift in Sources */,
 				88CC658C295DA14200AB0310 /* TabBarView.swift in Sources */,
 				8876B636293074B8005296E1 /* ResetPasswordViewController.swift in Sources */,

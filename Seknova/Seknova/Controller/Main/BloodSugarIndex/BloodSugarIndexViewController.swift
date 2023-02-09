@@ -12,67 +12,114 @@ class BloodSugarIndexViewController: BaseViewController {
     
     // MARK: - IBOutlet
     
-    @IBOutlet weak var lineChartView: LineChartView!
+    @IBOutlet weak var seknovaImageView: UIImageView!
+    @IBOutlet weak var bluetoothImageView: UIImageView!
+    @IBOutlet weak var networkImageView: UIImageView!
     
-    var lineChartViewDataEntries: [ChartDataEntry] = []
-    var lineChartEntrieCount = 0
+    @IBOutlet weak var trendLabel: UILabel!
+    @IBOutlet weak var bloodSugarLabel: UILabel!
+    @IBOutlet weak var componentLabel: UILabel!
+    
+    @IBOutlet weak var trendSignImageView: UIImageView!
+    
+    @IBOutlet weak var bloodSugarChartView: LineChartView!
+    
+    // MARK: - Variables
+    
+    var bloodSugarIndex: [Int] = []
+    var bloodSugarChartDataEntries = [ChartDataEntry]()
+    
+    let date = Date()
+    var dateFormatter = DateFormatter()
+    
+    let highBloodSugar = UserPreference.shared.highSuger
+    let lowBloodSuagr = UserPreference.shared.lowSuger
+    
+    // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "即時血糖"
-        view.insertSubview(Background(imageName: "Background5", alpha: 0.25), at: 0)
+        
+        setupUI()
+        
+        _ = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(setupChart), userInfo: nil, repeats: true)
+    }
+    
+    // MARK: - UI Settings
+    
+    func setupUI() {
+        setupView()
         setupLineChartView()
     }
     
-    func setupLineChartView() {
-        let today = Date()
-        let zone = NSTimeZone.system
-        let interval = zone.secondsFromGMT()
-        let now = today.addingTimeInterval(TimeInterval(interval))
-
-        let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "HH:mm:ss"
-        let time = dateformatter.string(from: Date())
-        print(time)
-        lineChartViewDataInput()
-        lineChartViewConfiguration()
-    }
-    
-    // MARK: Line Chart View Data Input
-    
-    func lineChartViewDataInput() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.lineChartEntrieCount += 1
-            self.lineChartViewDataEntries.append(ChartDataEntry.init(x: Double(self.lineChartEntrieCount),
-                                                                     y: Double(Int.random(in: 75...300))))
-            self.lineChartView.reloadInputViews()
-        }
-    }
-    
-    // MARK: Line Chart View Configuration
-    
-    func lineChartViewConfiguration() {
-        let chartDataSet1 = LineChartDataSet.init(entries: lineChartViewDataEntries, label: "")
-        chartDataSet1.colors = [.red, .green, .blue, .orange, .systemPink]
-        chartDataSet1.lineWidth = 3 // 設定第一組資料的折線寬度
-        chartDataSet1.drawCirclesEnabled = false // 第一組資料點的內、外圓都不顯示
-        chartDataSet1.drawValuesEnabled = false // 第一組資料點的值在折線上都不顯示
-        chartDataSet1.mode = .horizontalBezier // 將第一組資料點的折線模式設為水平貝茲曲線
-        chartDataSet1.highlightEnabled = false // 關閉點擊後的十字線
+    private func setupView() {
+        self.title = "即時血糖"
         
-        let chartData = LineChartData.init(dataSet: chartDataSet1)
-        lineChartView.data = chartData
-        lineChartView.drawBordersEnabled = true // 繪製 lineChartView 邊框
-        lineChartView.legend.form = .none // 不顯示圖例
-        lineChartView.scaleXEnabled = true // 關閉 x 軸縮放
-        lineChartView.scaleYEnabled = false // 關閉 y 軸縮放
-        lineChartView.doubleTapToZoomEnabled = false // 關閉雙擊縮放
-        lineChartView.xAxis.drawGridLinesEnabled = true // 取消垂直網格線
-        lineChartView.xAxis.labelPosition = .bottom // 將 x 軸座標數值設在底部
-        lineChartView.xAxis.labelCount = lineChartViewDataEntries.count // 設定全部的 x 軸值的數量
-        lineChartView.xAxis.granularity = 1 // 設定 x 軸值的間隔
-        lineChartView.leftAxis.drawAxisLineEnabled = true // 不顯示左側 y 軸的線
-        lineChartView.rightAxis.enabled = false // 取消右側座標
-        lineChartView.rightAxis.drawAxisLineEnabled = true // 不顯示右側 y 軸的線
+        view.insertSubview(Background(imageName: "Background5", alpha: 0.25), at: 0)
     }
+    
+    private func setupLineChartView() {
+        for i in lowBloodSuagr...highBloodSugar {
+            let limitLine = ChartLimitLine(limit: Double(i))
+            
+            limitLine.lineColor = .orange.withAlphaComponent(0.2)
+            
+            bloodSugarChartView.leftAxis.addLimitLine(limitLine)
+        }
+        
+        dateFormatter.dateFormat = "HH:mm"
+    }
+    
+    @objc func setupChart() {
+        let xAxisNumberFormatter = ChartsXAxisFormatter()
+        
+        bloodSugarChartView.xAxis.valueFormatter = xAxisNumberFormatter
+        bloodSugarChartView.xAxis.labelPosition = .bottom
+        bloodSugarChartView.xAxis.labelCount = 6
+        bloodSugarChartView.leftAxis.axisMinimum = 0
+        bloodSugarChartView.leftAxis.axisMaximum = 400
+        bloodSugarChartView.legendRenderer.legend = .none
+        
+        bloodSugarChartView.xAxis.avoidFirstLastClippingEnabled = true
+        bloodSugarChartView.xAxis.forceLabelsEnabled = true
+        bloodSugarChartView.leftAxis.drawLimitLinesBehindDataEnabled = true
+        bloodSugarChartView.scaleYEnabled = false
+        bloodSugarChartView.rightAxis.drawLabelsEnabled = false
+        bloodSugarChartView.autoScaleMinMaxEnabled = true
+        
+        let time: TimeInterval = Date().timeIntervalSince1970
+        
+        bloodSugarChartView.xAxis.axisMaximum = time + 3540
+        bloodSugarChartView.xAxis.axisMinimum = time - 60
+        
+        bloodSugarIndex.append(Int.random(in: 50...400))
+        bloodSugarLabel.text = "\(bloodSugarIndex[bloodSugarIndex.count - 1])"
+        
+        let entry = ChartDataEntry(x: Date().timeIntervalSince1970,
+                                   y: Double(bloodSugarIndex[bloodSugarIndex.count - 1]))
+        
+        bloodSugarChartDataEntries.append(entry)
+        
+        let chartDataSet = LineChartDataSet(entries: bloodSugarChartDataEntries, label: "")
+        
+        chartDataSet.mode = .horizontalBezier
+        chartDataSet.colors = [.red]
+        chartDataSet.circleColors = [.red]
+        chartDataSet.circleRadius = 2
+        
+        chartDataSet.drawValuesEnabled = false
+        chartDataSet.drawCircleHoleEnabled = false
+        chartDataSet.highlightEnabled = false
+        
+        let chartData = LineChartData(dataSets: [chartDataSet])
+        
+        bloodSugarChartView.data = chartData
+    }
+    
+    // MARK: - IBAction
+    
 }
+
+// MARK: - Extension
+
+// MARK: - Protocol

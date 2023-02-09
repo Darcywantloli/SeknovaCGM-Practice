@@ -12,7 +12,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarIndexViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
-                <outlet property="lineChartView" destination="7q0-2M-e4Z" id="sRG-of-wWH"/>
+                <outlet property="bloodSugarChartView" destination="7q0-2M-e4Z" id="sRG-of-wWH"/>
+                <outlet property="bloodSugarLabel" destination="aEo-GT-8t2" id="783-RZ-jNr"/>
+                <outlet property="bluetoothImageView" destination="1yG-1s-YJY" id="hgY-BA-mvz"/>
+                <outlet property="componentLabel" destination="FwI-zj-iXV" id="wJp-5U-5CR"/>
+                <outlet property="networkImageView" destination="v5V-yc-CDk" id="rCS-Ox-OYT"/>
+                <outlet property="seknovaImageView" destination="vDN-6H-XCl" id="Pka-la-T91"/>
+                <outlet property="trendLabel" destination="n5m-9m-Su1" id="WaO-K1-MKV"/>
+                <outlet property="trendSignImageView" destination="5vp-cO-EUf" id="geW-vm-6Fi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,7 +43,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="network-check" translatesAutoresizingMaskIntoConstraints="NO" id="v5V-yc-CDk">
                     <rect key="frame" x="268" y="5.5" width="51" height="51"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上升趨勢高於每分鐘2or3 mg/dL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5m-9m-Su1">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5m-9m-Su1">
                     <rect key="frame" x="37.5" y="273.5" width="300" height="33.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="n5m-9m-Su1" secondAttribute="height" multiplier="9:1" id="1cX-aI-oB5"/>
