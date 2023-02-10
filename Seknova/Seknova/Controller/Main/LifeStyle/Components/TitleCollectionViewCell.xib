@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,27 +18,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="195" height="240"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLZ-pL-V8n">
-                        <rect key="frame" x="9.6666666666666714" y="4.6666666666666714" width="175.66666666666663" height="175.33333333333331"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Em-Qf-Qew">
+                        <rect key="frame" x="9.6666666666666714" y="5" width="175.66666666666663" height="175.66666666666666"/>
+                        <color key="backgroundColor" name="LifeStyle"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="qLZ-pL-V8n" secondAttribute="height" multiplier="1:1" id="jwp-Vm-6Cj"/>
+                            <constraint firstAttribute="width" secondItem="2Em-Qf-Qew" secondAttribute="height" multiplier="1:1" id="SXs-b7-sHA"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
-                            <backgroundConfiguration key="background">
-                                <color key="backgroundColor" name="LifeStyle"/>
-                            </backgroundConfiguration>
-                        </buttonConfiguration>
-                    </button>
+                    </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lXC-Py-zlq">
-                        <rect key="frame" x="40.333333333333336" y="35.333333333333343" width="114.33333333333331" height="114"/>
+                        <rect key="frame" x="40.333333333333336" y="35.666666666666664" width="114.33333333333331" height="114.33333333333334"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="lXC-Py-zlq" secondAttribute="height" multiplier="1:1" id="wa0-Ro-PDu"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJM-vY-qTa">
-                        <rect key="frame" x="0.0" y="180" width="195" height="60"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <rect key="frame" x="0.0" y="185.66666666666666" width="195" height="54.333333333333343"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -46,21 +41,21 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="lXC-Py-zlq" firstAttribute="centerY" secondItem="qLZ-pL-V8n" secondAttribute="centerY" id="0jd-WV-JRo"/>
+                <constraint firstAttribute="top" secondItem="2Em-Qf-Qew" secondAttribute="top" constant="-5" id="1gb-Vv-qdm"/>
+                <constraint firstItem="rJM-vY-qTa" firstAttribute="top" secondItem="2Em-Qf-Qew" secondAttribute="bottom" constant="5" id="AAj-1A-uFl"/>
+                <constraint firstItem="2Em-Qf-Qew" firstAttribute="width" secondItem="rJM-vY-qTa" secondAttribute="width" multiplier="0.9" id="EJ1-W4-dbA"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="leading" secondItem="rJM-vY-qTa" secondAttribute="leading" id="KgH-bH-owy"/>
-                <constraint firstItem="lXC-Py-zlq" firstAttribute="centerX" secondItem="qLZ-pL-V8n" secondAttribute="centerX" id="NQk-uV-vWN"/>
-                <constraint firstItem="qLZ-pL-V8n" firstAttribute="centerX" secondItem="rJM-vY-qTa" secondAttribute="centerX" id="SIJ-mw-b5f"/>
-                <constraint firstItem="qLZ-pL-V8n" firstAttribute="width" secondItem="rJM-vY-qTa" secondAttribute="width" multiplier="0.9" id="fGd-ra-FnX"/>
-                <constraint firstItem="lXC-Py-zlq" firstAttribute="width" secondItem="qLZ-pL-V8n" secondAttribute="width" multiplier="0.65" id="fWN-2d-FuC"/>
-                <constraint firstItem="rJM-vY-qTa" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.25" id="lNa-nd-sPN"/>
+                <constraint firstItem="lXC-Py-zlq" firstAttribute="centerY" secondItem="2Em-Qf-Qew" secondAttribute="centerY" id="MY1-T2-Hdm"/>
+                <constraint firstItem="lXC-Py-zlq" firstAttribute="centerX" secondItem="2Em-Qf-Qew" secondAttribute="centerX" id="diS-Sm-edK"/>
+                <constraint firstItem="lXC-Py-zlq" firstAttribute="width" secondItem="2Em-Qf-Qew" secondAttribute="width" multiplier="0.650854" id="itF-Qs-9sK"/>
                 <constraint firstItem="rJM-vY-qTa" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="s1b-G8-15n"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="rJM-vY-qTa" secondAttribute="bottom" id="ucj-cB-9gx"/>
-                <constraint firstItem="rJM-vY-qTa" firstAttribute="top" secondItem="qLZ-pL-V8n" secondAttribute="bottom" id="v7I-N1-sQK"/>
+                <constraint firstItem="2Em-Qf-Qew" firstAttribute="centerX" secondItem="rJM-vY-qTa" secondAttribute="centerX" id="yxi-u7-XAr"/>
                 <constraint firstItem="rJM-vY-qTa" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="z0a-kI-rIJ"/>
             </constraints>
             <size key="customSize" width="195" height="240"/>
             <connections>
-                <outlet property="titleButton" destination="qLZ-pL-V8n" id="9en-Rm-BgE"/>
+                <outlet property="titleBackgroundView" destination="2Em-Qf-Qew" id="K8a-lm-LaP"/>
                 <outlet property="titleImageView" destination="lXC-Py-zlq" id="tZg-c7-boC"/>
                 <outlet property="titleLabel" destination="rJM-vY-qTa" id="c8k-sQ-aId"/>
             </connections>

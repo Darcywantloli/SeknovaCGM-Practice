@@ -64,6 +64,7 @@ extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDat
             let cell = titleCollectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier,
                                                                for: indexPath) as! TitleCollectionViewCell
             
+            cell.titleBackgroundView.layer.cornerRadius = 31
             cell.titleImageView.image = UIImage(named: "meal")
             cell.titleLabel.text = "用餐"
             
@@ -72,6 +73,7 @@ extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDat
             let cell = titleCollectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier,
                                                                for: indexPath) as! TitleCollectionViewCell
             
+            cell.titleBackgroundView.layer.cornerRadius = 31
             cell.titleImageView.image = UIImage(named: "exercise")
             cell.titleLabel.text = "運動"
             
@@ -80,6 +82,7 @@ extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDat
             let cell = titleCollectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier,
                                                                for: indexPath) as! TitleCollectionViewCell
             
+            cell.titleBackgroundView.layer.cornerRadius = 31
             cell.titleImageView.image = UIImage(named: "insulin")
             cell.titleLabel.text = "胰島素"
             
@@ -88,6 +91,7 @@ extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDat
             let cell = titleCollectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier,
                                                                for: indexPath) as! TitleCollectionViewCell
             
+            cell.titleBackgroundView.layer.cornerRadius = 31
             cell.titleImageView.image = UIImage(named: "sleep")
             cell.titleLabel.text = "睡眠"
             
@@ -96,6 +100,7 @@ extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDat
             let cell = titleCollectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier,
                                                                for: indexPath) as! TitleCollectionViewCell
             
+            cell.titleBackgroundView.layer.cornerRadius = 31
             cell.titleImageView.image = UIImage(named: "awaken")
             cell.titleLabel.text = "起床"
             
@@ -104,6 +109,7 @@ extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDat
             let cell = titleCollectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier,
                                                                for: indexPath) as! TitleCollectionViewCell
             
+            cell.titleBackgroundView.layer.cornerRadius = 31
             cell.titleImageView.image = UIImage(named: "bath")
             cell.titleLabel.text = "洗澡"
             
@@ -112,6 +118,7 @@ extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDat
             let cell = titleCollectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier,
                                                                for: indexPath) as! TitleCollectionViewCell
             
+            cell.titleBackgroundView.layer.cornerRadius = 31
             cell.titleImageView.image = UIImage(named: "other")
             cell.titleLabel.text = "其他"
             

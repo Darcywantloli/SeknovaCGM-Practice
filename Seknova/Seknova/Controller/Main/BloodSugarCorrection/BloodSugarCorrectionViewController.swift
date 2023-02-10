@@ -24,7 +24,6 @@ class BloodSugarCorrectionViewController: BaseViewController {
     
     // MARK: - Variables
     
-    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
