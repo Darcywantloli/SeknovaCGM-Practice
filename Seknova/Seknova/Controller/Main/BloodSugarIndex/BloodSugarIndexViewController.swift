@@ -42,13 +42,14 @@ class BloodSugarIndexViewController: BaseViewController {
         
         setupUI()
         
-        _ = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(setupChart), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setupChart), userInfo: nil, repeats: true)
     }
     
     // MARK: - UI Settings
     
     func setupUI() {
         setupView()
+        setupChart()
         setupLineChartView()
     }
     

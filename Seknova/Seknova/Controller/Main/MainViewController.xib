@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,6 +25,9 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lna-2s-Ywt">
+                    <rect key="frame" x="0.0" y="103" width="430" height="715"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVV-Hd-Efh">
                     <rect key="frame" x="0.0" y="103.00000000000001" width="107.66666666666667" height="186.33333333333337"/>
                     <subviews>
@@ -44,6 +47,7 @@
                             <buttonConfiguration key="configuration" style="plain" title="Button"/>
                         </button>
                     </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="N66-HW-MXK" firstAttribute="top" secondItem="fqP-wp-Yen" secondAttribute="bottom" id="ATU-Lr-rKm"/>
                         <constraint firstItem="xur-6l-4Hh" firstAttribute="top" secondItem="mVV-Hd-Efh" secondAttribute="top" id="H8c-6O-KTv"/>
@@ -58,9 +62,6 @@
                         <constraint firstItem="fqP-wp-Yen" firstAttribute="width" secondItem="xur-6l-4Hh" secondAttribute="width" id="xka-Az-vBB"/>
                         <constraint firstItem="N66-HW-MXK" firstAttribute="width" secondItem="fqP-wp-Yen" secondAttribute="width" id="zFy-ZS-GRv"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lna-2s-Ywt">
-                    <rect key="frame" x="0.0" y="103" width="430" height="715"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xo3-gL-DYs" customClass="TabBarView" customModule="Seknova" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="818" width="430" height="80"/>

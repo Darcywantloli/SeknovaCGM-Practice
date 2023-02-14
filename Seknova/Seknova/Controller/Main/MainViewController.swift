@@ -24,11 +24,6 @@ class MainViewController: BaseViewController {
     
     var showOrNot = true
     
-    let dropDownTransparent = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-    let deviceEventButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-    
-    let rightBarButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-    
     var vc: [UIViewController] = []
     
     private let historyVC = HistoryViewController()
@@ -36,6 +31,11 @@ class MainViewController: BaseViewController {
     private let bloodSugarVC = BloodSugarIndexViewController()
     private let lifeStyleVC = LifeStyleViewController()
     private let personalVC = PersonalInformationViewController()
+    
+    let dropDownTransparent = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    let deviceEventButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    let timeLogButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    let reloadButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
     
     // MARK: - LifeCycle
     
@@ -46,15 +46,14 @@ class MainViewController: BaseViewController {
         updateView(2)
         
         setupUI()
-        setNavigationBar()
     }
     
     // MARK: - UI Settings
     
     func setupUI() {
+        setNavigationBar()
         setupCustomTabBar()
         setupBurgerListView()
-        setupLeftNavigationBarButtonItems()
     }
     
     private func setupCustomTabBar() {
@@ -63,6 +62,16 @@ class MainViewController: BaseViewController {
     }
     
     private func setupNaviagtionBar(_ index: Int) {
+        setupLeftNavigationBarButtonItems()
+        setupRightNavigationBarButtonItems(index)
+        setupNavigationBarTitle(index)
+    }
+    
+    private func setupBurgerListView() {
+        hideBurgerList(times: 0)
+    }
+    
+    private func setupNavigationBarTitle(_ index: Int) {
         switch index {
         case 0:
             self.title = "歷史紀錄"
@@ -79,25 +88,51 @@ class MainViewController: BaseViewController {
         }
     }
     
-    private func setupBurgerListView() {
-        hideBurgerList(times: 0)
-    }
-    
     private func setupRightNavigationBarButtonItems(_ index: Int) {
-//        switch index {
-//        case 0:
-//            <#code#>
-//        case 1:
-//
-//        case 2:
-//
-//        case 3:
-//
-//        case 4:
-//
-//        default:
-//            <#code#>
-//        }
+        self.navigationItem.rightBarButtonItem = nil
+        
+        switch index {
+        case 0:
+            reloadButton.setBackgroundImage(UIImage(named: "reload"), for: .normal)
+            reloadButton.addTarget(self, action: #selector(reload), for: .touchUpInside)
+            
+            let eventButton = UIBarButtonItem(customView: reloadButton)
+            
+            let eventButtonWidth = eventButton.customView?.widthAnchor.constraint(equalToConstant: 30)
+            eventButtonWidth?.isActive = true
+            let eventButtonHeight = eventButton.customView?.heightAnchor.constraint(equalToConstant: 30)
+            eventButtonHeight?.isActive = true
+            
+            self.navigationItem.rightBarButtonItem = eventButton
+        case 2:
+            timeLogButton.setBackgroundImage(UIImage(named: "user"), for: .normal)
+            timeLogButton.addTarget(self, action: #selector(timeLog), for: .touchUpInside)
+            
+            let eventButton = UIBarButtonItem(customView: timeLogButton)
+            
+            let eventButtonWidth = eventButton.customView?.widthAnchor.constraint(equalToConstant: 30)
+            eventButtonWidth?.isActive = true
+            let eventButtonHeight = eventButton.customView?.heightAnchor.constraint(equalToConstant: 30)
+            eventButtonHeight?.isActive = true
+            
+            self.navigationItem.rightBarButtonItem = eventButton
+        case 3:
+            let eventButton = UIBarButtonItem(title: "事件記錄",
+                                              style: .plain,
+                                              target: self,
+                                              action: #selector(eventLog))
+            
+            self.navigationItem.rightBarButtonItem = eventButton
+        case 4:
+            let eventButton = UIBarButtonItem(title: "更新",
+                                              style: .plain,
+                                              target: self,
+                                              action: #selector(update))
+            
+            self.navigationItem.rightBarButtonItem = eventButton
+        default:
+            self.navigationItem.rightBarButtonItem = nil
+        }
     }
     
     private func setupLeftNavigationBarButtonItems() {
@@ -114,7 +149,7 @@ class MainViewController: BaseViewController {
         }
         
         dropDownTransparent.setBackgroundImage(UIImage(named: "ThreeLineSmall"), for: .normal)
-        dropDownTransparent.addTarget(self, action: #selector(burgerList), for: .allEvents)
+        dropDownTransparent.addTarget(self, action: #selector(burgerList), for: .touchUpInside)
         
         let dropDownButton = UIBarButtonItem(customView: dropDownTransparent)
         
@@ -129,7 +164,7 @@ class MainViewController: BaseViewController {
             deviceEventButton.setBackgroundImage(UIImage(named: "unlink"), for: .normal)
         }
         
-        deviceEventButton.addTarget(self, action: #selector(deviceEvent), for: .allEvents)
+        deviceEventButton.addTarget(self, action: #selector(deviceEvent), for: .touchUpInside)
         
         let deviceButton = UIBarButtonItem(customView: deviceEventButton)
         
@@ -182,13 +217,35 @@ class MainViewController: BaseViewController {
             popupVC.event = (UserPreference.shared.sensorID == "") ? .transmitterOnSensorOff : .transmitterOnSensorOn
         }
         
+        switch popupVC.event {
+        case .transmitterOffSensorOff, .transmitterOnSensorOff:
+            popupVC.preferredContentSize = CGSize(width: 250, height: 50)
+        case .transmitterOnSensorOn, .transmitterOffSensorOn:
+            popupVC.preferredContentSize = CGSize(width: 150, height: 50)
+        }
+        
         popupVC.modalPresentationStyle = .popover
         popupVC.popoverPresentationController?.delegate = self
         popupVC.popoverPresentationController?.sourceView = deviceEventButton
         popupVC.popoverPresentationController?.sourceRect = deviceEventButton.bounds
-        popupVC.preferredContentSize = CGSize(width: self.view.bounds.width / 2, height: 100)
         
         present(popupVC, animated: true)
+    }
+    
+    @objc func timeLog() {
+        print("time")
+    }
+    
+    @objc func eventLog() {
+        print("log")
+    }
+    
+    @objc func update() {
+        print("update")
+    }
+    
+    @objc func reload() {
+        print("reload")
     }
     
     // 切換ContainerView

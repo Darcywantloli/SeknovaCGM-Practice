@@ -28,19 +28,46 @@ class LifeStyleViewController: BaseViewController {
     
     // MARK: - Variables
     
+    let date = Date()
+    var dateFormatter = DateFormatter()
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "生活作息"
-        
-        subtitleCollectionView.backgroundView?.layer.cornerRadius = 50
 
         setupUI()
     }
+    
+    // MARK: - UI Settings
 
     func setupUI() {
+        setupLabel()
+        setupButton()
+        setupTableView()
+        setupPickerView()
         setupCollectionView()
+    }
+    
+    private func setupLabel() {
+        dateFormatter.dateFormat = "yyyy/MM/dd EEEE a HH:mm"
+        dateFormatter.locale = Locale(identifier: "zh_TW")
+        let time = dateFormatter.string(from: Date())
+        
+        timeLabel.text = time
+    }
+    
+    private func setupButton() {
+        addButton.isHidden = true
+    }
+    
+    private func setupTableView() {
+        attributeTableView.isHidden = true
+    }
+    
+    private func setupPickerView() {
+        timePickerView.isHidden = true
     }
     
     private func setupCollectionView() {
@@ -49,13 +76,25 @@ class LifeStyleViewController: BaseViewController {
         
         titleCollectionView.register(UINib(nibName: "TitleCollectionViewCell", bundle: nil),
                                      forCellWithReuseIdentifier: TitleCollectionViewCell.identifier)
+        
+        subtitleCollectionView.delegate = self
+        subtitleCollectionView.dataSource = self
+        
+        subtitleCollectionView.isHidden = true
     }
     
 }
 
 extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        switch collectionView {
+        case titleCollectionView:
+            return 7
+        case subtitleCollectionView:
+            return 1
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -128,5 +167,17 @@ extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDat
         }
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        switch indexPath.item {
+//        case 0:
+//        case 1:
+//        case 2:
+//        case 3:
+//        case 4:
+//        case 5:
+//        case 6:
+//        default:
+//            <#code#>
+//        }
+    }
 }

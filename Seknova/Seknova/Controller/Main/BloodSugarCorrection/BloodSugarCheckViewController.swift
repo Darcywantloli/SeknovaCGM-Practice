@@ -33,7 +33,7 @@ class BloodSugarCheckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(setupTime), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setupTime), userInfo: nil, repeats: true)
         
         setupUI()
     }
@@ -41,6 +41,7 @@ class BloodSugarCheckViewController: UIViewController {
     // MARK: - UI Settings
     
     func setupUI() {
+        setupTime()
         setupLabel()
         setupButton()
     }
