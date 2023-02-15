@@ -51,9 +51,16 @@ class MainViewController: BaseViewController {
     // MARK: - UI Settings
     
     func setupUI() {
+        setupButton()
         setNavigationBar()
         setupCustomTabBar()
         setupBurgerListView()
+    }
+    
+    private func setupButton() {
+        reportButton.setTitle("報表", for: .normal)
+        dailyButton.setTitle("日誌", for: .normal)
+        settingButton.setTitle("設定", for: .normal)
     }
     
     private func setupCustomTabBar() {
@@ -196,6 +203,23 @@ class MainViewController: BaseViewController {
         })
     }
     
+    // 切換ContainerView
+    private func updateView(_ index: Int) {
+        setupNaviagtionBar(index)
+    
+        if children.first(where: { String(describing: $0.classForCoder) == String(describing: vc[index].classForCoder) }) == nil {
+            addChild(vc[index])
+            vc[index].view.frame = containerView.bounds
+        }
+        
+        if !showOrNot {
+            hideBurgerList(times: 0)
+            showOrNot = !showOrNot
+        }
+        
+        containerView.addSubview(vc[index].view!)
+    }
+    
     // BurgerList狀態判斷
     @objc func burgerList() {
         if showOrNot {
@@ -248,15 +272,10 @@ class MainViewController: BaseViewController {
         print("reload")
     }
     
-    // 切換ContainerView
-    private func updateView(_ index: Int) {
-        setupNaviagtionBar(index)
+    @IBAction func setting(_ sender: Any) {
+        let nextVC = SettingViewController()
         
-        if children.first(where: { String(describing: $0.classForCoder) == String(describing: vc[index].classForCoder) }) == nil {
-            addChild(vc[index])
-            vc[index].view.frame = containerView.bounds
-        }
-        containerView.addSubview(vc[index].view!)
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 

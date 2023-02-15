@@ -13,6 +13,14 @@
 		8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */; };
 		88202A3D29505ED7008B9E31 /* PairBluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88202A3B29505ED7008B9E31 /* PairBluetoothViewController.swift */; };
 		88202A3E29505ED7008B9E31 /* PairBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88202A3C29505ED7008B9E31 /* PairBluetoothViewController.xib */; };
+		88425392299B5D67005DBA48 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425390299B5D67005DBA48 /* SettingViewController.swift */; };
+		88425393299B5D67005DBA48 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88425391299B5D67005DBA48 /* SettingViewController.xib */; };
+		88425397299B68C0005DBA48 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425395299B68C0005DBA48 /* ImageTableViewCell.swift */; };
+		88425398299B68C0005DBA48 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88425396299B68C0005DBA48 /* ImageTableViewCell.xib */; };
+		8842539B299B68ED005DBA48 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425399299B68ED005DBA48 /* LabelTableViewCell.swift */; };
+		8842539C299B68ED005DBA48 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */; };
+		8842539F299B6900005DBA48 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */; };
+		884253A0299B6900005DBA48 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */; };
 		8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61A2908702A005296E1 /* RegisterViewController.swift */; };
 		8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B61B2908702A005296E1 /* RegisterViewController.xib */; };
 		8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61F2909020E005296E1 /* Color+Extensions.swift */; };
@@ -113,6 +121,14 @@
 		8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanningTransmitterViewController.xib; sourceTree = "<group>"; };
 		88202A3B29505ED7008B9E31 /* PairBluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairBluetoothViewController.swift; sourceTree = "<group>"; };
 		88202A3C29505ED7008B9E31 /* PairBluetoothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairBluetoothViewController.xib; sourceTree = "<group>"; };
+		88425390299B5D67005DBA48 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		88425391299B5D67005DBA48 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		88425395299B68C0005DBA48 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		88425396299B68C0005DBA48 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		88425399299B68ED005DBA48 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
+		8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
+		8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
 		8876B61A2908702A005296E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8876B61B2908702A005296E1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8876B61F2909020E005296E1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -239,6 +255,29 @@
 			path = PairBluetooth;
 			sourceTree = "<group>";
 		};
+		8842538F299B5CF8005DBA48 /* SettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88425390299B5D67005DBA48 /* SettingViewController.swift */,
+				88425391299B5D67005DBA48 /* SettingViewController.xib */,
+				88425394299B687A005DBA48 /* Components */,
+			);
+			path = SettingViewController;
+			sourceTree = "<group>";
+		};
+		88425394299B687A005DBA48 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				88425395299B68C0005DBA48 /* ImageTableViewCell.swift */,
+				88425396299B68C0005DBA48 /* ImageTableViewCell.xib */,
+				88425399299B68ED005DBA48 /* LabelTableViewCell.swift */,
+				8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */,
+				8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */,
+				8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		8876B61E290901F7005296E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +383,7 @@
 		88A2D1D729531B6B0037E594 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				8842538F299B5CF8005DBA48 /* SettingViewController */,
 				88A2D1DB29531E490037E594 /* MainViewController.swift */,
 				88A2D1DC29531E490037E594 /* MainViewController.xib */,
 				88A2D1DF2955973F0037E594 /* DeviceStatusViewController.swift */,
@@ -702,6 +742,7 @@
 				889EB689295EEA5400BAA752 /* PersonalInformationViewController.xib in Resources */,
 				88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */,
 				8876B626292162CF005296E1 /* VerifyViewController.xib in Resources */,
+				8842539C299B68ED005DBA48 /* LabelTableViewCell.xib in Resources */,
 				8876B637293074B8005296E1 /* ResetPasswordViewController.xib in Resources */,
 				88D874CC294050290048EB41 /* GetPersonalInformationViewController.xib in Resources */,
 				88D874D529405C780048EB41 /* PersonalActionSheetTableViewCell.xib in Resources */,
@@ -709,6 +750,7 @@
 				8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */,
 				88DA3D8A298BBF2100DFB406 /* BloodSugarCheckViewController.xib in Resources */,
 				8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */,
+				88425398299B68C0005DBA48 /* ImageTableViewCell.xib in Resources */,
 				88DA3D922993989200DFB406 /* TitleCollectionViewCell.xib in Resources */,
 				88A2D1D6295310A40037E594 /* ScanningSensorViewController.xib in Resources */,
 				889EB685295EEA4200BAA752 /* HistoryViewController.xib in Resources */,
@@ -717,7 +759,9 @@
 				88C4D23C293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib in Resources */,
 				889EB68D295EEA6500BAA752 /* LifeStyleViewController.xib in Resources */,
 				88A2D1D129506F400037E594 /* ConnectionViewController.xib in Resources */,
+				884253A0299B6900005DBA48 /* SwitchTableViewCell.xib in Resources */,
 				889EB695295EEAFF00BAA752 /* BloodSugarCorrectionViewController.xib in Resources */,
+				88425393299B5D67005DBA48 /* SettingViewController.xib in Resources */,
 				889EB691295EEADA00BAA752 /* BloodSugarIndexViewController.xib in Resources */,
 				88A2D1E22955973F0037E594 /* DeviceStatusViewController.xib in Resources */,
 				88CC658E295DA15800AB0310 /* TabBarView.xib in Resources */,
@@ -860,8 +904,10 @@
 				889EB688295EEA5400BAA752 /* PersonalInformationViewController.swift in Sources */,
 				889EB68C295EEA6500BAA752 /* LifeStyleViewController.swift in Sources */,
 				88C4D23B293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift in Sources */,
+				88425397299B68C0005DBA48 /* ImageTableViewCell.swift in Sources */,
 				8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */,
 				88CDF78028FFF64600FE16E1 /* BaseViewController.swift in Sources */,
+				88425392299B5D67005DBA48 /* SettingViewController.swift in Sources */,
 				8876B62F292760B9005296E1 /* UserPreference.swift in Sources */,
 				88A2D1D029506F400037E594 /* ConnectionViewController.swift in Sources */,
 				889EB694295EEAFF00BAA752 /* BloodSugarCorrectionViewController.swift in Sources */,
@@ -878,12 +924,14 @@
 				88D874D429405C780048EB41 /* PersonalActionSheetTableViewCell.swift in Sources */,
 				88DA3D912993989200DFB406 /* TitleCollectionViewCell.swift in Sources */,
 				88A2D1D5295310A40037E594 /* ScanningSensorViewController.swift in Sources */,
+				8842539F299B6900005DBA48 /* SwitchTableViewCell.swift in Sources */,
 				88CC658C295DA14200AB0310 /* TabBarView.swift in Sources */,
 				8876B636293074B8005296E1 /* ResetPasswordViewController.swift in Sources */,
 				8807B2BB294C434100FEC0B3 /* ScanningTransmitterViewController.swift in Sources */,
 				8876B62B29256A4F005296E1 /* AgreementViewController.swift in Sources */,
 				88D874D72940717D0048EB41 /* AppDefine.swift in Sources */,
 				889EB684295EEA4200BAA752 /* HistoryViewController.swift in Sources */,
+				8842539B299B68ED005DBA48 /* LabelTableViewCell.swift in Sources */,
 				88A2D1E72959A1BA0037E594 /* BarButtonItemView.swift in Sources */,
 				8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */,
 				8876B622290A6F91005296E1 /* TextField+Extensions.swift in Sources */,
