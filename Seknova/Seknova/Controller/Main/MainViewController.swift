@@ -75,6 +75,8 @@ class MainViewController: BaseViewController {
     }
     
     private func setupBurgerListView() {
+        burgerListView.layer.shadowOpacity = 0.5
+        burgerListView.layer.shadowRadius = 2
         hideBurgerList(times: 0)
     }
     

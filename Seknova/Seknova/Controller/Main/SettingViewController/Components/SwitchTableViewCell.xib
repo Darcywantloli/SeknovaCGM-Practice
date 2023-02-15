@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,24 +19,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUP-cx-pvd">
-                        <rect key="frame" x="0.0" y="0.0" width="268" height="44"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="25" y="0.0" width="221" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dx1-U5-uHM">
-                        <rect key="frame" x="268" y="6.6666666666666679" width="49" height="31.000000000000004"/>
+                        <rect key="frame" x="246" y="6.6666666666666679" width="51" height="31.000000000000004"/>
                     </switch>
                 </subviews>
+                <color key="backgroundColor" name="SettingCellBackground"/>
                 <constraints>
                     <constraint firstItem="oUP-cx-pvd" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="0xe-z2-kjf"/>
                     <constraint firstItem="dx1-U5-uHM" firstAttribute="leading" secondItem="oUP-cx-pvd" secondAttribute="trailing" id="At7-I1-fdR"/>
                     <constraint firstItem="oUP-cx-pvd" firstAttribute="centerY" secondItem="dx1-U5-uHM" secondAttribute="centerY" id="GGH-CN-g8N"/>
-                    <constraint firstItem="dx1-U5-uHM" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.146875" id="O5j-YP-XLf"/>
-                    <constraint firstItem="oUP-cx-pvd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="STp-FI-XF9"/>
-                    <constraint firstItem="dx1-U5-uHM" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.704545" id="bXd-qU-kgF"/>
+                    <constraint firstItem="oUP-cx-pvd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="STp-FI-XF9"/>
                     <constraint firstItem="dx1-U5-uHM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cc4-Kz-kxz"/>
-                    <constraint firstAttribute="trailing" secondItem="dx1-U5-uHM" secondAttribute="trailing" constant="5" id="m1K-33-00y"/>
+                    <constraint firstAttribute="trailing" secondItem="dx1-U5-uHM" secondAttribute="trailing" constant="25" id="m1K-33-00y"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -46,4 +46,9 @@
             <point key="canvasLocation" x="49" y="20"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="SettingCellBackground">
+            <color red="0.87450980392156863" green="0.8784313725490196" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

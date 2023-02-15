@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,27 +19,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olr-Aq-BjD">
-                        <rect key="frame" x="0.0" y="0.0" width="276" height="44"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="25.000000000000014" y="0.0" width="252.33333333333337" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zYh-tz-ude">
-                        <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                        <rect key="frame" x="277.33333333333331" y="13.333333333333334" width="17.666666666666686" height="17.333333333333329"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="zYh-tz-ude" secondAttribute="height" multiplier="1:1" id="KvN-SB-NTO"/>
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" name="SettingCellBackground"/>
                 <constraints>
                     <constraint firstItem="olr-Aq-BjD" firstAttribute="centerY" secondItem="zYh-tz-ude" secondAttribute="centerY" id="FPA-lr-B6V"/>
                     <constraint firstItem="zYh-tz-ude" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YSr-AH-9fr"/>
-                    <constraint firstItem="zYh-tz-ude" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="boU-gW-L64"/>
-                    <constraint firstAttribute="trailing" secondItem="zYh-tz-ude" secondAttribute="trailing" id="dkM-o1-1Vx"/>
-                    <constraint firstItem="olr-Aq-BjD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="r9z-uH-dbt"/>
+                    <constraint firstItem="zYh-tz-ude" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.4" id="boU-gW-L64"/>
+                    <constraint firstAttribute="trailing" secondItem="zYh-tz-ude" secondAttribute="trailing" constant="25" id="dkM-o1-1Vx"/>
+                    <constraint firstItem="olr-Aq-BjD" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="lGu-wu-6Ty"/>
+                    <constraint firstItem="olr-Aq-BjD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="r9z-uH-dbt"/>
                     <constraint firstItem="zYh-tz-ude" firstAttribute="leading" secondItem="olr-Aq-BjD" secondAttribute="trailing" id="utK-RM-TEf"/>
-                    <constraint firstItem="olr-Aq-BjD" firstAttribute="height" secondItem="zYh-tz-ude" secondAttribute="height" id="x76-Yt-iuH"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -49,4 +50,9 @@
             <point key="canvasLocation" x="49" y="20"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="SettingCellBackground">
+            <color red="0.87450980392156863" green="0.8784313725490196" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

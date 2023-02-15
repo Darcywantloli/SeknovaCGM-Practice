@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +19,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LG8-0R-2WH">
-                        <rect key="frame" x="0.0" y="0.0" width="224" height="44"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="25" y="0.0" width="174" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qK-Nd-Dif">
-                        <rect key="frame" x="224" y="0.0" width="96" height="44"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qK-Nd-Dif">
+                        <rect key="frame" x="199" y="0.0" width="96" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" name="SettingCellBackground"/>
                 <constraints>
                     <constraint firstItem="9qK-Nd-Dif" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7Ki-eq-zoY"/>
                     <constraint firstItem="LG8-0R-2WH" firstAttribute="height" secondItem="9qK-Nd-Dif" secondAttribute="height" id="8DA-XF-ucM"/>
                     <constraint firstItem="9qK-Nd-Dif" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.3" id="FaD-HW-srZ"/>
                     <constraint firstItem="9qK-Nd-Dif" firstAttribute="leading" secondItem="LG8-0R-2WH" secondAttribute="trailing" id="KDG-Jq-dRh"/>
-                    <constraint firstAttribute="trailing" secondItem="9qK-Nd-Dif" secondAttribute="trailing" id="UHv-KU-5k8"/>
+                    <constraint firstAttribute="trailing" secondItem="9qK-Nd-Dif" secondAttribute="trailing" constant="25" id="UHv-KU-5k8"/>
                     <constraint firstItem="LG8-0R-2WH" firstAttribute="centerY" secondItem="9qK-Nd-Dif" secondAttribute="centerY" id="acC-hG-mI8"/>
-                    <constraint firstItem="LG8-0R-2WH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kxR-Mb-ddP"/>
+                    <constraint firstItem="LG8-0R-2WH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="kxR-Mb-ddP"/>
                     <constraint firstItem="9qK-Nd-Dif" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="vyw-v2-HIx"/>
                 </constraints>
             </tableViewCellContentView>
@@ -49,4 +51,9 @@
             <point key="canvasLocation" x="49" y="20"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="SettingCellBackground">
+            <color red="0.87450980392156863" green="0.8784313725490196" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
