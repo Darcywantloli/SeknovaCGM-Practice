@@ -13,6 +13,10 @@
 		8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */; };
 		88202A3D29505ED7008B9E31 /* PairBluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88202A3B29505ED7008B9E31 /* PairBluetoothViewController.swift */; };
 		88202A3E29505ED7008B9E31 /* PairBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88202A3C29505ED7008B9E31 /* PairBluetoothViewController.xib */; };
+		882B4F0D299E1D970031AD31 /* AlertSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */; };
+		882B4F0E299E1D970031AD31 /* AlertSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */; };
+		882B4F13299F50F60031AD31 /* TwoLabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */; };
+		882B4F14299F50F60031AD31 /* TwoLabelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F12299F50F60031AD31 /* TwoLabelsTableViewCell.xib */; };
 		88425392299B5D67005DBA48 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425390299B5D67005DBA48 /* SettingViewController.swift */; };
 		88425393299B5D67005DBA48 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88425391299B5D67005DBA48 /* SettingViewController.xib */; };
 		88425397299B68C0005DBA48 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425395299B68C0005DBA48 /* ImageTableViewCell.swift */; };
@@ -121,6 +125,10 @@
 		8807B2BA294C434100FEC0B3 /* ScanningTransmitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanningTransmitterViewController.xib; sourceTree = "<group>"; };
 		88202A3B29505ED7008B9E31 /* PairBluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairBluetoothViewController.swift; sourceTree = "<group>"; };
 		88202A3C29505ED7008B9E31 /* PairBluetoothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairBluetoothViewController.xib; sourceTree = "<group>"; };
+		882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingViewController.swift; sourceTree = "<group>"; };
+		882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertSettingViewController.xib; sourceTree = "<group>"; };
+		882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsTableViewCell.swift; sourceTree = "<group>"; };
+		882B4F12299F50F60031AD31 /* TwoLabelsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoLabelsTableViewCell.xib; sourceTree = "<group>"; };
 		88425390299B5D67005DBA48 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		88425391299B5D67005DBA48 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		88425395299B68C0005DBA48 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -255,17 +263,7 @@
 			path = PairBluetooth;
 			sourceTree = "<group>";
 		};
-		8842538F299B5CF8005DBA48 /* SettingViewController */ = {
-			isa = PBXGroup;
-			children = (
-				88425390299B5D67005DBA48 /* SettingViewController.swift */,
-				88425391299B5D67005DBA48 /* SettingViewController.xib */,
-				88425394299B687A005DBA48 /* Components */,
-			);
-			path = SettingViewController;
-			sourceTree = "<group>";
-		};
-		88425394299B687A005DBA48 /* Components */ = {
+		882B4F0F299E2AE50031AD31 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
 				88425395299B68C0005DBA48 /* ImageTableViewCell.swift */,
@@ -274,6 +272,36 @@
 				8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */,
 				8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */,
 				8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		882B4F10299E2AFD0031AD31 /* AlertSetting */ = {
+			isa = PBXGroup;
+			children = (
+				882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */,
+				882B4F12299F50F60031AD31 /* TwoLabelsTableViewCell.xib */,
+			);
+			path = AlertSetting;
+			sourceTree = "<group>";
+		};
+		8842538F299B5CF8005DBA48 /* SettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88425390299B5D67005DBA48 /* SettingViewController.swift */,
+				88425391299B5D67005DBA48 /* SettingViewController.xib */,
+				882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */,
+				882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */,
+				88425394299B687A005DBA48 /* Components */,
+			);
+			path = SettingViewController;
+			sourceTree = "<group>";
+		};
+		88425394299B687A005DBA48 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				882B4F10299E2AFD0031AD31 /* AlertSetting */,
+				882B4F0F299E2AE50031AD31 /* Setting */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -734,6 +762,7 @@
 			files = (
 				88CDF77E28EEC9EF00FE16E1 /* LoginViewController.xib in Resources */,
 				88202A3E29505ED7008B9E31 /* PairBluetoothViewController.xib in Resources */,
+				882B4F14299F50F60031AD31 /* TwoLabelsTableViewCell.xib in Resources */,
 				88C4D240293DF08200FB7C67 /* KnowMoreViewController.xib in Resources */,
 				88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */,
 				88D874D129405C500048EB41 /* PersonalTextFieldTableViewCell.xib in Resources */,
@@ -742,6 +771,7 @@
 				889EB689295EEA5400BAA752 /* PersonalInformationViewController.xib in Resources */,
 				88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */,
 				8876B626292162CF005296E1 /* VerifyViewController.xib in Resources */,
+				882B4F0E299E1D970031AD31 /* AlertSettingViewController.xib in Resources */,
 				8842539C299B68ED005DBA48 /* LabelTableViewCell.xib in Resources */,
 				8876B637293074B8005296E1 /* ResetPasswordViewController.xib in Resources */,
 				88D874CC294050290048EB41 /* GetPersonalInformationViewController.xib in Resources */,
@@ -916,6 +946,7 @@
 				8876B6392934AB7D005296E1 /* Alert.swift in Sources */,
 				88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */,
 				88A2D1DD29531E490037E594 /* MainViewController.swift in Sources */,
+				882B4F13299F50F60031AD31 /* TwoLabelsTableViewCell.swift in Sources */,
 				88C4D23F293DF08200FB7C67 /* KnowMoreViewController.swift in Sources */,
 				88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */,
 				8807B2B3294B2BEE00FEC0B3 /* UserInformationTable.swift in Sources */,
@@ -934,6 +965,7 @@
 				8842539B299B68ED005DBA48 /* LabelTableViewCell.swift in Sources */,
 				88A2D1E72959A1BA0037E594 /* BarButtonItemView.swift in Sources */,
 				8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */,
+				882B4F0D299E1D970031AD31 /* AlertSettingViewController.swift in Sources */,
 				8876B622290A6F91005296E1 /* TextField+Extensions.swift in Sources */,
 				88D874D029405C500048EB41 /* PersonalTextFieldTableViewCell.swift in Sources */,
 				8807B2B12946C2A100FEC0B3 /* LocalDatabase.swift in Sources */,

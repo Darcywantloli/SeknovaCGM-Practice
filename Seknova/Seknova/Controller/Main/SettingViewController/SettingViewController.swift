@@ -155,7 +155,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                                                                 for: indexPath) as! LabelTableViewCell
                 
                 cell.informationLabel.text = "暖機狀態"
-                cell.indexLabel.text = "Off"
+                cell.indexLabel.text = "On"
                 
                 return cell
             case 12:
@@ -272,11 +272,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             switch indexPath.row {
             case 0:
-                print(0)
-            case 1:
-                print(0)
-            case 2:
-                print(0)
+                let nextVC = AlertSettingViewController()
+                self.navigationController?.pushViewController(nextVC, animated: true)
             case 4:
                 Alert.showAlertWithTextField(title: "請輸入對應字串",
                                              message: "輸入0000進入正常模式\n輸入8888進入開發者模式",
@@ -290,10 +287,14 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                     if self.warming && texField.text == "0000" {
                         self.warming = !self.warming
                         self.settingTableView.reloadData()
-                    } else if !self.warming {
-                        
+                    } else if !self.warming && texField.text == "8888" {
+                        self.warming = !self.warming
+                        self.settingTableView.reloadData()
                     } else {
-                        
+                        Alert.showAlertWith(title: "錯誤",
+                                            message: "請輸入正確的字串",
+                                            vc: self,
+                                            confirmTitle: "確認")
                     }
                 })
             default:

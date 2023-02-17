@@ -77,6 +77,8 @@ class MainViewController: BaseViewController {
     private func setupBurgerListView() {
         burgerListView.layer.shadowOpacity = 0.5
         burgerListView.layer.shadowRadius = 2
+        burgerListView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        
         hideBurgerList(times: 0)
     }
     
@@ -198,7 +200,7 @@ class MainViewController: BaseViewController {
     
     func hideBurgerList(times: Double) {
         UIView.animate(withDuration: times, animations: {
-            let moveWidth = UIScreen.main.bounds.width / 4
+            let moveWidth = UIScreen.main.bounds.width / 4 + 5
             let moveLeft = CGAffineTransform(translationX: -(moveWidth), y: 0.0)
             
             self.burgerListView.transform = moveLeft
