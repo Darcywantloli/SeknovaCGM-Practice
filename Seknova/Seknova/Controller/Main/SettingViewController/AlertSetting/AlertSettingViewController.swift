@@ -9,13 +9,21 @@ import UIKit
 
 class AlertSettingViewController: UIViewController {
     
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var settingTableView: UITableView!
+    
+    // MARK: - Variables
+    
+    // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
     }
+    
+    // MARK: - UI Settings
     
     func setupUI() {
         setupTableView()
@@ -28,7 +36,12 @@ class AlertSettingViewController: UIViewController {
         settingTableView.register(UINib(nibName: "TwoLabelsTableViewCell", bundle: nil),
                                   forCellReuseIdentifier: TwoLabelsTableViewCell.identifier)
     }
+    
+    // MARK: - IBAction
+    
 }
+
+// MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,7 +62,12 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return " "
+        switch section {
+        case 0:
+            return " "
+        default:
+            return ""
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
@@ -82,8 +100,44 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
             default:
                 return UITableViewCell()
             }
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TwoLabelsTableViewCell.identifier,
+                                                     for: indexPath) as! TwoLabelsTableViewCell
+            
+            cell.accessoryType = .disclosureIndicator
+            
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TwoLabelsTableViewCell.identifier,
+                                                     for: indexPath) as! TwoLabelsTableViewCell
+            
+            cell.accessoryType = .disclosureIndicator
+            
+            return cell
         default:
             return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = settingTableView.frame.height
+        
+        return height / 12
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                let nextVC = HighAlertViewController()
+                
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            default:
+                break
+            }
+        default:
+            break
         }
     }
 }

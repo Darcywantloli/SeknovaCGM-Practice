@@ -16,7 +16,8 @@
 		882B4F0D299E1D970031AD31 /* AlertSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */; };
 		882B4F0E299E1D970031AD31 /* AlertSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */; };
 		882B4F13299F50F60031AD31 /* TwoLabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */; };
-		882B4F14299F50F60031AD31 /* TwoLabelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F12299F50F60031AD31 /* TwoLabelsTableViewCell.xib */; };
+		882B4F18299F5F680031AD31 /* HighAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F16299F5F680031AD31 /* HighAlertViewController.swift */; };
+		882B4F19299F5F680031AD31 /* HighAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F17299F5F680031AD31 /* HighAlertViewController.xib */; };
 		88425392299B5D67005DBA48 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425390299B5D67005DBA48 /* SettingViewController.swift */; };
 		88425393299B5D67005DBA48 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88425391299B5D67005DBA48 /* SettingViewController.xib */; };
 		88425397299B68C0005DBA48 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425395299B68C0005DBA48 /* ImageTableViewCell.swift */; };
@@ -25,6 +26,7 @@
 		8842539C299B68ED005DBA48 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */; };
 		8842539F299B6900005DBA48 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */; };
 		884253A0299B6900005DBA48 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */; };
+		8872227F299F67A400EB1174 /* TwoLabelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8872227E299F67A400EB1174 /* TwoLabelsTableViewCell.xib */; };
 		8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61A2908702A005296E1 /* RegisterViewController.swift */; };
 		8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B61B2908702A005296E1 /* RegisterViewController.xib */; };
 		8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61F2909020E005296E1 /* Color+Extensions.swift */; };
@@ -128,7 +130,8 @@
 		882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingViewController.swift; sourceTree = "<group>"; };
 		882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertSettingViewController.xib; sourceTree = "<group>"; };
 		882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsTableViewCell.swift; sourceTree = "<group>"; };
-		882B4F12299F50F60031AD31 /* TwoLabelsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoLabelsTableViewCell.xib; sourceTree = "<group>"; };
+		882B4F16299F5F680031AD31 /* HighAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighAlertViewController.swift; sourceTree = "<group>"; };
+		882B4F17299F5F680031AD31 /* HighAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighAlertViewController.xib; sourceTree = "<group>"; };
 		88425390299B5D67005DBA48 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		88425391299B5D67005DBA48 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		88425395299B68C0005DBA48 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 		8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
 		8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
+		8872227E299F67A400EB1174 /* TwoLabelsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoLabelsTableViewCell.xib; sourceTree = "<group>"; };
 		8876B61A2908702A005296E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8876B61B2908702A005296E1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8876B61F2909020E005296E1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -263,26 +267,23 @@
 			path = PairBluetooth;
 			sourceTree = "<group>";
 		};
-		882B4F0F299E2AE50031AD31 /* Setting */ = {
+		882B4F15299F5E290031AD31 /* AlertSetting */ = {
 			isa = PBXGroup;
 			children = (
-				88425395299B68C0005DBA48 /* ImageTableViewCell.swift */,
-				88425396299B68C0005DBA48 /* ImageTableViewCell.xib */,
-				88425399299B68ED005DBA48 /* LabelTableViewCell.swift */,
-				8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */,
-				8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */,
-				8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		882B4F10299E2AFD0031AD31 /* AlertSetting */ = {
-			isa = PBXGroup;
-			children = (
-				882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */,
-				882B4F12299F50F60031AD31 /* TwoLabelsTableViewCell.xib */,
+				882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */,
+				882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */,
+				882B4F1A299F5F6E0031AD31 /* HighAlert */,
 			);
 			path = AlertSetting;
+			sourceTree = "<group>";
+		};
+		882B4F1A299F5F6E0031AD31 /* HighAlert */ = {
+			isa = PBXGroup;
+			children = (
+				882B4F16299F5F680031AD31 /* HighAlertViewController.swift */,
+				882B4F17299F5F680031AD31 /* HighAlertViewController.xib */,
+			);
+			path = HighAlert;
 			sourceTree = "<group>";
 		};
 		8842538F299B5CF8005DBA48 /* SettingViewController */ = {
@@ -290,9 +291,8 @@
 			children = (
 				88425390299B5D67005DBA48 /* SettingViewController.swift */,
 				88425391299B5D67005DBA48 /* SettingViewController.xib */,
-				882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */,
-				882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */,
 				88425394299B687A005DBA48 /* Components */,
+				882B4F15299F5E290031AD31 /* AlertSetting */,
 			);
 			path = SettingViewController;
 			sourceTree = "<group>";
@@ -300,8 +300,14 @@
 		88425394299B687A005DBA48 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				882B4F10299E2AFD0031AD31 /* AlertSetting */,
-				882B4F0F299E2AE50031AD31 /* Setting */,
+				88425395299B68C0005DBA48 /* ImageTableViewCell.swift */,
+				88425396299B68C0005DBA48 /* ImageTableViewCell.xib */,
+				88425399299B68ED005DBA48 /* LabelTableViewCell.swift */,
+				8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */,
+				882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */,
+				8872227E299F67A400EB1174 /* TwoLabelsTableViewCell.xib */,
+				8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */,
+				8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -762,7 +768,6 @@
 			files = (
 				88CDF77E28EEC9EF00FE16E1 /* LoginViewController.xib in Resources */,
 				88202A3E29505ED7008B9E31 /* PairBluetoothViewController.xib in Resources */,
-				882B4F14299F50F60031AD31 /* TwoLabelsTableViewCell.xib in Resources */,
 				88C4D240293DF08200FB7C67 /* KnowMoreViewController.xib in Resources */,
 				88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */,
 				88D874D129405C500048EB41 /* PersonalTextFieldTableViewCell.xib in Resources */,
@@ -771,10 +776,12 @@
 				889EB689295EEA5400BAA752 /* PersonalInformationViewController.xib in Resources */,
 				88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */,
 				8876B626292162CF005296E1 /* VerifyViewController.xib in Resources */,
+				882B4F19299F5F680031AD31 /* HighAlertViewController.xib in Resources */,
 				882B4F0E299E1D970031AD31 /* AlertSettingViewController.xib in Resources */,
 				8842539C299B68ED005DBA48 /* LabelTableViewCell.xib in Resources */,
 				8876B637293074B8005296E1 /* ResetPasswordViewController.xib in Resources */,
 				88D874CC294050290048EB41 /* GetPersonalInformationViewController.xib in Resources */,
+				8872227F299F67A400EB1174 /* TwoLabelsTableViewCell.xib in Resources */,
 				88D874D529405C780048EB41 /* PersonalActionSheetTableViewCell.xib in Resources */,
 				8876B63F293A6F19005296E1 /* AudiovisualTeachingViewController.xib in Resources */,
 				8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */,
@@ -969,6 +976,7 @@
 				8876B622290A6F91005296E1 /* TextField+Extensions.swift in Sources */,
 				88D874D029405C500048EB41 /* PersonalTextFieldTableViewCell.swift in Sources */,
 				8807B2B12946C2A100FEC0B3 /* LocalDatabase.swift in Sources */,
+				882B4F18299F5F680031AD31 /* HighAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
