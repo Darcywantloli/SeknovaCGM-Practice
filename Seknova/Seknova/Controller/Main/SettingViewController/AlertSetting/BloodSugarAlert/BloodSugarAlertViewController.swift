@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HighAlertViewController: UIViewController {
+class BloodSugarAlertViewController: UIViewController {
 
     // MARK: - IBOutlet
     
@@ -47,7 +47,7 @@ class HighAlertViewController: UIViewController {
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
-extension HighAlertViewController: UITableViewDelegate, UITableViewDataSource {
+extension BloodSugarAlertViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -92,7 +92,7 @@ extension HighAlertViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 
-extension HighAlertViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension BloodSugarAlertViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

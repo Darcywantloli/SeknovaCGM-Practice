@@ -117,6 +117,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                                                                 for: indexPath) as! SwitchTableViewCell
                 
                 cell.informationLabel.text = "顯示數值資訊"
+                cell.onOffSwitch.isOn = true
                 
                 return cell
             case 7:
@@ -132,6 +133,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                                                                 for: indexPath) as! SwitchTableViewCell
                 
                 cell.informationLabel.text = "上傳雲端"
+                cell.onOffSwitch.isOn = true
                 
                 return cell
             case 9:

@@ -44,6 +44,10 @@
             <constraints>
                 <constraint firstItem="H2p-sc-9uM" firstAttribute="bottom" secondItem="Jkv-fr-xpe" secondAttribute="bottom" id="ZcS-h2-uek"/>
             </constraints>
+            <connections>
+                <outlet property="indexLabel" destination="Jkv-fr-xpe" id="kER-nq-aCE"/>
+                <outlet property="titleLabel" destination="FYv-FN-y5R" id="Yp4-XB-O7y"/>
+            </connections>
             <point key="canvasLocation" x="49" y="20"/>
         </tableViewCell>
     </objects>

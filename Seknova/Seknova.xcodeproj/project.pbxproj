@@ -16,8 +16,8 @@
 		882B4F0D299E1D970031AD31 /* AlertSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */; };
 		882B4F0E299E1D970031AD31 /* AlertSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */; };
 		882B4F13299F50F60031AD31 /* TwoLabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */; };
-		882B4F18299F5F680031AD31 /* HighAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F16299F5F680031AD31 /* HighAlertViewController.swift */; };
-		882B4F19299F5F680031AD31 /* HighAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F17299F5F680031AD31 /* HighAlertViewController.xib */; };
+		882B4F18299F5F680031AD31 /* BloodSugarAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F16299F5F680031AD31 /* BloodSugarAlertViewController.swift */; };
+		882B4F19299F5F680031AD31 /* BloodSugarAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F17299F5F680031AD31 /* BloodSugarAlertViewController.xib */; };
 		88425392299B5D67005DBA48 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425390299B5D67005DBA48 /* SettingViewController.swift */; };
 		88425393299B5D67005DBA48 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88425391299B5D67005DBA48 /* SettingViewController.xib */; };
 		88425397299B68C0005DBA48 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425395299B68C0005DBA48 /* ImageTableViewCell.swift */; };
@@ -130,8 +130,8 @@
 		882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingViewController.swift; sourceTree = "<group>"; };
 		882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertSettingViewController.xib; sourceTree = "<group>"; };
 		882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsTableViewCell.swift; sourceTree = "<group>"; };
-		882B4F16299F5F680031AD31 /* HighAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighAlertViewController.swift; sourceTree = "<group>"; };
-		882B4F17299F5F680031AD31 /* HighAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighAlertViewController.xib; sourceTree = "<group>"; };
+		882B4F16299F5F680031AD31 /* BloodSugarAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarAlertViewController.swift; sourceTree = "<group>"; };
+		882B4F17299F5F680031AD31 /* BloodSugarAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodSugarAlertViewController.xib; sourceTree = "<group>"; };
 		88425390299B5D67005DBA48 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		88425391299B5D67005DBA48 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		88425395299B68C0005DBA48 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -272,18 +272,18 @@
 			children = (
 				882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */,
 				882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */,
-				882B4F1A299F5F6E0031AD31 /* HighAlert */,
+				882B4F1A299F5F6E0031AD31 /* BloodSugarAlert */,
 			);
 			path = AlertSetting;
 			sourceTree = "<group>";
 		};
-		882B4F1A299F5F6E0031AD31 /* HighAlert */ = {
+		882B4F1A299F5F6E0031AD31 /* BloodSugarAlert */ = {
 			isa = PBXGroup;
 			children = (
-				882B4F16299F5F680031AD31 /* HighAlertViewController.swift */,
-				882B4F17299F5F680031AD31 /* HighAlertViewController.xib */,
+				882B4F16299F5F680031AD31 /* BloodSugarAlertViewController.swift */,
+				882B4F17299F5F680031AD31 /* BloodSugarAlertViewController.xib */,
 			);
-			path = HighAlert;
+			path = BloodSugarAlert;
 			sourceTree = "<group>";
 		};
 		8842538F299B5CF8005DBA48 /* SettingViewController */ = {
@@ -291,8 +291,8 @@
 			children = (
 				88425390299B5D67005DBA48 /* SettingViewController.swift */,
 				88425391299B5D67005DBA48 /* SettingViewController.xib */,
-				88425394299B687A005DBA48 /* Components */,
 				882B4F15299F5E290031AD31 /* AlertSetting */,
+				88425394299B687A005DBA48 /* Components */,
 			);
 			path = SettingViewController;
 			sourceTree = "<group>";
@@ -417,11 +417,11 @@
 		88A2D1D729531B6B0037E594 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8842538F299B5CF8005DBA48 /* SettingViewController */,
 				88A2D1DB29531E490037E594 /* MainViewController.swift */,
 				88A2D1DC29531E490037E594 /* MainViewController.xib */,
 				88A2D1DF2955973F0037E594 /* DeviceStatusViewController.swift */,
 				88A2D1E02955973F0037E594 /* DeviceStatusViewController.xib */,
+				8842538F299B5CF8005DBA48 /* SettingViewController */,
 				889EB681295EEA2100BAA752 /* LifeStyle */,
 				889EB680295EEA1300BAA752 /* PersonalInformation */,
 				88A2D1DA29531C720037E594 /* History */,
@@ -776,7 +776,7 @@
 				889EB689295EEA5400BAA752 /* PersonalInformationViewController.xib in Resources */,
 				88CDF75228EEC93F00FE16E1 /* Assets.xcassets in Resources */,
 				8876B626292162CF005296E1 /* VerifyViewController.xib in Resources */,
-				882B4F19299F5F680031AD31 /* HighAlertViewController.xib in Resources */,
+				882B4F19299F5F680031AD31 /* BloodSugarAlertViewController.xib in Resources */,
 				882B4F0E299E1D970031AD31 /* AlertSettingViewController.xib in Resources */,
 				8842539C299B68ED005DBA48 /* LabelTableViewCell.xib in Resources */,
 				8876B637293074B8005296E1 /* ResetPasswordViewController.xib in Resources */,
@@ -976,7 +976,7 @@
 				8876B622290A6F91005296E1 /* TextField+Extensions.swift in Sources */,
 				88D874D029405C500048EB41 /* PersonalTextFieldTableViewCell.swift in Sources */,
 				8807B2B12946C2A100FEC0B3 /* LocalDatabase.swift in Sources */,
-				882B4F18299F5F680031AD31 /* HighAlertViewController.swift in Sources */,
+				882B4F18299F5F680031AD31 /* BloodSugarAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

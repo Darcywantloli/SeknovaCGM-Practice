@@ -9,6 +9,9 @@ import UIKit
 
 class TwoLabelsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var indexLabel: UILabel!
+    
     static let identifier = "TwoLabelsTableViewCell"
     
     override func awakeFromNib() {

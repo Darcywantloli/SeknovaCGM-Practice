@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HighAlertViewController" customModule="Seknova" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarAlertViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
                 <outlet property="highBloodSugarPickerView" destination="NFc-PM-DUh" id="68D-3C-6R2"/>
                 <outlet property="hightAlertTableView" destination="eH6-Uy-jys" id="JqA-qN-uD4"/>

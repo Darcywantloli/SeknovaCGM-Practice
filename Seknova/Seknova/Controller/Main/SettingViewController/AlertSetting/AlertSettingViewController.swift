@@ -88,6 +88,8 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
                                                          for: indexPath) as! TwoLabelsTableViewCell
                 
                 cell.accessoryType = .disclosureIndicator
+                cell.titleLabel.text = "High Alerts"
+                cell.indexLabel.text = "none"
                 
                 return cell
             case 1:
@@ -95,6 +97,8 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
                                                          for: indexPath) as! TwoLabelsTableViewCell
                 
                 cell.accessoryType = .disclosureIndicator
+                cell.titleLabel.text = "Low Alerts"
+                cell.indexLabel.text = "none"
                 
                 return cell
             default:
@@ -130,7 +134,7 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
         case 0:
             switch indexPath.row {
             case 0:
-                let nextVC = HighAlertViewController()
+                let nextVC = BloodSugarAlertViewController()
                 
                 self.navigationController?.pushViewController(nextVC, animated: true)
             default:
