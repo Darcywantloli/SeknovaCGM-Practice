@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +30,6 @@
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" name="SettingCellBackground"/>
                 <constraints>
                     <constraint firstItem="olr-Aq-BjD" firstAttribute="centerY" secondItem="zYh-tz-ude" secondAttribute="centerY" id="FPA-lr-B6V"/>
                     <constraint firstItem="zYh-tz-ude" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YSr-AH-9fr"/>
@@ -50,9 +48,4 @@
             <point key="canvasLocation" x="49" y="20"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <namedColor name="SettingCellBackground">
-            <color red="0.87450980392156863" green="0.8784313725490196" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

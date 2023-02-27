@@ -15,10 +15,17 @@ class AlertSettingViewController: UIViewController {
     
     // MARK: - Variables
     
+    var highAlertOnOff = false
+    var highAlertIndex = 0
+    
+    var lowAlertOnOff = false
+    var lowAlertIndex = 0
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         setupUI()
     }
@@ -89,7 +96,12 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
                 
                 cell.accessoryType = .disclosureIndicator
                 cell.titleLabel.text = "High Alerts"
-                cell.indexLabel.text = "none"
+                
+                if highAlertOnOff {
+                    cell.indexLabel.text = "\(highAlertIndex) mg/dL"
+                } else {
+                    cell.indexLabel.text = "none"
+                }
                 
                 return cell
             case 1:
@@ -98,7 +110,12 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
                 
                 cell.accessoryType = .disclosureIndicator
                 cell.titleLabel.text = "Low Alerts"
-                cell.indexLabel.text = "none"
+                
+                if lowAlertOnOff {
+                    cell.indexLabel.text = "\(lowAlertIndex) mg/dL"
+                } else {
+                    cell.indexLabel.text = "None"
+                }
                 
                 return cell
             default:
@@ -136,6 +153,16 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
             case 0:
                 let nextVC = BloodSugarAlertViewController()
                 
+                nextVC.root = .HighBloodSugar
+                nextVC.delegate = self
+                
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            case 1:
+                let nextVC = BloodSugarAlertViewController()
+                
+                nextVC.root = .LowBloodSuagr
+                nextVC.delegate = self
+                
                 self.navigationController?.pushViewController(nextVC, animated: true)
             default:
                 break
@@ -143,5 +170,22 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
         default:
             break
         }
+    }
+}
+
+extension AlertSettingViewController: AlertTypeDelegate {
+    func target(onOff: Bool, index: Int, type: Int) {
+        if type == 1 {
+            highAlertOnOff = onOff
+            highAlertIndex = index
+        } else if type == 2 {
+            lowAlertOnOff = onOff
+            lowAlertIndex = index
+        } else {
+            highAlertOnOff = false
+            lowAlertOnOff = false
+        }
+        
+        settingTableView.reloadData()
     }
 }

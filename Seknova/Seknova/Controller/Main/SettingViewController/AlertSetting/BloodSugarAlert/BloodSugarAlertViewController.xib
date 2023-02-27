@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarAlertViewController" customModule="Seknova" customModuleProvider="target">
             <connections>
-                <outlet property="highBloodSugarPickerView" destination="NFc-PM-DUh" id="68D-3C-6R2"/>
-                <outlet property="hightAlertTableView" destination="eH6-Uy-jys" id="JqA-qN-uD4"/>
+                <outlet property="alertTableView" destination="eH6-Uy-jys" id="JqA-qN-uD4"/>
+                <outlet property="bloodSugarPickerView" destination="NFc-PM-DUh" id="68D-3C-6R2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +23,7 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eH6-Uy-jys">
                     <rect key="frame" x="0.0" y="59" width="393" height="213"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                 </tableView>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFc-PM-DUh">
                     <rect key="frame" x="0.0" y="272" width="393" height="213"/>
@@ -45,6 +45,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

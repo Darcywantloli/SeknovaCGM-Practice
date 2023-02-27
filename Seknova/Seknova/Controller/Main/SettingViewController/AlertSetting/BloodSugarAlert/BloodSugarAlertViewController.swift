@@ -11,11 +11,25 @@ class BloodSugarAlertViewController: UIViewController {
 
     // MARK: - IBOutlet
     
-    @IBOutlet weak var hightAlertTableView: UITableView!
+    @IBOutlet weak var alertTableView: UITableView!
     
-    @IBOutlet weak var highBloodSugarPickerView: UIPickerView!
+    @IBOutlet weak var bloodSugarPickerView: UIPickerView!
     
     // MARK: - Variables
+    
+    var root: AlertType = .HighBloodSugar
+    var delegate: AlertTypeDelegate?
+    
+    enum AlertType {
+        case HighBloodSugar
+        case LowBloodSuagr
+    }
+    
+    let lowBloodSuagr = [Int](70...90)
+    let highBloodSugar = [Int](150...250)
+    
+    var selectIndex = 0
+    var alertOnOff = true
     
     // MARK: - LifeCycle
     
@@ -29,20 +43,48 @@ class BloodSugarAlertViewController: UIViewController {
     
     func setupUI() {
         setupTableView()
+        setupPickerView()
+        setupRightBarButton()
     }
     
     private func setupTableView() {
-        hightAlertTableView.delegate = self
-        hightAlertTableView.dataSource = self
+        alertTableView.delegate = self
+        alertTableView.dataSource = self
         
-        hightAlertTableView.register(UINib(nibName: "SwitchTableViewCell", bundle: nil),
+        alertTableView.register(UINib(nibName: "SwitchTableViewCell", bundle: nil),
                                      forCellReuseIdentifier: SwitchTableViewCell.identifier)
-        hightAlertTableView.register(UINib(nibName: "LabelTableViewCell", bundle: nil),
+        alertTableView.register(UINib(nibName: "LabelTableViewCell", bundle: nil),
                                      forCellReuseIdentifier: LabelTableViewCell.identifier)
+        
+        alertTableView.isScrollEnabled = false
+    }
+    
+    private func setupPickerView() {
+        bloodSugarPickerView.delegate = self
+        bloodSugarPickerView.dataSource = self
+    }
+    
+    private func setupRightBarButton() {
+        let eventButton = UIBarButtonItem(title: "儲存",
+                                          style: .plain,
+                                          target: self,
+                                          action: #selector(saveData))
+        
+        self.navigationItem.rightBarButtonItem = eventButton
     }
     
     // MARK: - IBAction
     
+    @objc func saveData() {
+        switch root {
+        case .HighBloodSugar:
+            delegate?.target(onOff: alertOnOff, index: selectIndex, type: 1)
+        case .LowBloodSuagr:
+            delegate?.target(onOff: alertOnOff, index: selectIndex, type: 2)
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -61,7 +103,12 @@ extension BloodSugarAlertViewController: UITableViewDelegate, UITableViewDataSou
         case 0:
             return " "
         case 1:
-            return "高血糖警示"
+            switch root {
+            case .HighBloodSugar:
+                return "高血糖警示"
+            case .LowBloodSuagr:
+                return "低血糖警示"
+            }
         default:
             return ""
         }
@@ -70,16 +117,30 @@ extension BloodSugarAlertViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = hightAlertTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
+            let cell = alertTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
                                                                for: indexPath) as! SwitchTableViewCell
             
-            cell.informationLabel.text = "高血糖警示"
+            switch root {
+            case .HighBloodSugar:
+                cell.informationLabel.text = "高血糖警示"
+            case .LowBloodSuagr:
+                cell.informationLabel.text = "低血糖警示"
+            }
             
             return cell
         case 1:
-            let cell = hightAlertTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
+            let cell = alertTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
                                                                for: indexPath) as! LabelTableViewCell
-            cell.informationLabel.text = "High Limit"
+            
+            switch root {
+            case .HighBloodSugar:
+                cell.informationLabel.text = "High Limit"
+            case .LowBloodSuagr:
+                cell.informationLabel.text = "Low Limit"
+            }
+            
+            cell.indexLabel.text = "\(selectIndex) mg/dL"
+            cell.indexLabel.textColor = .tintColor
             
             return cell
         default:
@@ -87,7 +148,11 @@ extension BloodSugarAlertViewController: UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = alertTableView.frame.height
+        
+        return height / 3.5
+    }
 }
 
 // MARK: - UIPickerViewDelegate, UIPickerViewDataSource
@@ -98,8 +163,35 @@ extension BloodSugarAlertViewController: UIPickerViewDelegate, UIPickerViewDataS
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        switch root {
+        case .HighBloodSugar:
+            return highBloodSugar.count
+        case .LowBloodSuagr:
+            return lowBloodSuagr.count
+        }
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch root {
+        case .HighBloodSugar:
+            return highBloodSugar[row].description
+        case .LowBloodSuagr:
+            return lowBloodSuagr[row].description
+        }
+    }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch root {
+        case .HighBloodSugar:
+            selectIndex = highBloodSugar[row]
+            alertTableView.reloadData()
+        case .LowBloodSuagr:
+            selectIndex = lowBloodSuagr[row]
+            alertTableView.reloadData()
+        }
+    }
+}
+
+protocol AlertTypeDelegate: NSObjectProtocol {
+    func target(onOff: Bool, index: Int, type: Int)
 }

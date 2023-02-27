@@ -44,6 +44,9 @@
                             <buttonConfiguration key="configuration" style="plain" title="Button">
                                 <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="logs:" destination="-1" eventType="touchUpInside" id="kPz-yJ-QWq"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N66-HW-MXK">
                             <rect key="frame" x="0.0" y="124.33333333333334" width="107.66666666666667" height="62"/>

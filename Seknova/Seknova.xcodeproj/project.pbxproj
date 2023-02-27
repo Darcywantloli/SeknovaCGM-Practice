@@ -27,6 +27,8 @@
 		8842539F299B6900005DBA48 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */; };
 		884253A0299B6900005DBA48 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */; };
 		8872227F299F67A400EB1174 /* TwoLabelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8872227E299F67A400EB1174 /* TwoLabelsTableViewCell.xib */; };
+		8872228329ACB68B00EB1174 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8872228129ACB68B00EB1174 /* LogsViewController.swift */; };
+		8872228429ACB68B00EB1174 /* LogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8872228229ACB68B00EB1174 /* LogsViewController.xib */; };
 		8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61A2908702A005296E1 /* RegisterViewController.swift */; };
 		8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B61B2908702A005296E1 /* RegisterViewController.xib */; };
 		8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61F2909020E005296E1 /* Color+Extensions.swift */; };
@@ -141,6 +143,8 @@
 		8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
 		8872227E299F67A400EB1174 /* TwoLabelsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoLabelsTableViewCell.xib; sourceTree = "<group>"; };
+		8872228129ACB68B00EB1174 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		8872228229ACB68B00EB1174 /* LogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogsViewController.xib; sourceTree = "<group>"; };
 		8876B61A2908702A005296E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8876B61B2908702A005296E1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8876B61F2909020E005296E1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -312,6 +316,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8872228029ACB66B00EB1174 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				8872228129ACB68B00EB1174 /* LogsViewController.swift */,
+				8872228229ACB68B00EB1174 /* LogsViewController.xib */,
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
 		8876B61E290901F7005296E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +434,7 @@
 				88A2D1DC29531E490037E594 /* MainViewController.xib */,
 				88A2D1DF2955973F0037E594 /* DeviceStatusViewController.swift */,
 				88A2D1E02955973F0037E594 /* DeviceStatusViewController.xib */,
+				8872228029ACB66B00EB1174 /* Logs */,
 				8842538F299B5CF8005DBA48 /* SettingViewController */,
 				889EB681295EEA2100BAA752 /* LifeStyle */,
 				889EB680295EEA1300BAA752 /* PersonalInformation */,
@@ -769,6 +783,7 @@
 				88CDF77E28EEC9EF00FE16E1 /* LoginViewController.xib in Resources */,
 				88202A3E29505ED7008B9E31 /* PairBluetoothViewController.xib in Resources */,
 				88C4D240293DF08200FB7C67 /* KnowMoreViewController.xib in Resources */,
+				8872228429ACB68B00EB1174 /* LogsViewController.xib in Resources */,
 				88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */,
 				88D874D129405C500048EB41 /* PersonalTextFieldTableViewCell.xib in Resources */,
 				88A2D1DE29531E490037E594 /* MainViewController.xib in Resources */,
@@ -968,6 +983,7 @@
 				8807B2BB294C434100FEC0B3 /* ScanningTransmitterViewController.swift in Sources */,
 				8876B62B29256A4F005296E1 /* AgreementViewController.swift in Sources */,
 				88D874D72940717D0048EB41 /* AppDefine.swift in Sources */,
+				8872228329ACB68B00EB1174 /* LogsViewController.swift in Sources */,
 				889EB684295EEA4200BAA752 /* HistoryViewController.swift in Sources */,
 				8842539B299B68ED005DBA48 /* LabelTableViewCell.swift in Sources */,
 				88A2D1E72959A1BA0037E594 /* BarButtonItemView.swift in Sources */,

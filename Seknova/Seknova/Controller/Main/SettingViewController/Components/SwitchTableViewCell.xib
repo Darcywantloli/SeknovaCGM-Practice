@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +27,6 @@
                         <rect key="frame" x="246" y="6.6666666666666679" width="51" height="31.000000000000004"/>
                     </switch>
                 </subviews>
-                <color key="backgroundColor" name="SettingCellBackground"/>
                 <constraints>
                     <constraint firstItem="oUP-cx-pvd" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="0xe-z2-kjf"/>
                     <constraint firstItem="dx1-U5-uHM" firstAttribute="leading" secondItem="oUP-cx-pvd" secondAttribute="trailing" id="At7-I1-fdR"/>
@@ -46,9 +44,4 @@
             <point key="canvasLocation" x="49" y="20"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <namedColor name="SettingCellBackground">
-            <color red="0.87450980392156863" green="0.8784313725490196" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

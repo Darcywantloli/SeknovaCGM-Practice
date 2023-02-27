@@ -281,6 +281,13 @@ class MainViewController: BaseViewController {
         
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
+    
+    @IBAction func logs(_ sender: Any) {
+        let nextVC = LogsViewController()
+        
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
 }
 
 // MARK: - UIPopoverPresentationControllerDelegate

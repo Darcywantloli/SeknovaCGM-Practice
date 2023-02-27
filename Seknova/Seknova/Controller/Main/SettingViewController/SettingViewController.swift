@@ -70,6 +70,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "警示設定"
                 cell.settingImageView.image = UIImage(named: "ArrowRight")
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 1:
@@ -78,6 +79,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "校正模式"
                 cell.settingImageView.image = UIImage(named: "ArrowRight")
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 2:
@@ -86,6 +88,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "設定ADC初始值"
                 cell.indexLabel.text = "0"
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 3:
@@ -94,6 +97,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "設定X軸時間間距(per/s)"
                 cell.indexLabel.text = "3600.0 per/s"
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 4:
@@ -102,6 +106,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "設定y軸上下限"
                 cell.indexLabel.text = "400.0"
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 5:
@@ -110,6 +115,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "單位切換(mmol/L)"
                 cell.onOffSwitch.isOn = false
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 6:
@@ -118,6 +124,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "顯示數值資訊"
                 cell.onOffSwitch.isOn = true
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 7:
@@ -126,6 +133,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "顯示RSSI"
                 cell.onOffSwitch.isOn = false
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 8:
@@ -134,6 +142,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "上傳雲端"
                 cell.onOffSwitch.isOn = true
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 9:
@@ -142,6 +151,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "超出高低血糖警示"
                 cell.onOffSwitch.isOn = false
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 10:
@@ -150,6 +160,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "資料同步"
                 cell.settingImageView.image = UIImage(named: "reload")
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 11:
@@ -158,6 +169,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "暖機狀態"
                 cell.indexLabel.text = "On"
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 12:
@@ -170,6 +182,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "上傳事件日誌"
                 cell.indexLabel.text = time
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 13:
@@ -178,6 +191,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "韌體版本"
                 cell.indexLabel.text = "1.24.9"
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 14:
@@ -186,6 +200,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "App版本"
                 cell.indexLabel.text = "00.00.61"
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             default:
@@ -199,6 +214,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "警示設定"
                 cell.settingImageView.image = UIImage(named: "ArrowRight")
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 1:
@@ -207,6 +223,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "單位切換(mmol/L)"
                 cell.onOffSwitch.isOn = false
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 2:
@@ -215,6 +232,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "超出高低血糖警示"
                 cell.onOffSwitch.isOn = false
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 3:
@@ -223,6 +241,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "資料同步"
                 cell.settingImageView.image = UIImage(named: "reload")
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 4:
@@ -231,6 +250,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "暖機狀態"
                 cell.indexLabel.text = "Off"
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 5:
@@ -243,6 +263,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "上傳事件日誌"
                 cell.indexLabel.text = time
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 6:
@@ -251,6 +272,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "韌體版本"
                 cell.indexLabel.text = "1.24.9"
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             case 7:
@@ -259,6 +281,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.informationLabel.text = "App版本"
                 cell.indexLabel.text = "00.00.61"
+                cell.backgroundColor = .settingCellBackground
                 
                 return cell
             default:

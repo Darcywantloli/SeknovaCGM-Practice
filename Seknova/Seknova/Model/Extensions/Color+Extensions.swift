@@ -13,5 +13,6 @@ extension UIColor {
     static var lifeStyle = UIColor(named: "LifeStyle")
     static var navigationBar = UIColor(named: "NavigationBar")
     static var lifeStyleChoosed = UIColor(named: "LifeStyleChoosed")
+    static var settingCellBackground = UIColor(named: "SettingCellBackground")
     
 }
