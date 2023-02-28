@@ -40,8 +40,8 @@ class AlertSettingViewController: UIViewController {
         settingTableView.delegate = self
         settingTableView.dataSource = self
         
-        settingTableView.register(UINib(nibName: "TwoLabelsTableViewCell", bundle: nil),
-                                  forCellReuseIdentifier: TwoLabelsTableViewCell.identifier)
+        settingTableView.register(UINib(nibName: "AlertInformationLabelTableViewCell", bundle: nil),
+                                  forCellReuseIdentifier: AlertInformationLabelTableViewCell.identifier)
     }
     
     // MARK: - IBAction
@@ -91,8 +91,8 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
         case 0:
             switch indexPath.row {
             case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: TwoLabelsTableViewCell.identifier,
-                                                         for: indexPath) as! TwoLabelsTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: AlertInformationLabelTableViewCell.identifier,
+                                                         for: indexPath) as! AlertInformationLabelTableViewCell
                 
                 cell.accessoryType = .disclosureIndicator
                 cell.titleLabel.text = "High Alerts"
@@ -105,8 +105,8 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
                 
                 return cell
             case 1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: TwoLabelsTableViewCell.identifier,
-                                                         for: indexPath) as! TwoLabelsTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: AlertInformationLabelTableViewCell.identifier,
+                                                         for: indexPath) as! AlertInformationLabelTableViewCell
                 
                 cell.accessoryType = .disclosureIndicator
                 cell.titleLabel.text = "Low Alerts"
@@ -122,15 +122,15 @@ extension AlertSettingViewController: UITableViewDelegate, UITableViewDataSource
                 return UITableViewCell()
             }
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: TwoLabelsTableViewCell.identifier,
-                                                     for: indexPath) as! TwoLabelsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: AlertInformationLabelTableViewCell.identifier,
+                                                     for: indexPath) as! AlertInformationLabelTableViewCell
             
             cell.accessoryType = .disclosureIndicator
             
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: TwoLabelsTableViewCell.identifier,
-                                                     for: indexPath) as! TwoLabelsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: AlertInformationLabelTableViewCell.identifier,
+                                                     for: indexPath) as! AlertInformationLabelTableViewCell
             
             cell.accessoryType = .disclosureIndicator
             

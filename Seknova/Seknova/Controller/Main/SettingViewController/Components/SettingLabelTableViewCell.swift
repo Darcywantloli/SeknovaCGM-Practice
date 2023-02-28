@@ -1,5 +1,5 @@
 //
-//  LabelTableViewCell.swift
+//  SettingLabelTableViewCell.swift
 //  Seknova
 //
 //  Created by imac on 2023/2/14.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class LabelTableViewCell: UITableViewCell {
+class SettingLabelTableViewCell: UITableViewCell {
 
     @IBOutlet weak var informationLabel: UILabel!
     
     @IBOutlet weak var indexLabel: UILabel!
     
-    static let identifier = "LabelTableViewCell"
+    static let identifier = "SettingLabelTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()

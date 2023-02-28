@@ -50,10 +50,10 @@ class GetPersonalInformationViewController: BaseViewController {
         informationTableView.delegate = self
         informationTableView.dataSource = self
         
-        informationTableView.register(UINib(nibName: "PersonalTextFieldTableViewCell", bundle: nil),
-                                      forCellReuseIdentifier: PersonalTextFieldTableViewCell.identifier)
-        informationTableView.register(UINib(nibName: "PersonalActionSheetTableViewCell", bundle: nil),
-                                      forCellReuseIdentifier: PersonalActionSheetTableViewCell.identifier)
+        informationTableView.register(UINib(nibName: "GetInformationTextFieldTableViewCell", bundle: nil),
+                                      forCellReuseIdentifier: GetInformationTextFieldTableViewCell.identifier)
+        informationTableView.register(UINib(nibName: "GetInformationActionSheetTableViewCell", bundle: nil),
+                                      forCellReuseIdentifier: GetInformationActionSheetTableViewCell.identifier)
     }
     
     private func setupDatePicker() {
@@ -174,8 +174,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
         if indexPath.section == 0 {
             switch AppDefine.PersonalInformation.allCases[indexPath.row] {
             case .firstName:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalTextFieldTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalTextFieldTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationTextFieldTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationTextFieldTableViewCell
                 
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row]
@@ -185,8 +185,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .lastName:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalTextFieldTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalTextFieldTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationTextFieldTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationTextFieldTableViewCell
                 
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row]
@@ -196,8 +196,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .birthday:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalActionSheetTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalActionSheetTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationActionSheetTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationActionSheetTableViewCell
                 
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
                 cell.informationLabel.text = info[indexPath.row]
@@ -205,8 +205,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .email:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalTextFieldTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalTextFieldTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationTextFieldTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationTextFieldTableViewCell
                 
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row]
@@ -214,8 +214,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .phone:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalTextFieldTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalTextFieldTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationTextFieldTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationTextFieldTableViewCell
                 
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row]
@@ -226,8 +226,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .address:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalTextFieldTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalTextFieldTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationTextFieldTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationTextFieldTableViewCell
                 
                 cell.titleLabel.text = AppDefine.PersonalInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row]
@@ -240,8 +240,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
         } else {
             switch AppDefine.BodyInformation.allCases[indexPath.row] {
             case .gender:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalActionSheetTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalActionSheetTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationActionSheetTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationActionSheetTableViewCell
                 
                 cell.titleLabel.text = AppDefine.BodyInformation.allCases[indexPath.row].title
                 cell.informationLabel.text = info[indexPath.row + 6]
@@ -249,8 +249,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .height:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalTextFieldTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalTextFieldTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationTextFieldTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationTextFieldTableViewCell
                 
                 cell.titleLabel.text = AppDefine.BodyInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row + 6]
@@ -261,8 +261,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .weight:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalTextFieldTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalTextFieldTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationTextFieldTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationTextFieldTableViewCell
                 
                 cell.titleLabel.text = AppDefine.BodyInformation.allCases[indexPath.row].title
                 cell.informationTextField.text = info[indexPath.row + 6]
@@ -273,8 +273,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .race:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalActionSheetTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalActionSheetTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationActionSheetTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationActionSheetTableViewCell
                 
                 cell.titleLabel.text = AppDefine.BodyInformation.allCases[indexPath.row].title
                 cell.informationLabel.text = info[indexPath.row + 6]
@@ -282,8 +282,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .liquor:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalActionSheetTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalActionSheetTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationActionSheetTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationActionSheetTableViewCell
                 
                 cell.titleLabel.text = AppDefine.BodyInformation.allCases[indexPath.row].title
                 cell.informationLabel.text = info[indexPath.row + 6]
@@ -291,8 +291,8 @@ extension GetPersonalInformationViewController: UITableViewDelegate, UITableView
                 
                 return cell
             case .smoke:
-                let cell = tableView.dequeueReusableCell(withIdentifier: PersonalActionSheetTableViewCell.identifier,
-                                                         for: indexPath) as! PersonalActionSheetTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: GetInformationActionSheetTableViewCell.identifier,
+                                                         for: indexPath) as! GetInformationActionSheetTableViewCell
                 
                 cell.titleLabel.text = AppDefine.BodyInformation.allCases[indexPath.row].title
                 cell.informationLabel.text = info[indexPath.row + 6]

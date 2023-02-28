@@ -51,10 +51,10 @@ class BloodSugarAlertViewController: UIViewController {
         alertTableView.delegate = self
         alertTableView.dataSource = self
         
-        alertTableView.register(UINib(nibName: "SwitchTableViewCell", bundle: nil),
-                                     forCellReuseIdentifier: SwitchTableViewCell.identifier)
-        alertTableView.register(UINib(nibName: "LabelTableViewCell", bundle: nil),
-                                     forCellReuseIdentifier: LabelTableViewCell.identifier)
+        alertTableView.register(UINib(nibName: "SettingSwitchTableViewCell", bundle: nil),
+                                     forCellReuseIdentifier: SettingSwitchTableViewCell.identifier)
+        alertTableView.register(UINib(nibName: "SettingLabelTableViewCell", bundle: nil),
+                                     forCellReuseIdentifier: SettingLabelTableViewCell.identifier)
         
         alertTableView.isScrollEnabled = false
     }
@@ -117,8 +117,8 @@ extension BloodSugarAlertViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = alertTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
-                                                               for: indexPath) as! SwitchTableViewCell
+            let cell = alertTableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.identifier,
+                                                               for: indexPath) as! SettingSwitchTableViewCell
             
             switch root {
             case .HighBloodSugar:
@@ -129,8 +129,8 @@ extension BloodSugarAlertViewController: UITableViewDelegate, UITableViewDataSou
             
             return cell
         case 1:
-            let cell = alertTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                               for: indexPath) as! LabelTableViewCell
+            let cell = alertTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                               for: indexPath) as! SettingLabelTableViewCell
             
             switch root {
             case .HighBloodSugar:

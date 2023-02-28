@@ -15,20 +15,24 @@
 		88202A3E29505ED7008B9E31 /* PairBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88202A3C29505ED7008B9E31 /* PairBluetoothViewController.xib */; };
 		882B4F0D299E1D970031AD31 /* AlertSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */; };
 		882B4F0E299E1D970031AD31 /* AlertSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */; };
-		882B4F13299F50F60031AD31 /* TwoLabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */; };
+		882B4F13299F50F60031AD31 /* AlertInformationLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F11299F50F60031AD31 /* AlertInformationLabelTableViewCell.swift */; };
 		882B4F18299F5F680031AD31 /* BloodSugarAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4F16299F5F680031AD31 /* BloodSugarAlertViewController.swift */; };
 		882B4F19299F5F680031AD31 /* BloodSugarAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882B4F17299F5F680031AD31 /* BloodSugarAlertViewController.xib */; };
 		88425392299B5D67005DBA48 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425390299B5D67005DBA48 /* SettingViewController.swift */; };
 		88425393299B5D67005DBA48 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88425391299B5D67005DBA48 /* SettingViewController.xib */; };
-		88425397299B68C0005DBA48 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425395299B68C0005DBA48 /* ImageTableViewCell.swift */; };
-		88425398299B68C0005DBA48 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88425396299B68C0005DBA48 /* ImageTableViewCell.xib */; };
-		8842539B299B68ED005DBA48 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425399299B68ED005DBA48 /* LabelTableViewCell.swift */; };
-		8842539C299B68ED005DBA48 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */; };
-		8842539F299B6900005DBA48 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */; };
-		884253A0299B6900005DBA48 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */; };
-		8872227F299F67A400EB1174 /* TwoLabelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8872227E299F67A400EB1174 /* TwoLabelsTableViewCell.xib */; };
+		88425397299B68C0005DBA48 /* SettingImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425395299B68C0005DBA48 /* SettingImageTableViewCell.swift */; };
+		88425398299B68C0005DBA48 /* SettingImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88425396299B68C0005DBA48 /* SettingImageTableViewCell.xib */; };
+		8842539B299B68ED005DBA48 /* SettingLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88425399299B68ED005DBA48 /* SettingLabelTableViewCell.swift */; };
+		8842539C299B68ED005DBA48 /* SettingLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842539A299B68ED005DBA48 /* SettingLabelTableViewCell.xib */; };
+		8842539F299B6900005DBA48 /* SettingSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842539D299B6900005DBA48 /* SettingSwitchTableViewCell.swift */; };
+		884253A0299B6900005DBA48 /* SettingSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842539E299B6900005DBA48 /* SettingSwitchTableViewCell.xib */; };
+		8872227F299F67A400EB1174 /* AlertInformationLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8872227E299F67A400EB1174 /* AlertInformationLabelTableViewCell.xib */; };
 		8872228329ACB68B00EB1174 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8872228129ACB68B00EB1174 /* LogsViewController.swift */; };
 		8872228429ACB68B00EB1174 /* LogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8872228229ACB68B00EB1174 /* LogsViewController.xib */; };
+		8872228829ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8872228629ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.swift */; };
+		8872228929ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8872228729ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.xib */; };
+		8872228C29AE839500EB1174 /* SetInformationLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8872228A29AE839500EB1174 /* SetInformationLabelTableViewCell.swift */; };
+		8872228D29AE839500EB1174 /* SetInformationLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8872228B29AE839500EB1174 /* SetInformationLabelTableViewCell.xib */; };
 		8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61A2908702A005296E1 /* RegisterViewController.swift */; };
 		8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876B61B2908702A005296E1 /* RegisterViewController.xib */; };
 		8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B61F2909020E005296E1 /* Color+Extensions.swift */; };
@@ -85,10 +89,10 @@
 		88CDF78028FFF64600FE16E1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CDF77F28FFF64600FE16E1 /* BaseViewController.swift */; };
 		88D874CB294050290048EB41 /* GetPersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D874C9294050290048EB41 /* GetPersonalInformationViewController.swift */; };
 		88D874CC294050290048EB41 /* GetPersonalInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D874CA294050290048EB41 /* GetPersonalInformationViewController.xib */; };
-		88D874D029405C500048EB41 /* PersonalTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D874CE29405C500048EB41 /* PersonalTextFieldTableViewCell.swift */; };
-		88D874D129405C500048EB41 /* PersonalTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D874CF29405C500048EB41 /* PersonalTextFieldTableViewCell.xib */; };
-		88D874D429405C780048EB41 /* PersonalActionSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D874D229405C780048EB41 /* PersonalActionSheetTableViewCell.swift */; };
-		88D874D529405C780048EB41 /* PersonalActionSheetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D874D329405C780048EB41 /* PersonalActionSheetTableViewCell.xib */; };
+		88D874D029405C500048EB41 /* GetInformationTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D874CE29405C500048EB41 /* GetInformationTextFieldTableViewCell.swift */; };
+		88D874D129405C500048EB41 /* GetInformationTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D874CF29405C500048EB41 /* GetInformationTextFieldTableViewCell.xib */; };
+		88D874D429405C780048EB41 /* GetInformationActionSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D874D229405C780048EB41 /* GetInformationActionSheetTableViewCell.swift */; };
+		88D874D529405C780048EB41 /* GetInformationActionSheetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D874D329405C780048EB41 /* GetInformationActionSheetTableViewCell.xib */; };
 		88D874D72940717D0048EB41 /* AppDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D874D62940717D0048EB41 /* AppDefine.swift */; };
 		88DA3D86297673F200DFB406 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA3D85297673F200DFB406 /* Background.swift */; };
 		88DA3D89298BBF2100DFB406 /* BloodSugarCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA3D87298BBF2100DFB406 /* BloodSugarCheckViewController.swift */; };
@@ -131,20 +135,24 @@
 		88202A3C29505ED7008B9E31 /* PairBluetoothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairBluetoothViewController.xib; sourceTree = "<group>"; };
 		882B4F0B299E1D970031AD31 /* AlertSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingViewController.swift; sourceTree = "<group>"; };
 		882B4F0C299E1D970031AD31 /* AlertSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertSettingViewController.xib; sourceTree = "<group>"; };
-		882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsTableViewCell.swift; sourceTree = "<group>"; };
+		882B4F11299F50F60031AD31 /* AlertInformationLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInformationLabelTableViewCell.swift; sourceTree = "<group>"; };
 		882B4F16299F5F680031AD31 /* BloodSugarAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarAlertViewController.swift; sourceTree = "<group>"; };
 		882B4F17299F5F680031AD31 /* BloodSugarAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodSugarAlertViewController.xib; sourceTree = "<group>"; };
 		88425390299B5D67005DBA48 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		88425391299B5D67005DBA48 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
-		88425395299B68C0005DBA48 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
-		88425396299B68C0005DBA48 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
-		88425399299B68ED005DBA48 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
-		8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
-		8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
-		8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
-		8872227E299F67A400EB1174 /* TwoLabelsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoLabelsTableViewCell.xib; sourceTree = "<group>"; };
+		88425395299B68C0005DBA48 /* SettingImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingImageTableViewCell.swift; sourceTree = "<group>"; };
+		88425396299B68C0005DBA48 /* SettingImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingImageTableViewCell.xib; sourceTree = "<group>"; };
+		88425399299B68ED005DBA48 /* SettingLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLabelTableViewCell.swift; sourceTree = "<group>"; };
+		8842539A299B68ED005DBA48 /* SettingLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingLabelTableViewCell.xib; sourceTree = "<group>"; };
+		8842539D299B6900005DBA48 /* SettingSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		8842539E299B6900005DBA48 /* SettingSwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingSwitchTableViewCell.xib; sourceTree = "<group>"; };
+		8872227E299F67A400EB1174 /* AlertInformationLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertInformationLabelTableViewCell.xib; sourceTree = "<group>"; };
 		8872228129ACB68B00EB1174 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		8872228229ACB68B00EB1174 /* LogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogsViewController.xib; sourceTree = "<group>"; };
+		8872228629ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetInformationTextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		8872228729ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetInformationTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		8872228A29AE839500EB1174 /* SetInformationLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetInformationLabelTableViewCell.swift; sourceTree = "<group>"; };
+		8872228B29AE839500EB1174 /* SetInformationLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetInformationLabelTableViewCell.xib; sourceTree = "<group>"; };
 		8876B61A2908702A005296E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8876B61B2908702A005296E1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8876B61F2909020E005296E1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -205,10 +213,10 @@
 		88CDF77F28FFF64600FE16E1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		88D874C9294050290048EB41 /* GetPersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPersonalInformationViewController.swift; sourceTree = "<group>"; };
 		88D874CA294050290048EB41 /* GetPersonalInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetPersonalInformationViewController.xib; sourceTree = "<group>"; };
-		88D874CE29405C500048EB41 /* PersonalTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalTextFieldTableViewCell.swift; sourceTree = "<group>"; };
-		88D874CF29405C500048EB41 /* PersonalTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalTextFieldTableViewCell.xib; sourceTree = "<group>"; };
-		88D874D229405C780048EB41 /* PersonalActionSheetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalActionSheetTableViewCell.swift; sourceTree = "<group>"; };
-		88D874D329405C780048EB41 /* PersonalActionSheetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalActionSheetTableViewCell.xib; sourceTree = "<group>"; };
+		88D874CE29405C500048EB41 /* GetInformationTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInformationTextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		88D874CF29405C500048EB41 /* GetInformationTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetInformationTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		88D874D229405C780048EB41 /* GetInformationActionSheetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInformationActionSheetTableViewCell.swift; sourceTree = "<group>"; };
+		88D874D329405C780048EB41 /* GetInformationActionSheetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetInformationActionSheetTableViewCell.xib; sourceTree = "<group>"; };
 		88D874D62940717D0048EB41 /* AppDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefine.swift; sourceTree = "<group>"; };
 		88DA3D85297673F200DFB406 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		88DA3D87298BBF2100DFB406 /* BloodSugarCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarCheckViewController.swift; sourceTree = "<group>"; };
@@ -304,14 +312,14 @@
 		88425394299B687A005DBA48 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				88425395299B68C0005DBA48 /* ImageTableViewCell.swift */,
-				88425396299B68C0005DBA48 /* ImageTableViewCell.xib */,
-				88425399299B68ED005DBA48 /* LabelTableViewCell.swift */,
-				8842539A299B68ED005DBA48 /* LabelTableViewCell.xib */,
-				882B4F11299F50F60031AD31 /* TwoLabelsTableViewCell.swift */,
-				8872227E299F67A400EB1174 /* TwoLabelsTableViewCell.xib */,
-				8842539D299B6900005DBA48 /* SwitchTableViewCell.swift */,
-				8842539E299B6900005DBA48 /* SwitchTableViewCell.xib */,
+				88425395299B68C0005DBA48 /* SettingImageTableViewCell.swift */,
+				88425396299B68C0005DBA48 /* SettingImageTableViewCell.xib */,
+				88425399299B68ED005DBA48 /* SettingLabelTableViewCell.swift */,
+				8842539A299B68ED005DBA48 /* SettingLabelTableViewCell.xib */,
+				8842539D299B6900005DBA48 /* SettingSwitchTableViewCell.swift */,
+				8842539E299B6900005DBA48 /* SettingSwitchTableViewCell.xib */,
+				882B4F11299F50F60031AD31 /* AlertInformationLabelTableViewCell.swift */,
+				8872227E299F67A400EB1174 /* AlertInformationLabelTableViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -323,6 +331,17 @@
 				8872228229ACB68B00EB1174 /* LogsViewController.xib */,
 			);
 			path = Logs;
+			sourceTree = "<group>";
+		};
+		8872228529AD447200EB1174 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8872228629ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.swift */,
+				8872228729ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.xib */,
+				8872228A29AE839500EB1174 /* SetInformationLabelTableViewCell.swift */,
+				8872228B29AE839500EB1174 /* SetInformationLabelTableViewCell.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		8876B61E290901F7005296E1 /* Extensions */ = {
@@ -404,6 +423,7 @@
 			children = (
 				889EB686295EEA5400BAA752 /* PersonalInformationViewController.swift */,
 				889EB687295EEA5400BAA752 /* PersonalInformationViewController.xib */,
+				8872228529AD447200EB1174 /* Components */,
 			);
 			path = PersonalInformation;
 			sourceTree = "<group>";
@@ -622,10 +642,10 @@
 		88D874CD29405C190048EB41 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				88D874CE29405C500048EB41 /* PersonalTextFieldTableViewCell.swift */,
-				88D874CF29405C500048EB41 /* PersonalTextFieldTableViewCell.xib */,
-				88D874D229405C780048EB41 /* PersonalActionSheetTableViewCell.swift */,
-				88D874D329405C780048EB41 /* PersonalActionSheetTableViewCell.xib */,
+				88D874CE29405C500048EB41 /* GetInformationTextFieldTableViewCell.swift */,
+				88D874CF29405C500048EB41 /* GetInformationTextFieldTableViewCell.xib */,
+				88D874D229405C780048EB41 /* GetInformationActionSheetTableViewCell.swift */,
+				88D874D329405C780048EB41 /* GetInformationActionSheetTableViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -785,7 +805,7 @@
 				88C4D240293DF08200FB7C67 /* KnowMoreViewController.xib in Resources */,
 				8872228429ACB68B00EB1174 /* LogsViewController.xib in Resources */,
 				88CDF75528EEC93F00FE16E1 /* LaunchScreen.storyboard in Resources */,
-				88D874D129405C500048EB41 /* PersonalTextFieldTableViewCell.xib in Resources */,
+				88D874D129405C500048EB41 /* GetInformationTextFieldTableViewCell.xib in Resources */,
 				88A2D1DE29531E490037E594 /* MainViewController.xib in Resources */,
 				8876B6332930747C005296E1 /* ForgotPasswordViewController.xib in Resources */,
 				889EB689295EEA5400BAA752 /* PersonalInformationViewController.xib in Resources */,
@@ -793,16 +813,18 @@
 				8876B626292162CF005296E1 /* VerifyViewController.xib in Resources */,
 				882B4F19299F5F680031AD31 /* BloodSugarAlertViewController.xib in Resources */,
 				882B4F0E299E1D970031AD31 /* AlertSettingViewController.xib in Resources */,
-				8842539C299B68ED005DBA48 /* LabelTableViewCell.xib in Resources */,
+				8872228929ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.xib in Resources */,
+				8842539C299B68ED005DBA48 /* SettingLabelTableViewCell.xib in Resources */,
+				8872228D29AE839500EB1174 /* SetInformationLabelTableViewCell.xib in Resources */,
 				8876B637293074B8005296E1 /* ResetPasswordViewController.xib in Resources */,
 				88D874CC294050290048EB41 /* GetPersonalInformationViewController.xib in Resources */,
-				8872227F299F67A400EB1174 /* TwoLabelsTableViewCell.xib in Resources */,
-				88D874D529405C780048EB41 /* PersonalActionSheetTableViewCell.xib in Resources */,
+				8872227F299F67A400EB1174 /* AlertInformationLabelTableViewCell.xib in Resources */,
+				88D874D529405C780048EB41 /* GetInformationActionSheetTableViewCell.xib in Resources */,
 				8876B63F293A6F19005296E1 /* AudiovisualTeachingViewController.xib in Resources */,
 				8807B2BC294C434100FEC0B3 /* ScanningTransmitterViewController.xib in Resources */,
 				88DA3D8A298BBF2100DFB406 /* BloodSugarCheckViewController.xib in Resources */,
 				8876B61D2908702A005296E1 /* RegisterViewController.xib in Resources */,
-				88425398299B68C0005DBA48 /* ImageTableViewCell.xib in Resources */,
+				88425398299B68C0005DBA48 /* SettingImageTableViewCell.xib in Resources */,
 				88DA3D922993989200DFB406 /* TitleCollectionViewCell.xib in Resources */,
 				88A2D1D6295310A40037E594 /* ScanningSensorViewController.xib in Resources */,
 				889EB685295EEA4200BAA752 /* HistoryViewController.xib in Resources */,
@@ -811,7 +833,7 @@
 				88C4D23C293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.xib in Resources */,
 				889EB68D295EEA6500BAA752 /* LifeStyleViewController.xib in Resources */,
 				88A2D1D129506F400037E594 /* ConnectionViewController.xib in Resources */,
-				884253A0299B6900005DBA48 /* SwitchTableViewCell.xib in Resources */,
+				884253A0299B6900005DBA48 /* SettingSwitchTableViewCell.xib in Resources */,
 				889EB695295EEAFF00BAA752 /* BloodSugarCorrectionViewController.xib in Resources */,
 				88425393299B5D67005DBA48 /* SettingViewController.xib in Resources */,
 				889EB691295EEADA00BAA752 /* BloodSugarIndexViewController.xib in Resources */,
@@ -956,7 +978,7 @@
 				889EB688295EEA5400BAA752 /* PersonalInformationViewController.swift in Sources */,
 				889EB68C295EEA6500BAA752 /* LifeStyleViewController.swift in Sources */,
 				88C4D23B293D0B4000FB7C67 /* SetUpBloodSugerIndexViewController.swift in Sources */,
-				88425397299B68C0005DBA48 /* ImageTableViewCell.swift in Sources */,
+				88425397299B68C0005DBA48 /* SettingImageTableViewCell.swift in Sources */,
 				8876B61C2908702A005296E1 /* RegisterViewController.swift in Sources */,
 				88CDF78028FFF64600FE16E1 /* BaseViewController.swift in Sources */,
 				88425392299B5D67005DBA48 /* SettingViewController.swift in Sources */,
@@ -968,16 +990,16 @@
 				8876B6392934AB7D005296E1 /* Alert.swift in Sources */,
 				88CDF74928EEC93C00FE16E1 /* AppDelegate.swift in Sources */,
 				88A2D1DD29531E490037E594 /* MainViewController.swift in Sources */,
-				882B4F13299F50F60031AD31 /* TwoLabelsTableViewCell.swift in Sources */,
+				882B4F13299F50F60031AD31 /* AlertInformationLabelTableViewCell.swift in Sources */,
 				88C4D23F293DF08200FB7C67 /* KnowMoreViewController.swift in Sources */,
 				88CDF74B28EEC93C00FE16E1 /* SceneDelegate.swift in Sources */,
 				8807B2B3294B2BEE00FEC0B3 /* UserInformationTable.swift in Sources */,
 				8876B63E293A6F19005296E1 /* AudiovisualTeachingViewController.swift in Sources */,
 				8876B6322930747C005296E1 /* ForgotPasswordViewController.swift in Sources */,
-				88D874D429405C780048EB41 /* PersonalActionSheetTableViewCell.swift in Sources */,
+				88D874D429405C780048EB41 /* GetInformationActionSheetTableViewCell.swift in Sources */,
 				88DA3D912993989200DFB406 /* TitleCollectionViewCell.swift in Sources */,
 				88A2D1D5295310A40037E594 /* ScanningSensorViewController.swift in Sources */,
-				8842539F299B6900005DBA48 /* SwitchTableViewCell.swift in Sources */,
+				8842539F299B6900005DBA48 /* SettingSwitchTableViewCell.swift in Sources */,
 				88CC658C295DA14200AB0310 /* TabBarView.swift in Sources */,
 				8876B636293074B8005296E1 /* ResetPasswordViewController.swift in Sources */,
 				8807B2BB294C434100FEC0B3 /* ScanningTransmitterViewController.swift in Sources */,
@@ -985,12 +1007,14 @@
 				88D874D72940717D0048EB41 /* AppDefine.swift in Sources */,
 				8872228329ACB68B00EB1174 /* LogsViewController.swift in Sources */,
 				889EB684295EEA4200BAA752 /* HistoryViewController.swift in Sources */,
-				8842539B299B68ED005DBA48 /* LabelTableViewCell.swift in Sources */,
+				8842539B299B68ED005DBA48 /* SettingLabelTableViewCell.swift in Sources */,
 				88A2D1E72959A1BA0037E594 /* BarButtonItemView.swift in Sources */,
+				8872228C29AE839500EB1174 /* SetInformationLabelTableViewCell.swift in Sources */,
 				8876B6202909020E005296E1 /* Color+Extensions.swift in Sources */,
 				882B4F0D299E1D970031AD31 /* AlertSettingViewController.swift in Sources */,
 				8876B622290A6F91005296E1 /* TextField+Extensions.swift in Sources */,
-				88D874D029405C500048EB41 /* PersonalTextFieldTableViewCell.swift in Sources */,
+				88D874D029405C500048EB41 /* GetInformationTextFieldTableViewCell.swift in Sources */,
+				8872228829ADC06B00EB1174 /* SetInformationTextFieldTableViewCell.swift in Sources */,
 				8807B2B12946C2A100FEC0B3 /* LocalDatabase.swift in Sources */,
 				882B4F18299F5F680031AD31 /* BloodSugarAlertViewController.swift in Sources */,
 			);

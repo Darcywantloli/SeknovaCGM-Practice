@@ -1,5 +1,5 @@
 //
-//  ImageTableViewCell.swift
+//  SettingImageTableViewCell.swift
 //  Seknova
 //
 //  Created by imac on 2023/2/14.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ImageTableViewCell: UITableViewCell {
+class SettingImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var informationLabel: UILabel!
     
     @IBOutlet weak var settingImageView: UIImageView!
     
-    static let identifier = "ImageTableViewCell"
+    static let identifier = "SettingImageTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()

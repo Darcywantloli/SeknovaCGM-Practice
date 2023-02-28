@@ -38,12 +38,12 @@ class SettingViewController: UIViewController {
         settingTableView.delegate = self
         settingTableView.dataSource = self
         
-        settingTableView.register(UINib(nibName: "ImageTableViewCell", bundle: nil),
-                                  forCellReuseIdentifier: ImageTableViewCell.identifier)
-        settingTableView.register(UINib(nibName: "LabelTableViewCell", bundle: nil),
-                                  forCellReuseIdentifier: LabelTableViewCell.identifier)
-        settingTableView.register(UINib(nibName: "SwitchTableViewCell", bundle: nil),
-                                  forCellReuseIdentifier: SwitchTableViewCell.identifier)
+        settingTableView.register(UINib(nibName: "SettingImageTableViewCell", bundle: nil),
+                                  forCellReuseIdentifier: SettingImageTableViewCell.identifier)
+        settingTableView.register(UINib(nibName: "SettingLabelTableViewCell", bundle: nil),
+                                  forCellReuseIdentifier: SettingLabelTableViewCell.identifier)
+        settingTableView.register(UINib(nibName: "SettingSwitchTableViewCell", bundle: nil),
+                                  forCellReuseIdentifier: SettingSwitchTableViewCell.identifier)
     }
     
     // MARK: - IBAction
@@ -65,8 +65,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         if warming {
             switch indexPath.row {
             case 0:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier,
-                                                                for: indexPath) as! ImageTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingImageTableViewCell.identifier,
+                                                                for: indexPath) as! SettingImageTableViewCell
                 
                 cell.informationLabel.text = "警示設定"
                 cell.settingImageView.image = UIImage(named: "ArrowRight")
@@ -74,8 +74,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 1:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier,
-                                                                for: indexPath) as! ImageTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingImageTableViewCell.identifier,
+                                                                for: indexPath) as! SettingImageTableViewCell
                 
                 cell.informationLabel.text = "校正模式"
                 cell.settingImageView.image = UIImage(named: "ArrowRight")
@@ -83,8 +83,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 2:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 cell.informationLabel.text = "設定ADC初始值"
                 cell.indexLabel.text = "0"
@@ -92,8 +92,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 3:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 cell.informationLabel.text = "設定X軸時間間距(per/s)"
                 cell.indexLabel.text = "3600.0 per/s"
@@ -101,8 +101,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 4:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 cell.informationLabel.text = "設定y軸上下限"
                 cell.indexLabel.text = "400.0"
@@ -110,8 +110,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 5:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
-                                                                for: indexPath) as! SwitchTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.identifier,
+                                                                for: indexPath) as! SettingSwitchTableViewCell
                 
                 cell.informationLabel.text = "單位切換(mmol/L)"
                 cell.onOffSwitch.isOn = false
@@ -119,8 +119,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 6:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
-                                                                for: indexPath) as! SwitchTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.identifier,
+                                                                for: indexPath) as! SettingSwitchTableViewCell
                 
                 cell.informationLabel.text = "顯示數值資訊"
                 cell.onOffSwitch.isOn = true
@@ -128,8 +128,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 7:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
-                                                                for: indexPath) as! SwitchTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.identifier,
+                                                                for: indexPath) as! SettingSwitchTableViewCell
                 
                 cell.informationLabel.text = "顯示RSSI"
                 cell.onOffSwitch.isOn = false
@@ -137,8 +137,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 8:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
-                                                                for: indexPath) as! SwitchTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.identifier,
+                                                                for: indexPath) as! SettingSwitchTableViewCell
                 
                 cell.informationLabel.text = "上傳雲端"
                 cell.onOffSwitch.isOn = true
@@ -146,8 +146,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 9:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
-                                                                for: indexPath) as! SwitchTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.identifier,
+                                                                for: indexPath) as! SettingSwitchTableViewCell
                 
                 cell.informationLabel.text = "超出高低血糖警示"
                 cell.onOffSwitch.isOn = false
@@ -155,8 +155,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 10:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier,
-                                                                for: indexPath) as! ImageTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingImageTableViewCell.identifier,
+                                                                for: indexPath) as! SettingImageTableViewCell
                 
                 cell.informationLabel.text = "資料同步"
                 cell.settingImageView.image = UIImage(named: "reload")
@@ -164,8 +164,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 11:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 cell.informationLabel.text = "暖機狀態"
                 cell.indexLabel.text = "On"
@@ -173,8 +173,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 12:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 dateFormatter.dateFormat = "MM:dd HH:mm:ss"
                 
@@ -186,8 +186,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 13:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 cell.informationLabel.text = "韌體版本"
                 cell.indexLabel.text = "1.24.9"
@@ -195,8 +195,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 14:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 cell.informationLabel.text = "App版本"
                 cell.indexLabel.text = "00.00.61"
@@ -209,8 +209,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             switch indexPath.row {
             case 0:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier,
-                                                                for: indexPath) as! ImageTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingImageTableViewCell.identifier,
+                                                                for: indexPath) as! SettingImageTableViewCell
                 
                 cell.informationLabel.text = "警示設定"
                 cell.settingImageView.image = UIImage(named: "ArrowRight")
@@ -218,8 +218,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 1:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
-                                                                for: indexPath) as! SwitchTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.identifier,
+                                                                for: indexPath) as! SettingSwitchTableViewCell
                 
                 cell.informationLabel.text = "單位切換(mmol/L)"
                 cell.onOffSwitch.isOn = false
@@ -227,8 +227,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 2:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
-                                                                for: indexPath) as! SwitchTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingSwitchTableViewCell.identifier,
+                                                                for: indexPath) as! SettingSwitchTableViewCell
                 
                 cell.informationLabel.text = "超出高低血糖警示"
                 cell.onOffSwitch.isOn = false
@@ -236,8 +236,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 3:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier,
-                                                                for: indexPath) as! ImageTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingImageTableViewCell.identifier,
+                                                                for: indexPath) as! SettingImageTableViewCell
                 
                 cell.informationLabel.text = "資料同步"
                 cell.settingImageView.image = UIImage(named: "reload")
@@ -245,8 +245,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 4:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 cell.informationLabel.text = "暖機狀態"
                 cell.indexLabel.text = "Off"
@@ -254,8 +254,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 5:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 dateFormatter.dateFormat = "MM/dd HH:mm:ss"
                 
@@ -267,8 +267,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 6:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 cell.informationLabel.text = "韌體版本"
                 cell.indexLabel.text = "1.24.9"
@@ -276,8 +276,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 return cell
             case 7:
-                let cell = settingTableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.identifier,
-                                                                for: indexPath) as! LabelTableViewCell
+                let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingLabelTableViewCell.identifier,
+                                                                for: indexPath) as! SettingLabelTableViewCell
                 
                 cell.informationLabel.text = "App版本"
                 cell.indexLabel.text = "00.00.61"
